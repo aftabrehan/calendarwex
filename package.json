@@ -14,14 +14,15 @@
     "clsx": "^1.2.1",
     "next": "12",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "saas": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
     "@types/react": "^18.0.17",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
-    "sass": "^1.49.11"
+    "sass": "^1.54.9"
   },
   "description": "Calendarar is a simple calendar web application.",
   "main": "next.config.js",

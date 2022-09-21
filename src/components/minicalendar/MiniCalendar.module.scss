@@ -1,0 +1,41 @@
+.miniCalendar {
+  border: 2px solid red;
+  width: 250px;
+  height: 265px;
+  margin: auto;
+  margin-top: 19%;
+}
+
+.smallCalendarHeader {
+  border: 1px solid red;
+  width: 100%;
+}
+
+.smallCalendarHeader {
+  h2 {
+    width: 76px;
+    height: 27px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 10px 158px 10px 16px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    /* Text */
+    color: #333333;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+}
+
+.smallCalendar {
+  padding: 10px;
+  position: relative;
+  width: 258px;
+  height: 218px;
+}
