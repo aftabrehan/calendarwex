@@ -1,0 +1,45 @@
+.smallCalendar {
+  border: 1px solid #c1c1c1;
+  width: 258px;
+  height: 218px;
+  padding: 10px;
+}
+
+.smallCalendarContent {
+  width: 238px;
+  height: 198px;
+}
+
+.smallCalendarDayHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 238px;
+  height: 33px;
+  opacity: 0.7;
+}
+
+.smallCalendarDateWeek {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 238px;
+  height: 33px;
+  opacity: 0.7;
+}
+
+.fifthWeek4 {
+  opacity: 30%;
+}
+
+.fifthWeek5 {
+  opacity: 30%;
+}
+
+.fifthWeek6 {
+  opacity: 30%;
+}
+
+.fifthWeek7 {
+  opacity: 30%;
+}
