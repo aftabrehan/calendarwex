@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+const path = require("path");
+
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    loader: "imgix",
+    path: "https://example.com/myaccount/",
+  },
+  webpack: (config) => {
+    config.resolve.modules.push(path.resolve("./"));
 
-module.exports = nextConfig
+    return config;
+  },
+};
