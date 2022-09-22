@@ -1,0 +1,355 @@
+[debug] [2022-09-22T04:18:24.830Z] ----------------------------------------------------------------------
+[debug] [2022-09-22T04:18:24.832Z] Command:       /usr/local/bin/firebase /home/ar/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting:github
+[debug] [2022-09-22T04:18:24.833Z] CLI Version:   11.8.0
+[debug] [2022-09-22T04:18:24.833Z] Platform:      linux
+[debug] [2022-09-22T04:18:24.833Z] Node Version:  v16.16.0
+[debug] [2022-09-22T04:18:24.833Z] Time:          Thu Sep 22 2022 09:18:24 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-09-22T04:18:24.834Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-22T04:18:24.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-22T04:18:24.900Z] > authorizing via signed-in user (aftabrehan52422@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ar/Code/Calendarar/calendarar
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-09-22T04:18:24.905Z] Using project from CLI flag: calendarar-de45c
+[debug] [2022-09-22T04:18:24.908Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c [none]
+[debug] [2022-09-22T04:18:25.872Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c 200
+[debug] [2022-09-22T04:18:25.873Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c {"projectId":"calendarar-de45c","projectNumber":"217905937656","displayName":"Calendarar","name":"projects/calendarar-de45c","resources":{"hostingSite":"calendarar-de45c"},"state":"ACTIVE","etag":"1_39dc062d-02c0-4cdf-ac14-060fd3a37a2a"}
+[info] i  Using project calendarar-de45c (Calendarar) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/ar/Code/Calendarar/calendarar 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=939579773&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-09-22T04:18:27.194Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-09-22T04:18:27.194Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-09-22T04:18:28.547Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-09-22T04:18:28.549Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-09-22T04:18:28.583Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-09-22T04:18:29.843Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-09-22T04:18:29.843Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"aftabrehan","id":93012310,"node_id":"U_kgDOBYtBVg","avatar_url":"https://avatars.githubusercontent.com/u/93012310?v=4","gravatar_id":"","url":"https://api.github.com/users/aftabrehan","html_url":"https://github.com/aftabrehan","followers_url":"https://api.github.com/users/aftabrehan/followers","following_url":"https://api.github.com/users/aftabrehan/following{/other_user}","gists_url":"https://api.github.com/users/aftabrehan/gists{/gist_id}","starred_url":"https://api.github.com/users/aftabrehan/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/aftabrehan/subscriptions","organizations_url":"https://api.github.com/users/aftabrehan/orgs","repos_url":"https://api.github.com/users/aftabrehan/repos","events_url":"https://api.github.com/users/aftabrehan/events{/privacy}","received_events_url":"https://api.github.com/users/aftabrehan/received_events","type":"User","site_admin":false,"name":"Aftab R.","company":"@appwex","blog":"aftabrehan.com","location":"Islamabad, Pakistan","email":null,"hireable":null,"bio":"Passionate 😍 Developer :robot:  building :rocket:  and maintaining ♻️ responsive 😎 websites 🌐 in the recruiting industry 🏭️","twitter_username":null,"public_repos":4,"public_gists":0,"followers":2,"following":10,"created_at":"2021-10-22T20:46:24Z","updated_at":"2022-09-22T02:38:17Z","private_gists":0,"total_private_repos":26,"owned_private_repos":26,"disk_usage":206770,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as aftabrehan 
+[info] 
+[debug] [2022-09-22T04:18:33.624Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:34.965Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:34.967Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:18:37.250Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:38.550Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:38.550Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:18:42.029Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:43.173Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:43.174Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:18:45.570Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:47.046Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:47.047Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:18:54.032Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:54.461Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:54.625Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:18:55.034Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:55.035Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:18:55.602Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:55.602Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:18:55.853Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:18:55.853Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:19:08.925Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:19:10.395Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:19:10.396Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:19:21.619Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:19:22.986Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:19:22.987Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:19:41.245Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:19:42.444Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:19:42.444Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:19:54.854Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:00.303Z] ----------------------------------------------------------------------
+[debug] [2022-09-22T04:20:00.306Z] Command:       /usr/local/bin/firebase /home/ar/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting:github
+[debug] [2022-09-22T04:20:00.306Z] CLI Version:   11.8.0
+[debug] [2022-09-22T04:20:00.306Z] Platform:      linux
+[debug] [2022-09-22T04:20:00.306Z] Node Version:  v16.16.0
+[debug] [2022-09-22T04:20:00.307Z] Time:          Thu Sep 22 2022 09:20:00 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-09-22T04:20:00.307Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-22T04:20:00.371Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-22T04:20:00.371Z] > authorizing via signed-in user (aftabrehan52422@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ar/Code/Calendarar/calendarar
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-09-22T04:20:00.377Z] Using project from CLI flag: calendarar-de45c
+[debug] [2022-09-22T04:20:00.380Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c [none]
+[debug] [2022-09-22T04:20:01.192Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c 200
+[debug] [2022-09-22T04:20:01.193Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c {"projectId":"calendarar-de45c","projectNumber":"217905937656","displayName":"Calendarar","name":"projects/calendarar-de45c","resources":{"hostingSite":"calendarar-de45c"},"state":"ACTIVE","etag":"1_39dc062d-02c0-4cdf-ac14-060fd3a37a2a"}
+[info] i  Using project calendarar-de45c (Calendarar) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/ar/Code/Calendarar/calendarar 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=79666515&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-09-22T04:20:02.559Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-09-22T04:20:02.562Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-09-22T04:20:04.161Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-09-22T04:20:04.167Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-09-22T04:20:04.195Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-09-22T04:20:05.380Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-09-22T04:20:05.380Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"aftabrehan","id":93012310,"node_id":"U_kgDOBYtBVg","avatar_url":"https://avatars.githubusercontent.com/u/93012310?v=4","gravatar_id":"","url":"https://api.github.com/users/aftabrehan","html_url":"https://github.com/aftabrehan","followers_url":"https://api.github.com/users/aftabrehan/followers","following_url":"https://api.github.com/users/aftabrehan/following{/other_user}","gists_url":"https://api.github.com/users/aftabrehan/gists{/gist_id}","starred_url":"https://api.github.com/users/aftabrehan/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/aftabrehan/subscriptions","organizations_url":"https://api.github.com/users/aftabrehan/orgs","repos_url":"https://api.github.com/users/aftabrehan/repos","events_url":"https://api.github.com/users/aftabrehan/events{/privacy}","received_events_url":"https://api.github.com/users/aftabrehan/received_events","type":"User","site_admin":false,"name":"Aftab R.","company":"@appwex","blog":"aftabrehan.com","location":"Islamabad, Pakistan","email":null,"hireable":null,"bio":"Passionate 😍 Developer :robot:  building :rocket:  and maintaining ♻️ responsive 😎 websites 🌐 in the recruiting industry 🏭️","twitter_username":null,"public_repos":4,"public_gists":0,"followers":2,"following":10,"created_at":"2021-10-22T20:46:24Z","updated_at":"2022-09-22T02:38:17Z","private_gists":0,"total_private_repos":26,"owned_private_repos":26,"disk_usage":206770,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as aftabrehan 
+[info] 
+[debug] [2022-09-22T04:20:07.996Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:09.405Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:09.405Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:53.960Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:55.251Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:55.251Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:55.296Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:55.937Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:56.297Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:56.298Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:56.341Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:56.508Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:56.702Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:56.847Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.061Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:57.061Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:57.076Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.127Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.305Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.417Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.455Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:57.456Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:57.544Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:57.544Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:57.646Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendararCalendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.764Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:57.771Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:57.837Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:20:57.840Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:57.841Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:58.086Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:58.087Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:58.148Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:58.150Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:58.425Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:58.426Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:58.426Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:58.427Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:20:58.840Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendararCalendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:58.841Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendararCalendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-09-22T04:20:59.040Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:20:59.041Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:01.797Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:02.610Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:02.802Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:03.078Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:03.078Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:03.657Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:03.657Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:03.955Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:03.956Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:05.786Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:07.027Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:07.028Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:07.069Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:08.257Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:08.259Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:37.878Z] ----------------------------------------------------------------------
+[debug] [2022-09-22T04:21:37.882Z] Command:       /usr/local/bin/firebase /home/ar/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting:github
+[debug] [2022-09-22T04:21:37.883Z] CLI Version:   11.8.0
+[debug] [2022-09-22T04:21:37.883Z] Platform:      linux
+[debug] [2022-09-22T04:21:37.883Z] Node Version:  v16.16.0
+[debug] [2022-09-22T04:21:37.884Z] Time:          Thu Sep 22 2022 09:21:37 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-09-22T04:21:37.885Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-22T04:21:37.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-22T04:21:37.971Z] > authorizing via signed-in user (aftabrehan52422@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ar/Code/Calendarar/calendarar
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-09-22T04:21:37.976Z] Using project from CLI flag: calendarar-de45c
+[debug] [2022-09-22T04:21:37.979Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c [none]
+[debug] [2022-09-22T04:21:38.883Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c 200
+[debug] [2022-09-22T04:21:38.883Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c {"projectId":"calendarar-de45c","projectNumber":"217905937656","displayName":"Calendarar","name":"projects/calendarar-de45c","resources":{"hostingSite":"calendarar-de45c"},"state":"ACTIVE","etag":"1_39dc062d-02c0-4cdf-ac14-060fd3a37a2a"}
+[info] i  Using project calendarar-de45c (Calendarar) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/ar/Code/Calendarar/calendarar 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=789121521&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-09-22T04:21:40.125Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-09-22T04:21:40.126Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-09-22T04:21:41.330Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-09-22T04:21:41.331Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-09-22T04:21:41.341Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-09-22T04:21:42.558Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-09-22T04:21:42.558Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"aftabrehan","id":93012310,"node_id":"U_kgDOBYtBVg","avatar_url":"https://avatars.githubusercontent.com/u/93012310?v=4","gravatar_id":"","url":"https://api.github.com/users/aftabrehan","html_url":"https://github.com/aftabrehan","followers_url":"https://api.github.com/users/aftabrehan/followers","following_url":"https://api.github.com/users/aftabrehan/following{/other_user}","gists_url":"https://api.github.com/users/aftabrehan/gists{/gist_id}","starred_url":"https://api.github.com/users/aftabrehan/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/aftabrehan/subscriptions","organizations_url":"https://api.github.com/users/aftabrehan/orgs","repos_url":"https://api.github.com/users/aftabrehan/repos","events_url":"https://api.github.com/users/aftabrehan/events{/privacy}","received_events_url":"https://api.github.com/users/aftabrehan/received_events","type":"User","site_admin":false,"name":"Aftab R.","company":"@appwex","blog":"aftabrehan.com","location":"Islamabad, Pakistan","email":null,"hireable":null,"bio":"Passionate 😍 Developer :robot:  building :rocket:  and maintaining ♻️ responsive 😎 websites 🌐 in the recruiting industry 🏭️","twitter_username":null,"public_repos":4,"public_gists":0,"followers":2,"following":10,"created_at":"2021-10-22T20:46:24Z","updated_at":"2022-09-22T02:38:17Z","private_gists":0,"total_private_repos":26,"owned_private_repos":26,"disk_usage":206770,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as aftabrehan 
+[info] 
+[debug] [2022-09-22T04:21:46.396Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:47.682Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:47.683Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:21:53.526Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:21:54.743Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:21:54.744Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:22:00.045Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:22:01.607Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:22:01.607Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:22:02.953Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:22:04.471Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:22:04.471Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:22:15.865Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:22:17.067Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:22:17.068Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:22:41.647Z] ----------------------------------------------------------------------
+[debug] [2022-09-22T04:22:41.649Z] Command:       /usr/local/bin/firebase /home/ar/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting:github
+[debug] [2022-09-22T04:22:41.650Z] CLI Version:   11.8.0
+[debug] [2022-09-22T04:22:41.650Z] Platform:      linux
+[debug] [2022-09-22T04:22:41.650Z] Node Version:  v16.16.0
+[debug] [2022-09-22T04:22:41.651Z] Time:          Thu Sep 22 2022 09:22:41 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-09-22T04:22:41.651Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-22T04:22:41.719Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-22T04:22:41.719Z] > authorizing via signed-in user (aftabrehan52422@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ar/Code/Calendarar/calendarar
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-09-22T04:22:41.725Z] Using project from CLI flag: calendarar-de45c
+[debug] [2022-09-22T04:22:41.728Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c [none]
+[debug] [2022-09-22T04:22:42.979Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c 200
+[debug] [2022-09-22T04:22:42.979Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/calendarar-de45c {"projectId":"calendarar-de45c","projectNumber":"217905937656","displayName":"Calendarar","name":"projects/calendarar-de45c","resources":{"hostingSite":"calendarar-de45c"},"state":"ACTIVE","etag":"1_39dc062d-02c0-4cdf-ac14-060fd3a37a2a"}
+[info] i  Using project calendarar-de45c (Calendarar) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/ar/Code/Calendarar/calendarar 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=37964066&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-09-22T04:22:44.333Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-09-22T04:22:44.333Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-09-22T04:22:45.542Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-09-22T04:22:45.543Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-09-22T04:22:45.571Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-09-22T04:22:46.762Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-09-22T04:22:46.762Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"aftabrehan","id":93012310,"node_id":"U_kgDOBYtBVg","avatar_url":"https://avatars.githubusercontent.com/u/93012310?v=4","gravatar_id":"","url":"https://api.github.com/users/aftabrehan","html_url":"https://github.com/aftabrehan","followers_url":"https://api.github.com/users/aftabrehan/followers","following_url":"https://api.github.com/users/aftabrehan/following{/other_user}","gists_url":"https://api.github.com/users/aftabrehan/gists{/gist_id}","starred_url":"https://api.github.com/users/aftabrehan/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/aftabrehan/subscriptions","organizations_url":"https://api.github.com/users/aftabrehan/orgs","repos_url":"https://api.github.com/users/aftabrehan/repos","events_url":"https://api.github.com/users/aftabrehan/events{/privacy}","received_events_url":"https://api.github.com/users/aftabrehan/received_events","type":"User","site_admin":false,"name":"Aftab R.","company":"@appwex","blog":"aftabrehan.com","location":"Islamabad, Pakistan","email":null,"hireable":null,"bio":"Passionate 😍 Developer :robot:  building :rocket:  and maintaining ♻️ responsive 😎 websites 🌐 in the recruiting industry 🏭️","twitter_username":null,"public_repos":4,"public_gists":0,"followers":2,"following":10,"created_at":"2021-10-22T20:46:24Z","updated_at":"2022-09-22T02:38:17Z","private_gists":0,"total_private_repos":26,"owned_private_repos":26,"disk_usage":206770,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as aftabrehan 
+[info] 
+[debug] [2022-09-22T04:22:53.874Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:22:55.103Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:22:55.103Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:23:01.449Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:23:02.635Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:23:02.636Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:28:52.450Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:28:52.900Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:28:53.862Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:28:53.863Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:28:54.069Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:28:54.070Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:29:06.587Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:29:07.819Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:29:07.819Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:29:13.433Z] >>> [apiv2][query] GET https://api.github.com/repos/(Calendarar/calendarar)/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:29:14.855Z] <<< [apiv2][status] GET https://api.github.com/repos/(Calendarar/calendarar)/actions/secrets/public-key 404
+[debug] [2022-09-22T04:29:14.856Z] <<< [apiv2][body] GET https://api.github.com/repos/(Calendarar/calendarar)/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:29:25.147Z] >>> [apiv2][query] GET https://api.github.com/repos/(Calendarar/calendarar)/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:29:26.506Z] >>> [apiv2][query] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key type=owner
+[debug] [2022-09-22T04:29:26.511Z] <<< [apiv2][status] GET https://api.github.com/repos/(Calendarar/calendarar)/actions/secrets/public-key 404
+[debug] [2022-09-22T04:29:26.512Z] <<< [apiv2][body] GET https://api.github.com/repos/(Calendarar/calendarar)/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-09-22T04:29:27.758Z] <<< [apiv2][status] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key 404
+[debug] [2022-09-22T04:29:27.759Z] <<< [apiv2][body] GET https://api.github.com/repos/Calendarar/calendarar/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
