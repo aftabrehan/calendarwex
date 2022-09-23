@@ -24,7 +24,9 @@ const Home = () => {
             </Link>
           </li>
           <li>
-            <Link href="/src/components/minicalendar/">MiniCalendar</Link>
+            <Link href="/src/components/minicalendar/MiniCalendar">
+              MiniCalendar
+            </Link>
           </li>
         </ul>
       </div>

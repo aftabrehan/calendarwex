@@ -1,7 +1,7 @@
 import CalendarDaySmall from "./CalendarDaySmall";
 import SmallCalendar from "./SmallCalendar";
 
-import stl from "./index.module.scss";
+import stl from "./MiniCalendar.module.scss";
 
 const MiniCalendar = () => {
   return (
