@@ -1,7 +1,6 @@
 import stl from "./SmallCalendar.module.scss";
-import React from "react";
 
-const MiniCalendar = () => {
+const SmallCalendar = () => {
   return (
     <div className={stl.smallCalendar}>
       <div className={stl.smallCalendarContent}>
@@ -64,4 +63,4 @@ const MiniCalendar = () => {
   );
 };
 
-export default MiniCalendar;
+export default SmallCalendar;

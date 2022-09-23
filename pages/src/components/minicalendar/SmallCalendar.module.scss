@@ -43,3 +43,56 @@
 .fifthWeek7 {
   opacity: 30%;
 }
+
+.calendarDaySmall {
+  width: 74px;
+  height: 268px;
+  border: 1px solid #c1c1c1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 32px;
+  position: relative;
+  width: 74px;
+  height: 268px;
+  border: 1px dashed #9747ff;
+  border-radius: 5px;
+}
+
+.calendarDaySmallContent {
+  padding: 4px;
+  gap: 10px;
+}
+
+.calendarDaySmallDateDefault {
+  padding: 5px;
+  height: 22px;
+}
+
+.calendarDaySmallDateHover {
+  height: 22px;
+  padding: 5px;
+
+  &:hover {
+    background: #ededed;
+    border-radius: 62.4327rem;
+  }
+}
+
+.calendarDaySmallDateSelected {
+  padding: 5px;
+  height: 22px;
+
+  &:active {
+    background: #0c41ff;
+    border-radius: 6.1875rem;
+  }
+}
+
+.calendarDaySmallDayDefault {
+  padding: 5px;
+  width: 26px;
+  height: 25px;
+}
