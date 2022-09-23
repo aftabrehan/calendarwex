@@ -1,6 +1,6 @@
 import stl from "./ButtonSecondary.module.scss";
 
-const ButtonBordered = () => {
+const ButtonSecondary = () => {
   let val;
 
   return (
@@ -128,4 +128,4 @@ const ButtonBordered = () => {
   );
 };
 
-export default ButtonBordered;
+export default ButtonSecondary;

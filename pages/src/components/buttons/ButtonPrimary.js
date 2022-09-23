@@ -1,6 +1,6 @@
 import stl from "./ButtonPrimary.module.scss";
 
-const ButtonFilled = () => {
+const ButtonPrimary = () => {
   let val;
 
   return (
@@ -124,4 +124,4 @@ const ButtonFilled = () => {
   );
 };
 
-export default ButtonFilled;
+export default ButtonPrimary;
