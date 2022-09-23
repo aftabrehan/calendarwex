@@ -1,0 +1,93 @@
+.slct {
+  margin: 5% 0 0 5%;
+  padding: 5px;
+  -webkit-appearance: none;
+}
+
+.btnDefault,
+.hoverable,
+.disabled {
+  padding: 8px;
+  width: 77px;
+  height: 35px;
+  display: none;
+  gap: 4px;
+  align-items: center;
+  background-color: #0c41ff;
+  border-radius: 3px;
+  border: none;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.hoverable:hover {
+  background-color: #2a45a6;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.btnOnlyText,
+.btnOnlyTextHoverable,
+.btnOnlyTextDisabled {
+  padding: 8px;
+  width: 57px;
+  height: 35px;
+  display: none;
+  gap: 4px;
+  align-items: center;
+  background-color: #0c41ff;
+  border-radius: 3px;
+  border: none;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.btnOnlyTextHoverable:hover {
+  background-color: #2a45a6;
+}
+
+.btnOnlyTextDisabled {
+  opacity: 0.4;
+}
+
+.btnText {
+  width: 41px;
+  height: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+  padding: 1.33px 1.34px;
+}
+
+.btnOnlyIcon,
+.btnOnlyIconHoverable,
+.btnOnlyIconDisabled {
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  display: none;
+  gap: 4px;
+  align-items: center;
+  background-color: #0c41ff;
+  border-radius: 3px;
+  border: none;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.btnOnlyIconHoverable:hover {
+  background-color: #2a45a6;
+}
+
+.btnOnlyIconDisabled {
+  opacity: 0.4;
+}
