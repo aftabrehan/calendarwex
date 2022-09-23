@@ -1,0 +1,109 @@
+.slct {
+  margin: 5% 0 0 5%;
+  padding: 5px;
+  -webkit-appearance: none;
+}
+
+.btnDefault,
+.hoverable,
+.disabled {
+  background-color: transparent;
+  padding: 8px;
+  width: 77px;
+  height: 35px;
+  display: none;
+  align-items: center;
+  font-size: 12px;
+  color: #0c41ff;
+  gap: 4px;
+  border: 1px solid #0c41ff;
+  border-radius: 3px;
+  margin: auto;
+  margin-top: 25%;
+  svg {
+    fill: #0c41ff;
+  }
+}
+
+.hoverable:hover {
+  background-color: #0c41ff;
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px 1px #0c41ff;
+  svg {
+    fill: #fff;
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.btnOnlyText,
+.btnOnlyTextHoverable,
+.btnOnlyTextDisabled {
+  padding: 8px;
+  width: 57px;
+  height: 35px;
+  display: none;
+  font-size: 12px;
+  color: #0c41ff;
+  gap: 4px;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid #0c41ff;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.btnOnlyTextHoverable:hover {
+  background-color: #0c41ff;
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px 1px #0c41ff;
+}
+
+.btnOnlyTextDisabled {
+  opacity: 0.4;
+}
+
+.btnText {
+  width: 40px;
+}
+
+.btnIcon {
+  height: 16px;
+}
+
+.btnOnlyIcon,
+.btnOnlyIconHoverable,
+.btnOnlyIconDisabled {
+  padding: 8px;
+  width: 35px;
+  height: 35px;
+  display: none;
+  gap: 4px;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid #0c41ff;
+  margin: auto;
+  margin-top: 25%;
+  svg {
+    fill: #0c41ff;
+  }
+}
+
+.btnOnlyIconHoverable:hover {
+  background-color: #0c41ff;
+  border: none;
+  box-shadow: 0 0 5px 1px #0c41ff;
+  svg {
+    fill: #fff;
+  }
+}
+
+.btnOnlyIconDisabled {
+  opacity: 0.4;
+}

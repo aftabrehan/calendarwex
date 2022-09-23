@@ -1,15 +1,40 @@
-import MiniCalendar from "../src/components/minicalendar/SmallCalendar";
-import CalendarDaySmall from "../src/components/minicalendar/CalendarDaySmall";
-import Buttons from "../src/components/buttons/Buttons";
+import Link from "next/link";
 
 import stl from "./index.module.scss";
 
 const Home = () => {
   return (
     <div className={stl.container}>
-      <Buttons />
-      {/* <CalendarDaySmall />
-      <MiniCalendar /> */}
+      <div className={stl.Stories}>
+        <h1>Stories</h1>
+        <ul>
+          <li>
+            <Link href="/src/components/buttons/ButtonPrimary">
+              ButtonPrimary
+            </Link>
+          </li>
+          <li>
+            <Link href="/src/components/buttons/ButtonSecondary">
+              ButtonSecondary
+            </Link>
+          </li>
+          <li>
+            <Link href="/src/components/buttons/ButtonTertiary">
+              ButtonTertiary
+            </Link>
+          </li>
+          <li>
+            <Link href="/src/components/minicalendar/SmallCalendar">
+              SmallCalendar
+            </Link>
+          </li>
+          <li>
+            <Link href="/src/components/minicalendar/CalendarDaySmall">
+              CalendarDaySmall
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,12 +1,10 @@
-import stl from "./Buttons.module.scss";
+import stl from "./ButtonPrimary.module.scss";
 
-const Buttons = () => {
-  let va;
-
-  let btn;
+const ButtonFilled = () => {
+  let val;
 
   return (
-    <div>
+    <div className={stl.btnPrimary}>
       <select
         onClick={(e) => {
           const value = e.target.value;
@@ -77,9 +75,9 @@ const Buttons = () => {
         }}
         className={stl.slct}
         onChange={(e) => {
-          va = e.target.value;
+          val = e.target.value;
         }}
-        value={va}
+        value={val}
       >
         <option value="">select</option>
         <option value="primary">Primary</option>
@@ -93,7 +91,7 @@ const Buttons = () => {
         <option value="btnOnlyIconDisabled">ButtonOnlyIconDisabled</option>
       </select>
       <button id="btnDefault" className={stl.btnDefault}>
-        <span className={stl.btnText}>button</span>
+        <span className={stl.btnText}>Button</span>
         <div id="btnIcon" className={stl.btnIcon}>
           <svg
             width="14"
@@ -102,15 +100,12 @@ const Buttons = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M12.7285 0.91743L0.660582 7.87957C0.189322 8.15035 0.249206 8.80647 0.717862 9.00435L3.48554 10.1656L10.9658 3.57315C11.109 3.44557 11.3121 3.64084 11.1897 3.78925L4.91754 11.4309V13.5269C4.91754 14.1413 5.65958 14.3835 6.02409 13.9383L7.6774 11.9256L10.9215 13.2847C11.2913 13.441 11.713 13.2092 11.7807 12.8109L13.6554 1.56313C13.7439 1.0372 13.1789 0.657065 12.7285 0.91743Z"
-              fill="white"
-            />
+            <path d="M12.7285 0.91743L0.660582 7.87957C0.189322 8.15035 0.249206 8.80647 0.717862 9.00435L3.48554 10.1656L10.9658 3.57315C11.109 3.44557 11.3121 3.64084 11.1897 3.78925L4.91754 11.4309V13.5269C4.91754 14.1413 5.65958 14.3835 6.02409 13.9383L7.6774 11.9256L10.9215 13.2847C11.2913 13.441 11.713 13.2092 11.7807 12.8109L13.6554 1.56313C13.7439 1.0372 13.1789 0.657065 12.7285 0.91743Z" />
           </svg>
         </div>
       </button>
       <button id="btnOnlyText" className={stl.btnOnlyText}>
-        <span className={stl.btnText}>button</span>
+        <span className={stl.btnText}>Button</span>
       </button>
       <button id="btnOnlyIcon" className={stl.btnOnlyIcon}>
         <div id="btnIcon" className={stl.btnIcon}>
@@ -121,10 +116,7 @@ const Buttons = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M12.7285 0.91743L0.660582 7.87957C0.189322 8.15035 0.249206 8.80647 0.717862 9.00435L3.48554 10.1656L10.9658 3.57315C11.109 3.44557 11.3121 3.64084 11.1897 3.78925L4.91754 11.4309V13.5269C4.91754 14.1413 5.65958 14.3835 6.02409 13.9383L7.6774 11.9256L10.9215 13.2847C11.2913 13.441 11.713 13.2092 11.7807 12.8109L13.6554 1.56313C13.7439 1.0372 13.1789 0.657065 12.7285 0.91743Z"
-              fill="white"
-            />
+            <path d="M12.7285 0.91743L0.660582 7.87957C0.189322 8.15035 0.249206 8.80647 0.717862 9.00435L3.48554 10.1656L10.9658 3.57315C11.109 3.44557 11.3121 3.64084 11.1897 3.78925L4.91754 11.4309V13.5269C4.91754 14.1413 5.65958 14.3835 6.02409 13.9383L7.6774 11.9256L10.9215 13.2847C11.2913 13.441 11.713 13.2092 11.7807 12.8109L13.6554 1.56313C13.7439 1.0372 13.1789 0.657065 12.7285 0.91743Z" />
           </svg>
         </div>
       </button>
@@ -132,4 +124,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default ButtonFilled;
