@@ -1,0 +1,119 @@
+@import 'styles/common';
+.btn {
+  all: unset;
+  padding: 0.25rem 0.75rem;
+  @extend .flexCenter;
+  font-size: 1rem;
+  color: $black;
+  background-color: $white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity, box-shadow 0.25s ease-in-out;
+  -webkit-transition: opacity, box-shadow 0.25s ease-in-out;
+  -ms-transition: opacity, box-shadow 0.25s ease-in-out;
+  -moz-transition: opacity, box-shadow 0.25s ease-in-out;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 0.65;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.primaryBtn {
+  color: $white;
+  background-color: $primaryBlue;
+  box-shadow: 0 6px 20px $blueBoxShadow;
+
+  &:hover {
+    box-shadow: 0 4px 14px 0 $blueBoxShadowHover;
+  }
+}
+
+.secondaryBtn {
+  color: $lightGray;
+  background-color: $white;
+  box-shadow: 0 4px 15px $paleBlueBoxShadow;
+
+  &:hover {
+    box-shadow: 0 2px 10px 0 $paleBlueBoxShadowHover;
+  }
+}
+
+.roundedBtn {
+  border-radius: 20px;
+}
+
+.smallBtn {
+  font-size: 0.75rem;
+}
+
+.largeBtn {
+  padding: 0.5rem 2rem;
+}
+
+.xLargeBtn {
+  padding: 0.5rem 4rem;
+}
+
+.errorBtn {
+  background-color: $lightRed;
+  color: $white;
+  box-shadow: 0 4px 14px $lightRedBoxShadow;
+
+  &:hover {
+    box-shadow: 0 2px 8px 0 $lightRedBoxShadowHover;
+  }
+}
+
+.invertBtn,
+.transparentBtn,
+.blackBtn {
+  transition: color, background-color, 0.25s ease-in-out;
+}
+
+.invertBtn:hover {
+  &.primaryBtn {
+    color: $primaryBlue;
+    background-color: $white;
+  }
+
+  &.errorBtn {
+    color: $lightRed;
+    background-color: $white;
+  }
+
+  &.secondaryBtn {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+.transparentBtn {
+  color: $primaryBlue;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $veryPaleBlue;
+  }
+}
+
+.blackBtn {
+  color: $white;
+  background-color: $black;
+  border: 1px solid $black;
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+  }
+}
