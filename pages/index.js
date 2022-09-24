@@ -1,35 +1,13 @@
 import Link from "next/link";
 
+import HomePage from "./home";
+
 import stl from "./index.module.scss";
 
 const Home = () => {
   return (
     <div className={stl.container}>
-      <div className={stl.Stories}>
-        <h1>Stories</h1>
-        <ul>
-          <li>
-            <Link href="/src/components/buttons/ButtonPrimary">
-              ButtonPrimary
-            </Link>
-          </li>
-          <li>
-            <Link href="/src/components/buttons/ButtonSecondary">
-              ButtonSecondary
-            </Link>
-          </li>
-          <li>
-            <Link href="/src/components/buttons/ButtonTertiary">
-              ButtonTertiary
-            </Link>
-          </li>
-          <li>
-            <Link href="/src/components/minicalendar/MiniCalendar">
-              MiniCalendar
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <HomePage />
     </div>
   );
 };

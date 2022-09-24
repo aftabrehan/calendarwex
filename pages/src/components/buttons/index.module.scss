@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+}
+
+.link {
+  width: fit-content;
+  padding: 7px;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  color: dodgerblue;
+  background-color: transparent;
+  border: 1px solid dodgerblue;
+  border-radius: 3px;
+}
