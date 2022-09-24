@@ -1,8 +1,8 @@
 import Stories from 'components/stories'
 import Button from 'components/button'
 
-const primary = { arg: 'Primary', label: 'Primary' }
-const secondary = { arg: 'Secondary', label: 'Secondary', variant: 'secondary' }
+const primary = { arg: 'Fill', label: 'Fill' }
+const secondary = { arg: 'Bordered', label: 'Bordered', variant: 'bordered' }
 
 const ButtonStory = () => (
   <Stories
@@ -12,3 +12,5 @@ const ButtonStory = () => (
 )
 
 export default ButtonStory
+
+// <Button  />
