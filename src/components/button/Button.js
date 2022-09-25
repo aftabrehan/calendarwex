@@ -17,19 +17,15 @@ const Button = ({
   width,
   height,
   customClass,
+  style,
 }) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       type={type}
-      style={{ width, height }}
-      className={clsx(
-        stl.btn,
-        stl[`${variant}Btn`],
-        stl[`${size}Btn`],
-        customClass
-      )}
+      style={style}
+      className={clsx(stl[`${variant}Btn`], customClass)}
     >
       {label || children}
       {icon}
@@ -52,7 +48,9 @@ Button.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
   variant: PropTypes.oneOf(['fill', 'bordered', 'transparent']),
+  btnType: PropTypes.oneOf(['bordered', 'rounded', 'transparent', 'invert']),
   size: PropTypes.oneOf(['normal', 'small', 'large', 'xLarge']),
+  type: PropTypes.oneOf(['submit']),
   disabled: PropTypes.bool,
   width: PropTypes.string,
   height: PropTypes.string,
