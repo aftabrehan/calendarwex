@@ -1,0 +1,45 @@
+@import 'styles/common';
+
+.wrapper {
+  @extend .flexColStart;
+  padding: 1rem 1.5rem;
+}
+
+.drpDwn {
+  box-sizing: border-box;
+  border: 2px solid #0c41ff;
+  background: #d9d9d9;
+  border-radius: 5px;
+  list-style: none;
+  display: flex;
+  color: #0c41ff;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: all 0.4s ease-out;
+  width: 130px;
+  position: absolute;
+  padding: 4px 8px;
+  clear: both;
+  overflow: hidden;
+  text-align: center;
+  transition: height 0.4s ease-in-out;
+
+  li {
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  li:hover {
+    color: #fff;
+    background-color: #0c41ff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px #353030;
+    transition: all 0.25s;
+  }
+
+  li:active {
+    box-shadow: 0px 2px 5px;
+    transform: scale(0.98);
+  }
+}
