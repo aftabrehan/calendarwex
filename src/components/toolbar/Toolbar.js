@@ -8,7 +8,7 @@ const Toolbar = () => {
     <div className={stl.toolbar}>
       <div className={stl.right}>
         <Button
-          className={stl.openSidebar}
+          customClass={clsx(stl.openSidebar)}
           icon={
             <svg
               width="15"
@@ -27,9 +27,19 @@ const Toolbar = () => {
           style={{ flex: 'none', grow: '0', order: '0' }}
         ></Button>
         <span>01 January 2022</span>
-        <select
-          className={stl.type}
+        <Button
+          onClick={() => {
+            const btn = document.getElementById('drpBtn')
+            btn.style.display = 'none'
+            const dropDown = document.getElementById('dropMenu')
+            dropDown.style.opacity = '1'
+            dropDown.style.height = '200px'
+          }}
+          id={'drpBtn'}
+          customClass={clsx(stl.type)}
+          label="Month"
           variant="bordered"
+          type="checkbox"
           icon={
             <svg
               width="16"
@@ -44,15 +54,57 @@ const Toolbar = () => {
               />
             </svg>
           }
-        >
-          <option value="day">Day</option>
-          <option value="week">Week</option>
-          <option value="month">Month</option>
-          <option value="year">Year</option>
-        </select>
+        />
+        <ul id="dropMenu" className={stl.drpDwn}>
+          <li
+            onClick={() => {
+              const btn = document.getElementById('drpBtn')
+              btn.style.display = 'flex'
+              const dropDown = document.getElementById('dropMenu')
+              dropDown.style.height = '0'
+              dropDown.style.opacity = '0'
+            }}
+          >
+            Day
+          </li>
+          <li
+            onClick={() => {
+              const btn = document.getElementById('drpBtn')
+              btn.style.display = 'flex'
+              const dropDown = document.getElementById('dropMenu')
+              dropDown.style.height = '0'
+              dropDown.style.opacity = '0'
+            }}
+          >
+            Week
+          </li>
+          <li
+            onClick={() => {
+              const btn = document.getElementById('drpBtn')
+              btn.style.display = 'flex'
+              const dropDown = document.getElementById('dropMenu')
+              dropDown.style.height = '0'
+              dropDown.style.opacity = '0'
+            }}
+          >
+            Month
+          </li>
+          <li
+            onMouseUpCapture={() => {
+              const btn = document.getElementById('drpBtn')
+              btn.style.display = 'flex'
+              const dropDown = document.getElementById('dropMenu')
+              dropDown.style.height = '0'
+              dropDown.style.opacity = '0'
+            }}
+          >
+            Year
+          </li>
+        </ul>
       </div>
       <div className={stl.left}>
         <Button
+          customClass={clsx(stl.srchBtn)}
           icon={
             <svg
               width="14"
@@ -65,13 +117,7 @@ const Toolbar = () => {
             </svg>
           }
           variant="bordered"
-          style={{
-            radius: '50%',
-            flex: 'none',
-            grow: '0',
-            order: '0',
-          }}
-        ></Button>
+        />
         <Button
           variant="fill"
           icon={
@@ -86,9 +132,8 @@ const Toolbar = () => {
             </svg>
           }
           customClass={clsx(stl.addEvent)}
-        >
-          Add Event
-        </Button>
+          label="Add Event"
+        />
       </div>
     </div>
   )

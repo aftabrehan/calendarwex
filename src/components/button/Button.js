@@ -5,6 +5,7 @@ import stl from './Button.module.scss'
 
 const Button = ({
   label,
+  id,
   icon,
   endIcon,
   children,
@@ -21,6 +22,7 @@ const Button = ({
 }) => {
   return (
     <button
+      id={id}
       onClick={onClick}
       disabled={disabled}
       type={type}
