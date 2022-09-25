@@ -1,25 +1,41 @@
 @import 'styles/common';
-.btn {
+.fillBtn {
   all: unset;
-  padding: 0.25rem 0.75rem;
-  @extend .flexCenter;
-  font-size: 1rem;
-  color: $black;
-  background-color: $white;
-  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  color: white;
+  background: #0c41ff;
+  border-radius: 3px;
   cursor: pointer;
-  transition: opacity, box-shadow 0.25s ease-in-out;
-  -webkit-transition: opacity, box-shadow 0.25s ease-in-out;
-  -ms-transition: opacity, box-shadow 0.25s ease-in-out;
-  -moz-transition: opacity, box-shadow 0.25s ease-in-out;
   user-select: none;
+  box-shadow: 0px 4px 8px #353030;
+
+  svg {
+    fill: white;
+  }
 
   &:hover {
-    opacity: 0.85;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid #0c41ff;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px #0c41ff;
+    color: #0c41ff;
+    svg {
+      fill: #0c41ff;
+    }
   }
 
   &:active {
-    opacity: 0.65;
+    box-shadow: 0px 2px 5px;
+    transform: scale(0.98);
+    color: #0c41ff;
+    svg {
+      fill: #0c41ff;
+    }
   }
 
   &:disabled {
@@ -29,91 +45,92 @@
   }
 }
 
-.primaryBtn {
-  color: $white;
-  background-color: $primaryBlue;
-  box-shadow: 0 6px 20px $blueBoxShadow;
+.borderedBtn {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  color: #0c41ff;
+  border: 1px solid #0c41ff;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    fill: #0c41ff;
+  }
 
   &:hover {
-    box-shadow: 0 4px 14px 0 $blueBoxShadowHover;
-  }
-}
-
-.secondaryBtn {
-  color: $lightGray;
-  background-color: $white;
-  box-shadow: 0 4px 15px $paleBlueBoxShadow;
-
-  &:hover {
-    box-shadow: 0 2px 10px 0 $paleBlueBoxShadowHover;
-  }
-}
-
-.roundedBtn {
-  border-radius: 20px;
-}
-
-.smallBtn {
-  font-size: 0.75rem;
-}
-
-.largeBtn {
-  padding: 0.5rem 2rem;
-}
-
-.xLargeBtn {
-  padding: 0.5rem 4rem;
-}
-
-.errorBtn {
-  background-color: $lightRed;
-  color: $white;
-  box-shadow: 0 4px 14px $lightRedBoxShadow;
-
-  &:hover {
-    box-shadow: 0 2px 8px 0 $lightRedBoxShadowHover;
-  }
-}
-
-.invertBtn,
-.transparentBtn,
-.blackBtn {
-  transition: color, background-color, 0.25s ease-in-out;
-}
-
-.invertBtn:hover {
-  &.primaryBtn {
-    color: $primaryBlue;
-    background-color: $white;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 8px #353030;
+    background-color: #0c41ff;
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
   }
 
-  &.errorBtn {
-    color: $lightRed;
-    background-color: $white;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
   }
 
-  &.secondaryBtn {
-    color: $white;
-    background-color: $black;
+  &:active {
+    transition: all 0.25s ease-in-out;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px #353030;
+    background-color: #fff;
+    color: #0c41ff;
+    svg {
+      fill: #0c41ff;
+    }
   }
 }
 
 .transparentBtn {
-  color: $primaryBlue;
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  color: #0c41ff;
   background-color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
 
-  &:hover {
-    background-color: $veryPaleBlue;
+  svg {
+    fill: #0c41ff;
   }
-}
-
-.blackBtn {
-  color: $white;
-  background-color: $black;
-  border: 1px solid $black;
 
   &:hover {
-    color: $black;
-    background-color: $white;
+    transition: 0.1s ease-in-out;
+    background-color: transparent;
+    box-shadow: 0 4px 8px #353030;
+    border: 1px solid #0c41ff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:active {
+    transition: all 0.25s;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px #353030;
+    background-color: #0c41ff;
+    color: #fff;
+
+    svg {
+      fill: #fff;
+    }
   }
 }
