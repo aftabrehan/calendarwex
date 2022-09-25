@@ -18,6 +18,7 @@ const Button = ({
   width,
   height,
   customClass,
+  style,
 }) => {
   return (
     <button
