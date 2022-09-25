@@ -52,7 +52,6 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['fill', 'bordered', 'transparent']),
   btnType: PropTypes.oneOf(['bordered', 'rounded', 'transparent', 'invert']),
   size: PropTypes.oneOf(['normal', 'small', 'large', 'xLarge']),
-  type: PropTypes.oneOf(['submit']),
   disabled: PropTypes.bool,
   width: PropTypes.string,
   height: PropTypes.string,
