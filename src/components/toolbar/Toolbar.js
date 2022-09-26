@@ -1,10 +1,44 @@
-import clsx from 'clsx'
+import PropTypes from 'prop-types'
 
+import clsx from 'clsx'
+import Stories from 'components/stories'
 import DropDown from 'components/dropdown'
 import Button from 'components/button'
 import stl from './Toolbar.module.scss'
 
-const Toolbar = () => {
+const Toolbar = ({
+  argList,
+  id,
+  args,
+  icon,
+  endIcon,
+  children,
+  onClick,
+  liOnClick,
+  bntOnClick,
+  label,
+  variant,
+  btnType,
+  size,
+  type,
+  disabled,
+  top,
+  bottom,
+  right,
+  left,
+  width,
+  height,
+  customClass,
+  name,
+  drplist,
+  onMouseUpCapture,
+}) => {
+  console.log(argList)
+
+  const liOnClickHandler = e => {
+    console.log(e.target.value)
+  }
+
   return (
     <div className={stl.toolbar}>
       <div className={stl.right}>
@@ -27,14 +61,15 @@ const Toolbar = () => {
           variant="transparent"
           style={{ flex: 'none', grow: '0', order: '0' }}
         ></Button>
-        <span>01 January 2022</span>
+        <span>{label}</span>
         <DropDown
-          arg="Month"
+          arg={'Day'}
           drplist={['Day', 'Week', 'Month', 'Year']}
           height="250px"
-          top="-1.2rem"
-          left="41.3%"
-          name="Month"
+          top={top}
+          left={left}
+          liOnClick={liOnClickHandler}
+          name={name}
           variant="Dropdown"
           customClass={clsx(stl.drpDnMnu)}
           icon={
@@ -48,9 +83,7 @@ const Toolbar = () => {
               <path d="M7.48185 12.3312L1.54798 6.39727C1.2618 6.11108 1.2618 5.6471 1.54798 5.36095L2.24007 4.66886C2.52577 4.38316 2.9888 4.38261 3.27517 4.66763L8.00003 9.37035L12.7248 4.66763C13.0112 4.38261 13.4743 4.38316 13.7599 4.66886L14.452 5.36095C14.7382 5.64713 14.7382 6.11111 14.452 6.39727L8.5182 12.3312C8.23202 12.6173 7.76804 12.6173 7.48185 12.3312Z" />
             </svg>
           }
-        >
-          Month
-        </DropDown>
+        />
       </div>
       <div className={stl.left}>
         <Button
