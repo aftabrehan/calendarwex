@@ -1,12 +1,13 @@
 import Stories from 'components/stories'
 import DropDown from 'components/dropdown'
-import stl from './Stories.module.scss'
 
 const drpdnmenu = {
-  variant: 'drpDwn',
-  label: 'Dropdown',
-  left: '50%',
-  top: '50%',
+  arg: 'Dropdown',
+  variant: 'Dropdown',
+  label: ['Day'],
+  height: '55px',
+  left: '46.5%',
+  top: '45.8%',
 }
 
 const DropDownStory = () => {

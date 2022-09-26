@@ -1,7 +1,8 @@
-import stl from './Toolbar.module.scss'
 import clsx from 'clsx'
 
+import DropDown from 'components/dropdown'
 import Button from 'components/button'
+import stl from './Toolbar.module.scss'
 
 const Toolbar = () => {
   return (
@@ -27,19 +28,15 @@ const Toolbar = () => {
           style={{ flex: 'none', grow: '0', order: '0' }}
         ></Button>
         <span>01 January 2022</span>
-        <Button
-          onClick={() => {
-            const btn = document.getElementById('drpBtn')
-            btn.style.display = 'none'
-            const dropDown = document.getElementById('dropMenu')
-            dropDown.style.opacity = '1'
-            dropDown.style.height = '200px'
-          }}
-          id={'drpBtn'}
-          customClass={clsx(stl.type)}
-          label="Month"
-          variant="bordered"
-          type="checkbox"
+        <DropDown
+          arg="Month"
+          drplist={['Day', 'Week', 'Month', 'Year']}
+          height="250px"
+          top="-1.2rem"
+          left="41.3%"
+          name="Month"
+          variant="Dropdown"
+          customClass={clsx(stl.drpDnMnu)}
           icon={
             <svg
               width="16"
@@ -48,59 +45,12 @@ const Toolbar = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M7.48185 12.3312L1.54798 6.39727C1.2618 6.11108 1.2618 5.6471 1.54798 5.36095L2.24007 4.66886C2.52577 4.38316 2.9888 4.38261 3.27517 4.66763L8.00003 9.37035L12.7248 4.66763C13.0112 4.38261 13.4743 4.38316 13.7599 4.66886L14.452 5.36095C14.7382 5.64713 14.7382 6.11111 14.452 6.39727L8.5182 12.3312C8.23202 12.6173 7.76804 12.6173 7.48185 12.3312Z"
-                fill="#0C41FF"
-              />
+              <path d="M7.48185 12.3312L1.54798 6.39727C1.2618 6.11108 1.2618 5.6471 1.54798 5.36095L2.24007 4.66886C2.52577 4.38316 2.9888 4.38261 3.27517 4.66763L8.00003 9.37035L12.7248 4.66763C13.0112 4.38261 13.4743 4.38316 13.7599 4.66886L14.452 5.36095C14.7382 5.64713 14.7382 6.11111 14.452 6.39727L8.5182 12.3312C8.23202 12.6173 7.76804 12.6173 7.48185 12.3312Z" />
             </svg>
           }
-        />
-        <ul id="dropMenu" className={stl.drpDwn}>
-          <li
-            onClick={() => {
-              const btn = document.getElementById('drpBtn')
-              btn.style.display = 'flex'
-              const dropDown = document.getElementById('dropMenu')
-              dropDown.style.height = '0'
-              dropDown.style.opacity = '0'
-            }}
-          >
-            Day
-          </li>
-          <li
-            onClick={() => {
-              const btn = document.getElementById('drpBtn')
-              btn.style.display = 'flex'
-              const dropDown = document.getElementById('dropMenu')
-              dropDown.style.height = '0'
-              dropDown.style.opacity = '0'
-            }}
-          >
-            Week
-          </li>
-          <li
-            onClick={() => {
-              const btn = document.getElementById('drpBtn')
-              btn.style.display = 'flex'
-              const dropDown = document.getElementById('dropMenu')
-              dropDown.style.height = '0'
-              dropDown.style.opacity = '0'
-            }}
-          >
-            Month
-          </li>
-          <li
-            onMouseUpCapture={() => {
-              const btn = document.getElementById('drpBtn')
-              btn.style.display = 'flex'
-              const dropDown = document.getElementById('dropMenu')
-              dropDown.style.height = '0'
-              dropDown.style.opacity = '0'
-            }}
-          >
-            Year
-          </li>
-        </ul>
+        >
+          Month
+        </DropDown>
       </div>
       <div className={stl.left}>
         <Button

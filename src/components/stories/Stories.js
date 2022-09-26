@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import stl from './Stories.module.scss'
 
 const Stories = ({ argList, template, customClass }) => {
-  const [arg, setArg] = useState(argList[0]?.arg || '')
+  const [arg, setArg] = useState(argList[0].arg || '')
   const args = argList.find(el => el.arg === arg)
 
   return (

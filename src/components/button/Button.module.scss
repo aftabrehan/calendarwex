@@ -53,12 +53,14 @@
   justify-content: center;
   align-items: center;
   padding: 8px;
+  position: relative;
   gap: 4px;
   color: #0c41ff;
   background-color: transparent;
   border: 1px solid #0c41ff;
   border-radius: 3px;
   cursor: pointer;
+  z-index: 0;
   user-select: none;
 
   svg {
