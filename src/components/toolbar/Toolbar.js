@@ -1,9 +1,42 @@
-import stl from './Toolbar.module.scss'
 import clsx from 'clsx'
 
+import stl from './Toolbar.module.scss'
+import DropDown from 'components/dropdown'
 import Button from 'components/button'
 
-const Toolbar = () => {
+const Toolbar = ({
+  argList,
+  id,
+  args,
+  icon,
+  endIcon,
+  children,
+  onClick,
+  liOnClick,
+  bntOnClick,
+  label,
+  variant,
+  btnType,
+  size,
+  type,
+  disabled,
+  top,
+  bottom,
+  right,
+  left,
+  width,
+  height,
+  customClass,
+  name,
+  drplist,
+  onMouseUpCapture,
+}) => {
+  console.log(argList)
+
+  const liOnClickHandler = e => {
+    console.log(e.target.value)
+  }
+
   return (
     <div className={stl.toolbar}>
       <div className={stl.right}>
@@ -26,10 +59,17 @@ const Toolbar = () => {
           variant="transparent"
           style={{ flex: 'none', grow: '0', order: '0' }}
         ></Button>
-        <span>01 January 2022</span>
-        <select
-          className={stl.type}
-          variant="bordered"
+        <span>{label}</span>
+        <DropDown
+          arg={'Day'}
+          drplist={['Day', 'Week', 'Month', 'Year']}
+          height="250px"
+          top={top}
+          left={left}
+          liOnClick={liOnClickHandler}
+          name={name}
+          variant="Dropdown"
+          customClass={clsx(stl.drpDnMnu)}
           icon={
             <svg
               width="16"
@@ -44,12 +84,7 @@ const Toolbar = () => {
               />
             </svg>
           }
-        >
-          <option value="day">Day</option>
-          <option value="week">Week</option>
-          <option value="month">Month</option>
-          <option value="year">Year</option>
-        </select>
+        />
       </div>
       <div className={stl.left}>
         <Button

@@ -4,15 +4,18 @@ import clsx from 'clsx'
 
 import stl from './Stories.module.scss'
 
-const Stories = ({ argList, template, customClass }) => {
+const Stories = ({ argList, template, customClass, data }) => {
   const [arg, setArg] = useState(argList[0].arg || '')
   const args = argList.find(el => el.arg === arg)
+
+  console.log(data)
 
   return (
     <div className={clsx(stl.container, customClass)}>
       <select
+        id="selectMenu"
         name="variants"
-        onChange={e => setArg(e.target.value)}
+        onChange={e => setArg(data)}
         className={clsx(stl.variantSelector)}
       >
         {argList.map(el => (
