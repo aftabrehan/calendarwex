@@ -17,7 +17,7 @@ const bntOnClickHandler = () => {
   btn.style.display = 'none'
   const dropDown = document.getElementById('dropMenu')
   dropDown.style.zIndex = '1'
-  dropDown.style.height = height
+  dropDown.style.height = '250px' || height
 }
 
 const DropDown = ({
@@ -59,6 +59,7 @@ const DropDown = ({
           className={clsx(stl[`${variant}`], customClass)}
           style={{ top, left }}
           onClick={onClick}
+          height={height}
         >
           {drplist.map((i, index) => (
             <li
@@ -81,9 +82,10 @@ DropDown.defaultProps = {
   transition: 'all 0.4s',
   onMouseUpCapture: mouseUpCaptureHandler,
   variant: 'drpDwn',
-  bntOnClick: bntOnClickHandler,
   height: '55px',
+  bntOnClick: bntOnClickHandler,
   left: '46.5%',
+  name: 'DropDown',
   top: '45.8%',
   size: 'normal',
   disabled: false,
