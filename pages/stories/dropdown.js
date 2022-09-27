@@ -5,9 +5,8 @@ const drpdnmenu = {
   arg: 'Dropdown',
   variant: 'Dropdown',
   drplist: ['Day', 'Week', 'Month', 'Year'],
-  height: '55px',
-  left: '46.5%',
-  top: '45.8%',
+  top: '-1.1rem',
+  left: '50%',
 }
 
 const DropDownStory = () => {

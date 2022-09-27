@@ -8,7 +8,6 @@
   width: 930px;
   height: 77px;
   background-color: white;
-  margin: auto;
   border-bottom: 1px solid rgba(218, 220, 224, 0.6);
 }
 
@@ -25,12 +24,11 @@
 }
 
 .right {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 0px;
   gap: 16px;
+  border: 1px solid red;
   font-size: 30px;
   flex: none;
   order: 0;
@@ -48,18 +46,7 @@
   flex-grow: 0;
 }
 
-.type {
-  position: relative;
-  z-index: 1;
-}
-
-.drpdrpDnMnuDwn {
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: space-evenly;
-  transition: all 0.4s ease-out;
-
-  li {
-    cursor: pointer;
-  }
+.new {
+  font-size: 18px;
+  font-weight: 500;
 }
