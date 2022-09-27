@@ -87,7 +87,6 @@ DropDown.defaultProps = {
   left: '46.5%',
   name: 'DropDown',
   top: '45.8%',
-  name: 'DropDown',
   size: 'normal',
   disabled: false,
 }

@@ -31,12 +31,6 @@ const Toolbar = ({
   drplist,
   onMouseUpCapture,
 }) => {
-  console.log(argList)
-
-  const liOnClickHandler = e => {
-    console.log(e.target.value)
-  }
-
   return (
     <div className={stl.toolbar}>
       <div className={stl.right}>
@@ -61,15 +55,13 @@ const Toolbar = ({
         ></Button>
         <span>{label}</span>
         <DropDown
-          arg={'Day'}
+          // arg={'Day'}
           drplist={['Day', 'Week', 'Month', 'Year']}
-          height="250px"
           top={top}
           left={left}
-          liOnClick={liOnClickHandler}
           name={name}
           variant="Dropdown"
-          customClass={clsx(stl.drpDnMnu)}
+          customClass={clsx(stl.new)}
           icon={
             <svg
               width="16"
@@ -128,5 +120,7 @@ const Toolbar = ({
     </div>
   )
 }
+
+Toolbar.defaultProps = {}
 
 export default Toolbar
