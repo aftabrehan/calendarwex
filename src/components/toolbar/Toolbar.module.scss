@@ -28,7 +28,6 @@
   align-items: center;
   flex-direction: row;
   gap: 16px;
-  border: 1px solid red;
   font-size: 30px;
   flex: none;
   order: 0;
@@ -46,7 +45,7 @@
   flex-grow: 0;
 }
 
-.new {
+.newDrop {
   font-size: 18px;
   font-weight: 500;
 }
