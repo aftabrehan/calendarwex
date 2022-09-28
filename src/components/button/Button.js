@@ -42,7 +42,7 @@ const Button = ({
 Button.defaultProps = {
   label: 'Button',
   onClick: () => console.log('Button Clicked!'),
-  variant: 'primary',
+  variant: 'fill',
   size: 'normal',
   type: 'submit',
   disabled: false,
@@ -54,8 +54,7 @@ Button.propTypes = {
   endIcon: PropTypes.node,
   children: PropTypes.node,
   onClick: PropTypes.func,
-  variant: PropTypes.oneOf(['primary', 'secondary', 'error']),
-  btnType: PropTypes.oneOf(['bordered', 'rounded', 'transparent', 'invert']),
+  variant: PropTypes.oneOf(['fill', 'bordered', 'transparent']),
   size: PropTypes.oneOf(['normal', 'small', 'large', 'xLarge']),
   type: PropTypes.oneOf(['submit']),
   disabled: PropTypes.bool,
