@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
-import { useOnClickOutside } from 'lib/hooks'
 import clsx from 'clsx'
-import { useRef } from 'react'
 
 import stl from './Dropdown.module.scss'
 import Button from 'components/button'

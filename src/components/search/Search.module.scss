@@ -5,19 +5,10 @@
   align-items: center;
   border-radius: 99px;
   padding-left: 5px;
-
-  &:hover {
-    background-color: #f5f5f5;
-  }
-}
-
-.searchBox:hover > .searchInput {
-  width: 204px;
-  padding: 0 6px;
 }
 
 .searchBox:hover > .searchButton {
-  background: #fff;
+  background: transparent;
   svg {
     fill: #0c41ff;
   }
@@ -52,18 +43,6 @@
   width: 0px;
 }
 
-.addIcon {
+.closeIcon {
   display: none;
-}
-
-.searchInput:focus::placeholder {
-  color: transparent;
-}
-
-.searchInput:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.searchInput::focus:-ms-input-placeholder {
-  color: transparent;
 }
