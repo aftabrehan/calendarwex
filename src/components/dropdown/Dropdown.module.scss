@@ -5,10 +5,10 @@
 .Dropdown {
   position: absolute;
   box-sizing: border-box;
-  border: 2px solid #0c41ff;
   background: #fff;
   color: #0c41ff;
-  border-radius: 5px;
+  box-shadow: 0 0 75px rgb(215 215 215 / 50%);
+  border-radius: 12px;
   list-style: none;
   display: flex;
   flex-direction: column;
