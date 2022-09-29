@@ -1,0 +1,37 @@
+.smallCalendar {
+  border: 1px solid #c1c1c1;
+  width: 258px;
+  height: 218px;
+  padding: 10px;
+}
+
+.smallCalendarContent {
+  width: 238px;
+  height: 198px;
+}
+
+.smallCalendarDays,
+.smallCalendarDateWeek {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 238px;
+  height: 33px;
+  opacity: 0.7;
+}
+
+.dates {
+  padding: 5px;
+  border-radius: 62rem;
+  color: #333333;
+
+  &:hover {
+    background-color: #ededed;
+  }
+
+  &:active {
+    background-color: #0c41ff;
+    color: #ffffff;
+  }
+}
