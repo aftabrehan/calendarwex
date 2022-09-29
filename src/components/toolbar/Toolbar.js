@@ -55,7 +55,7 @@ const Toolbar = ({
           variant="transparent"
           style={{ flex: 'none', grow: '0', order: '0' }}
         ></Button>
-        <span>{label}</span>
+        <span className={stl.label}>{label}</span>
         <DropDown
           arg={args}
           drplist={['Day', 'Week', 'Month', 'Year']}
