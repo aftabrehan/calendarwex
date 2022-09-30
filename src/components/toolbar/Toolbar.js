@@ -1,9 +1,36 @@
-import stl from './Toolbar.module.scss'
 import clsx from 'clsx'
 
+import stl from './Toolbar.module.scss'
+import DropDown from 'components/dropdown'
 import Button from 'components/button'
 
-const Toolbar = () => {
+const Toolbar = ({
+  argList,
+  id,
+  args,
+  icon,
+  endIcon,
+  children,
+  onClick,
+  liOnClick,
+  bntOnClick,
+  label,
+  variant,
+  btnType,
+  size,
+  type,
+  disabled,
+  top,
+  bottom,
+  right,
+  left,
+  width,
+  height,
+  customClass,
+  name,
+  drplist,
+  onMouseUpCapture,
+}) => {
   return (
     <div className={stl.toolbar}>
       <div className={stl.right}>
@@ -26,10 +53,16 @@ const Toolbar = () => {
           variant="transparent"
           style={{ flex: 'none', grow: '0', order: '0' }}
         ></Button>
-        <span>01 January 2022</span>
-        <select
-          className={stl.type}
-          variant="bordered"
+        <span>{label}</span>
+        <DropDown
+          // arg={'Day'}
+          drplist={['Day', 'Week', 'Month', 'Year']}
+          top={top}
+          left={left}
+          name={name}
+          height="250px"
+          variant="Dropdown"
+          customClass={clsx(stl.new)}
           icon={
             <svg
               width="16"
@@ -44,12 +77,7 @@ const Toolbar = () => {
               />
             </svg>
           }
-        >
-          <option value="day">Day</option>
-          <option value="week">Week</option>
-          <option value="month">Month</option>
-          <option value="year">Year</option>
-        </select>
+        />
       </div>
       <div className={stl.left}>
         <Button
@@ -93,5 +121,7 @@ const Toolbar = () => {
     </div>
   )
 }
+
+Toolbar.defaultProps = {}
 
 export default Toolbar

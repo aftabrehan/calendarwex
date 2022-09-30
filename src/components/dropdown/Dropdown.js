@@ -64,7 +64,7 @@ const DropDown = ({
         >
           {drplist.map((i, index) => (
             <li
-              value={i}
+              value={index + 1}
               key={index}
               onClick={liOnClick}
               onMouseUpCapture={onMouseUpCapture}
@@ -87,7 +87,6 @@ DropDown.defaultProps = {
   left: '46.5%',
   name: 'DropDown',
   top: '45.8%',
-  name: 'DropDown',
   size: 'normal',
   disabled: false,
 }

@@ -11,6 +11,7 @@ const Stories = ({ argList, template, customClass }) => {
   return (
     <div className={clsx(stl.container, customClass)}>
       <select
+        id="selectMenu"
         name="variants"
         onChange={e => setArg(e.target.value)}
         className={clsx(stl.variantSelector)}

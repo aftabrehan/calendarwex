@@ -1,6 +1,5 @@
 @import 'styles/common';
 .fillBtn {
-  all: unset;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,6 +10,8 @@
   background: #0c41ff;
   border-radius: 3px;
   border: 1px solid transparent;
+  transition: opacity 0.4s;
+
   cursor: pointer;
   user-select: none;
   box-shadow: 0px 4px 8px #353030;
@@ -47,7 +48,6 @@
 }
 
 .borderedBtn {
-  all: unset;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -58,6 +58,7 @@
   border: 1px solid #0c41ff;
   border-radius: 3px;
   cursor: pointer;
+  transition: opacity 0.4s;
   user-select: none;
 
   svg {
@@ -93,7 +94,6 @@
 }
 
 .transparentBtn {
-  all: unset;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,6 +102,7 @@
   gap: 4px;
   color: #0c41ff;
   background-color: transparent;
+  transition: opacity 0.4s;
   border-radius: 3px;
   border: 1px solid transparent;
   cursor: pointer;
