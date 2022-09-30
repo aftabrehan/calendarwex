@@ -44,11 +44,11 @@ const DropDown = ({
     const btn = document.getElementById('drpBtn')
     btn.style.opacity = '0'
     const dropDown = document.getElementById('dropMenu')
-    dropDown.style.zIndex = '1'
-    dropDown.style.opacity = '1'
+    dropDown.style.height = '250px'
     dropDown.style.width = '130px'
     dropDown.style.padding = '4px 8px'
-    dropDown.style.height = '250px'
+    dropDown.style.opacity = '1'
+    dropDown.style.zIndex = '1'
   }
   return (
     <div className={stl.drpdncontainer}>

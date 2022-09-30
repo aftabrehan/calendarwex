@@ -1,7 +1,9 @@
+import clsx from 'clsx'
+
 import stl from './SmallCalendar.module.scss'
 import React from 'react'
 
-const MiniCalendar = () => {
+const MiniCalendar = customClass => {
   const Days = ['m', 't', 'w', 't', 'f', 's', 's']
   const row1 = ['0' + 1, '0' + 2, '0' + 3, '0' + 4, '0' + 5, '0' + 6, '0' + 7]
   const row2 = ['0' + 8, '0' + 9, 10, 11, 12, 13, 14]
@@ -10,7 +12,7 @@ const MiniCalendar = () => {
   const row5 = [29, 30, 31, '0' + 1, '0' + 2, '0' + 3, '0' + 4]
 
   return (
-    <div className={stl.smallCalendar}>
+    <div className={clsx(stl.smallCalendar, stl.monthData)}>
       <div className={stl.smallCalendarContent}>
         <div className={stl.smallCalendarDays}>
           {Days.map((dy, i) => (
