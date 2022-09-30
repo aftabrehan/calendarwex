@@ -1,25 +1,42 @@
 @import 'styles/common';
 
-.btn {
+.fillBtn {
   all: unset;
-  padding: 0.25rem 0.75rem;
-  @extend .flexCenter;
-  font-size: 1rem;
-  color: $black;
-  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  color: white;
+  background: #0c41ff;
+  border-radius: 3px;
   cursor: pointer;
-  transition: opacity, box-shadow 0.25s ease-in-out;
-  -webkit-transition: opacity, box-shadow 0.25s ease-in-out;
-  -ms-transition: opacity, box-shadow 0.25s ease-in-out;
-  -moz-transition: opacity, box-shadow 0.25s ease-in-out;
   user-select: none;
+  box-shadow: 0px 4px 8px #353030;
+
+  svg {
+    fill: white;
+  }
 
   &:hover {
-    opacity: 0.85;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid #0c41ff;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px #0c41ff;
+    color: #0c41ff;
+    svg {
+      fill: #0c41ff;
+    }
   }
 
   &:active {
-    opacity: 0.65;
+    box-shadow: 0px 2px 5px;
+    transform: scale(0.98);
+    color: #0c41ff;
+    svg {
+      fill: #0c41ff;
+    }
   }
 
   &:disabled {
@@ -29,12 +46,92 @@
   }
 }
 
-.fillBtn {
-  background-color: blue;
-  color: white;
+.borderedBtn {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  color: #0c41ff;
+  border: 1px solid #0c41ff;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    fill: #0c41ff;
+  }
+
+  &:hover {
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 8px #353030;
+    background-color: #0c41ff;
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:active {
+    transition: all 0.25s ease-in-out;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px #353030;
+    background-color: #fff;
+    color: #0c41ff;
+    svg {
+      fill: #0c41ff;
+    }
+  }
 }
 
-.borderedBtn {
-  border: 1px solid blue;
-  color: blue;
+.transparentBtn {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  color: #0c41ff;
+  background-color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  svg {
+    fill: #0c41ff;
+  }
+
+  &:hover {
+    transition: 0.1s ease-in-out;
+    background-color: transparent;
+    box-shadow: 0 4px 8px #353030;
+    border: 1px solid #0c41ff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:active {
+    transition: all 0.25s;
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px #353030;
+    background-color: #0c41ff;
+    color: #fff;
+
+    svg {
+      fill: #fff;
+    }
+  }
 }
