@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 import stl from './Dropdown.module.scss'
 import Button from 'components/button'
-import clsx from 'clsx'
 
 const mouseUpCaptureHandler = () => {
   const btn = document.getElementById('drpBtn')
-  btn.style.display = 'flex'
+  btn.style.display = 'block'
   const dropDown = document.getElementById('dropMenu')
   dropDown.style.height = '0'
-  dropDown.style.zIndex = '-1'
+  dropDown.style.width = '0'
+  dropDown.style.padding = '0'
+  dropDown.style.opacity = '0'
 }
 
 const DropDown = ({
@@ -22,6 +24,7 @@ const DropDown = ({
   bntOnClick,
   variant,
   btnType,
+  style,
   size,
   type,
   disabled,
@@ -40,40 +43,42 @@ const DropDown = ({
     const btn = document.getElementById('drpBtn')
     btn.style.display = 'none'
     const dropDown = document.getElementById('dropMenu')
-    dropDown.style.zIndex = '1'
     dropDown.style.height = height
+    dropDown.style.width = width
+    dropDown.style.transition = 'all 0.4s'
+    dropDown.style.opacity = '1'
   }
   return (
-    <div className={stl.wrapper}>
+    <div className={stl.drpdncontainer}>
       <Button
         id="drpBtn"
+        style={style}
         variant="bordered"
+        customClass={clsx(stl.new)}
         label={name}
         icon={icon}
         onClick={() => {
-          ;(bntOnClick && bntOnClick()) || bntOnClickHandler()
+          bntOnClickHandler()
         }}
       />
-      <div>
-        <ul
-          id="dropMenu"
-          className={clsx(stl[`${variant}`], customClass)}
-          style={{ top, left }}
-          onClick={onClick}
-          height={height}
-        >
-          {drplist.map((i, index) => (
-            <li
-              value={index + 1}
-              key={index}
-              onClick={liOnClick}
-              onMouseUpCapture={onMouseUpCapture}
-            >
-              {i || children}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul
+        id="dropMenu"
+        className={clsx(stl[`${variant}`], customClass)}
+        style={{ top, left, bottom, right, width, height }}
+        onClick={onClick}
+        height={height}
+      >
+        {drplist.map((i, index) => (
+          <li
+            value={index + 1}
+            key={index}
+            onClick={liOnClick}
+            onMouseUpCapture={onMouseUpCapture}
+          >
+            {i || children}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
@@ -86,7 +91,6 @@ DropDown.defaultProps = {
   height: '55px',
   left: '46.5%',
   name: 'DropDown',
-  top: '45.8%',
   size: 'normal',
   disabled: false,
 }
