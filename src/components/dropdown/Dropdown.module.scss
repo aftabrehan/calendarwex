@@ -5,10 +5,10 @@
 .Dropdown {
   position: absolute;
   box-sizing: border-box;
-  border: 2px solid #0c41ff;
   background: #fff;
   color: #0c41ff;
-  border-radius: 5px;
+  box-shadow: 0 0 75px rgb(215 215 215 / 50%);
+  border-radius: 12px;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   height: 0;
   overflow: hidden;
   text-align: center;
-  transition: all 0.4s;
+  z-index: -1;
 
   li {
     cursor: pointer;
@@ -41,4 +41,9 @@
     box-shadow: 0px 2px 5px;
     transform: scale(0.98);
   }
+}
+
+.new {
+  font-size: 18px;
+  font-weight: 500;
 }

@@ -7,8 +7,8 @@ const drpdnmenu = {
   drplist: ['Day', 'Week', 'Month', 'Year'],
   height: '250px',
   width: '130px',
-  left: '50%',
-  top: '-1.2rem',
+  // left: '50%',
+  top: '-1rem',
 }
 
 const DropDownStory = () => {
