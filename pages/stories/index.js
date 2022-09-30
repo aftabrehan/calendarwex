@@ -9,6 +9,8 @@ const StoriesLinks = () => (
     <Link href="/stories/dropdown">DropDown</Link>
     <Link href="/stories/toolbar">Toolbar</Link>
     <Link href="/stories/search">Search</Link>
+    <Link href="/stories/sidebar">Sidebar</Link>
+    <Link href="/stories/minicalendar">MiniCalendar</Link>
   </div>
 )
 
