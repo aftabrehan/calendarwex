@@ -7,7 +7,6 @@ const drpdnmenu = {
   drplist: ['Day', 'Week', 'Month', 'Year'],
   height: '250px',
   width: '130px',
-  // left: '50%',
   top: '-1rem',
 }
 

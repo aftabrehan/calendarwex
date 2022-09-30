@@ -6,12 +6,13 @@ import Button from 'components/button'
 
 const mouseUpCaptureHandler = () => {
   const btn = document.getElementById('drpBtn')
-  btn.style.display = 'block'
+  btn.style.opacity = '1'
   const dropDown = document.getElementById('dropMenu')
   dropDown.style.height = '0'
   dropDown.style.width = '0'
   dropDown.style.padding = '0'
   dropDown.style.opacity = '0'
+  dropDown.style.zIndex = '-1'
 }
 
 const DropDown = ({
@@ -41,13 +42,13 @@ const DropDown = ({
 }) => {
   const bntOnClickHandler = () => {
     const btn = document.getElementById('drpBtn')
-    btn.style.display = 'none'
+    btn.style.opacity = '0'
     const dropDown = document.getElementById('dropMenu')
-    dropDown.style.height = height
-    dropDown.style.width = width
-    dropDown.style.padding = '0 6px'
-    dropDown.style.opacity = '1'
     dropDown.style.zIndex = '1'
+    dropDown.style.opacity = '1'
+    dropDown.style.width = '130px'
+    dropDown.style.padding = '4px 8px'
+    dropDown.style.height = '250px'
   }
   return (
     <div className={stl.drpdncontainer}>
@@ -58,13 +59,14 @@ const DropDown = ({
         customClass={clsx(stl.new)}
         label={name}
         icon={icon}
-        onClick={bntOnClickHandler}
+        onClick={bntOnClick || bntOnClickHandler}
       />
       <ul
         id="dropMenu"
         className={clsx(stl[`${variant}`], customClass)}
-        style={{ top, left, bottom, right }}
+        style={{ top, left, bottom, right, width, height }}
         onClick={onClick}
+        height={height}
       >
         {drplist.map((i, index) => (
           <li
@@ -86,11 +88,10 @@ DropDown.defaultProps = {
   transition: 'all 0.4s',
   onMouseUpCapture: mouseUpCaptureHandler,
   variant: 'drpDwn',
-  height: '55px',
-  // left: '46.5%',
-  name: 'DropDown',
-  left: '50%',
   top: '-1rem',
+  onClick: () => {},
+  left: '50%',
+  name: 'DropDown',
   size: 'normal',
   disabled: false,
 }

@@ -2,7 +2,6 @@ import Stories from 'components/stories'
 import Button from 'components/button'
 
 import BtnIcon from '../../src/assets/btnIcon.svg'
-import stl from './Stories.module.scss'
 
 const fill = {
   arg: 'Fill',
