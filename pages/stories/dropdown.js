@@ -4,6 +4,7 @@ import DropDown from 'components/dropdown'
 const drpdnmenu = {
   arg: 'Dropdown',
   variant: 'Dropdown',
+  height: '150px',
   label: ['Day'],
   height: '55px',
   left: '46.5%',

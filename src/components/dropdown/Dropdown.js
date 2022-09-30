@@ -12,14 +12,6 @@ const mouseUpCaptureHandler = () => {
   dropDown.style.zIndex = '-1'
 }
 
-const bntOnClickHandler = () => {
-  const btn = document.getElementById('drpBtn')
-  btn.style.display = 'none'
-  const dropDown = document.getElementById('dropMenu')
-  dropDown.style.zIndex = '1'
-  dropDown.style.height = height
-}
-
 const DropDown = ({
   id,
   icon,
@@ -44,6 +36,13 @@ const DropDown = ({
   drplist,
   onMouseUpCapture,
 }) => {
+  const bntOnClickHandler = () => {
+    const btn = document.getElementById('drpBtn')
+    btn.style.display = 'none'
+    const dropDown = document.getElementById('dropMenu')
+    dropDown.style.zIndex = '1'
+    dropDown.style.height = height
+  }
   return (
     <div className={stl.wrapper}>
       <Button
@@ -51,7 +50,9 @@ const DropDown = ({
         variant="bordered"
         label={name}
         icon={icon}
-        onClick={bntOnClick}
+        onClick={() => {
+          ;(bntOnClick && bntOnClick()) || bntOnClickHandler()
+        }}
       />
       <div>
         <ul
@@ -81,10 +82,10 @@ DropDown.defaultProps = {
   transition: 'all 0.4s',
   onMouseUpCapture: mouseUpCaptureHandler,
   variant: 'drpDwn',
-  bntOnClick: bntOnClickHandler,
   height: '55px',
   left: '46.5%',
   top: '45.8%',
+  name: 'DropDown',
   size: 'normal',
   disabled: false,
 }
