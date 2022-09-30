@@ -57,12 +57,11 @@ const Toolbar = ({
         ></Button>
         <span>{label}</span>
         <DropDown
-          // arg={'Day'}
+          arg={args}
           drplist={['Day', 'Week', 'Month', 'Year']}
-          top={top}
-          left={left}
           name={name}
           height="250px"
+          width="130px"
           variant="Dropdown"
           customClass={clsx(stl.newDrop)}
           icon={

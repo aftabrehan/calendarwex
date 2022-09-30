@@ -45,8 +45,9 @@ const DropDown = ({
     const dropDown = document.getElementById('dropMenu')
     dropDown.style.height = height
     dropDown.style.width = width
-    dropDown.style.transition = 'all 0.4s'
+    dropDown.style.padding = '0 6px'
     dropDown.style.opacity = '1'
+    dropDown.style.zIndex = '1'
   }
   return (
     <div className={stl.drpdncontainer}>
@@ -57,16 +58,13 @@ const DropDown = ({
         customClass={clsx(stl.new)}
         label={name}
         icon={icon}
-        onClick={() => {
-          bntOnClickHandler()
-        }}
+        onClick={bntOnClickHandler}
       />
       <ul
         id="dropMenu"
         className={clsx(stl[`${variant}`], customClass)}
-        style={{ top, left, bottom, right, width, height }}
+        style={{ top, left, bottom, right }}
         onClick={onClick}
-        height={height}
       >
         {drplist.map((i, index) => (
           <li
@@ -89,8 +87,10 @@ DropDown.defaultProps = {
   onMouseUpCapture: mouseUpCaptureHandler,
   variant: 'drpDwn',
   height: '55px',
-  left: '46.5%',
+  // left: '46.5%',
   name: 'DropDown',
+  left: '50%',
+  top: '-1rem',
   size: 'normal',
   disabled: false,
 }
