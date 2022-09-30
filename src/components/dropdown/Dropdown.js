@@ -6,13 +6,12 @@ import Button from 'components/button'
 
 const mouseUpCaptureHandler = () => {
   const btn = document.getElementById('drpBtn')
-  btn.style.opacity = '1'
+  btn.style.display = 'block'
   const dropDown = document.getElementById('dropMenu')
   dropDown.style.height = '0'
   dropDown.style.width = '0'
   dropDown.style.padding = '0'
   dropDown.style.opacity = '0'
-  dropDown.style.zIndex = '-1'
 }
 
 const DropDown = ({
@@ -44,8 +43,10 @@ const DropDown = ({
     const btn = document.getElementById('drpBtn')
     btn.style.display = 'none'
     const dropDown = document.getElementById('dropMenu')
-    dropDown.style.zIndex = '1'
     dropDown.style.height = height
+    dropDown.style.width = width
+    dropDown.style.transition = 'all 0.4s'
+    dropDown.style.opacity = '1'
   }
   return (
     <div className={stl.drpdncontainer}>
@@ -57,7 +58,7 @@ const DropDown = ({
         label={name}
         icon={icon}
         onClick={() => {
-          ;(bntOnClick && bntOnClick()) || bntOnClickHandler()
+          bntOnClickHandler()
         }}
       />
       <ul

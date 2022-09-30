@@ -21,7 +21,7 @@
   height: 0;
   overflow: hidden;
   text-align: center;
-  z-index: -1;
+  transition: all 0.4s;
 
   li {
     cursor: pointer;
