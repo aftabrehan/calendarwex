@@ -60,6 +60,7 @@ const DropDown = ({
           className={clsx(stl[`${variant}`], customClass)}
           style={{ top, left }}
           onClick={onClick}
+          height={height}
         >
           {drplist.map((i, index) => (
             <li
@@ -84,6 +85,7 @@ DropDown.defaultProps = {
   variant: 'drpDwn',
   height: '55px',
   left: '46.5%',
+  name: 'DropDown',
   top: '45.8%',
   name: 'DropDown',
   size: 'normal',
