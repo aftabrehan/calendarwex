@@ -3,16 +3,6 @@ import SearchIcon from '../../assets/srchIcon.svg'
 import Close from '../../assets/close.svg'
 
 const Search = () => {
-  const inputHandler = e => {
-    const value = e.target.value
-    if (value.length != 0) {
-      const svg = document.getElementById('srchIcon')
-      const svg2 = document.getElementById('closeIcon')
-      svg.style.display = 'none'
-      svg2.style.display = 'block'
-    }
-  }
-
   const searchBoxHandler = () => {
     const searchInput = document.getElementById('srchInpt')
     const searchox = document.getElementById('srchbox')
@@ -21,9 +11,13 @@ const Search = () => {
     svg.style.display = 'none'
     svg2.style.display = 'block'
     searchox.style.background = '#F5F5F5'
-    searchInput.focus()
     searchInput.style.width = '204px'
     searchInput.style.padding = '0 6px'
+  }
+
+  const inputHandler = () => {
+    const searchInput = document.getElementById('srchInpt')
+    searchInput.focus()
   }
 
   const svgClickHandler = () => {

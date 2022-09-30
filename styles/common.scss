@@ -1,5 +1,5 @@
-@import "./colors.scss";
-@import "./mixins.scss";
+@import './colors.scss';
+@import './mixins.scss';
 
 .flexStart {
   display: flex;
@@ -21,4 +21,8 @@
 .flexCenterCol {
   @extend .flexCenter;
   flex-direction: column;
+}
+
+.testBorder {
+  border: 1px solid red;
 }
