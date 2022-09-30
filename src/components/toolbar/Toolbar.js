@@ -60,6 +60,7 @@ const Toolbar = ({
           top={top}
           left={left}
           name={name}
+          height="250px"
           variant="Dropdown"
           customClass={clsx(stl.new)}
           icon={
