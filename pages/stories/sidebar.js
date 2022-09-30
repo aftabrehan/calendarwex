@@ -16,7 +16,6 @@ const sidebarEmpty = {
       eventContent: [
         {
           eventName: 'No Upcoming Events',
-          // eventTime: '08:00',
         },
       ],
     },
@@ -28,9 +27,95 @@ const sidebarDefault = {
   variant: 'defaultSidebar',
   monthName: 'January',
   monthData: <MiniCalendar />,
-  eventDay: 'Today',
-  eventName: [{ eventName: 'Daily Standup' }],
-  eventTime: new Date().toTimeString(),
+  upcomingEvents: [
+    {
+      eventHeading: 'Today',
+      eventContent: [
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+      ],
+    },
+    {
+      eventHeading: 'Today',
+      eventContent: [
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+      ],
+    },
+    {
+      eventHeading: 'Today',
+      eventContent: [
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+        {
+          eventName: 'Daily Standup',
+          eventTime: new Date().toLocaleTimeString(),
+        },
+      ],
+    },
+  ],
   icon: <CalendarIcon />,
 }
 
