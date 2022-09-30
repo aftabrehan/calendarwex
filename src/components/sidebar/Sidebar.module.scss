@@ -26,6 +26,10 @@
 }
 
 .upcomingEvents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 10px 16px;
   gap: 10px;
   width: 250px;
@@ -39,23 +43,22 @@
   font-weight: 500;
   font-size: 16px;
   color: #333333;
+  // @extend .testBorder;
 }
 
 .upcmngEvtCntnt {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 8px 0px;
   gap: 10px;
-  width: 218px;
+  width: 210px;
+  min-height: 139px;
+  // @extend .testBorder;
 }
 
-.celebIcon {
-  margin-top: 40px;
-}
-
-.emptyEvent {
+.eventName {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
