@@ -1,4 +1,3 @@
-import Button from 'components/button'
 import stl from './Sidebar.module.scss'
 
 import AddIcon from '../../assets/addIcon.svg'
@@ -30,7 +29,7 @@ const Sidebar = ({
                   <div>{eventCntnt.eventName}</div>
                   <div>
                     {eventCntnt.eventTime || (
-                      <Button variant="fill" icon={<AddIcon />} />
+                      <AddIcon className={stl.addIcon} />
                     )}
                   </div>
                 </div>

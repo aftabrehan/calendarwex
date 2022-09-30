@@ -59,6 +59,12 @@
   flex: none;
   flex-grow: 0;
   order: 0;
+
+  &:active {
+    svg {
+      fill: #fff;
+    }
+  }
 }
 
 .right {

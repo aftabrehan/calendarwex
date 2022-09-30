@@ -2,7 +2,6 @@ import Stories from 'components/stories'
 import Sidebar from 'components/sidebar'
 import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
-import CelebIcon from '../../src/assets/celebration.svg'
 import CalendarIcon from '../../src/assets/calendar.svg'
 
 const sidebarEmpty = {
