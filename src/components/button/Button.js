@@ -27,7 +27,7 @@ const Button = ({
       disabled={disabled}
       type={type}
       style={style}
-      className={clsx(stl[`${variant}Btn`], customClass, stl.new)}
+      className={clsx(stl[`${variant}Btn`], customClass)}
     >
       {label || children}
       {icon}

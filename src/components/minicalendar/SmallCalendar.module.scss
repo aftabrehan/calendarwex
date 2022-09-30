@@ -1,6 +1,6 @@
 .smallCalendar {
   border: 1px solid #c1c1c1;
-  width: 258px;
+  width: 250px;
   height: 218px;
   padding: 10px;
   user-select: none;
@@ -25,6 +25,7 @@
 .dates {
   padding: 5px;
   border-radius: 62rem;
+  cursor: pointer;
   color: #333333;
 
   &:hover {

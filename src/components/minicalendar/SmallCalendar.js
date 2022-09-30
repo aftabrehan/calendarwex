@@ -13,41 +13,41 @@ const MiniCalendar = () => {
     <div className={stl.smallCalendar}>
       <div className={stl.smallCalendarContent}>
         <div className={stl.smallCalendarDays}>
-          {Days.map(dy => (
-            <div>{dy}</div>
+          {Days.map((dy, i) => (
+            <div key={i}>{dy}</div>
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row1.map((dt, i) => (
-            <div id={i} className={stl.dates}>
+            <div key={i} id={i} className={stl.dates}>
               {dt}
             </div>
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row2.map((dt, i) => (
-            <div id={i} className={stl.dates}>
+            <div key={i} id={i} className={stl.dates}>
               {dt}
             </div>
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row3.map((dt, i) => (
-            <div id={i} className={stl.dates}>
+            <div key={i} id={i} className={stl.dates}>
               {dt}
             </div>
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row4.map((dt, i) => (
-            <div id={i} className={stl.dates}>
+            <div key={i} id={i} className={stl.dates}>
               {dt}
             </div>
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row5.map((dt, i) => (
-            <div id={i} className={stl.dates}>
+            <div key={i} id={i} className={stl.dates}>
               {dt}
             </div>
           ))}
