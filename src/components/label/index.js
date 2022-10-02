@@ -1,3 +1,3 @@
-import Label from './Label'
+import LabelTop from './LabelTop'
 
-export default Label
+export default LabelTop
