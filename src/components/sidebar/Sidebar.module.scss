@@ -50,10 +50,15 @@
   color: #333333;
 }
 
+.content {
+  margin-top: 10px;
+}
+
 .upcmngEvtCntnt {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
   width: 218px;
   min-height: 139px;
 }

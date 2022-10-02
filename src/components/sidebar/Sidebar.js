@@ -18,7 +18,7 @@ const Sidebar = ({
       <div>{monthData}</div>
       <div className={stl.upcomingEvents}>
         {upcomingEvents.map((events, i) => (
-          <div>
+          <div key={i} className={stl.content}>
             <div className={stl.eventsHeading}>
               {icon}
               {events.eventHeading}
