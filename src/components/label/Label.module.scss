@@ -1,18 +1,5 @@
 @import 'styles/common';
 
-.container {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  position: relative;
-  gap: 2rem;
-  width: 209px;
-  height: 110px;
-  border: 1px dashed #9747ff;
-  border-radius: 5px;
-}
-
 .label {
   box-sizing: border-box;
   display: flex;
@@ -110,5 +97,11 @@
     gap: 10px;
     width: 69px;
     height: 26px;
+  }
+}
+
+.labelLeft {
+  h1 {
+    color: red;
   }
 }
