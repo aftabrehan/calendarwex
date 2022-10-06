@@ -73,6 +73,14 @@
   font-weight: 600;
   font-size: 10px;
   color: #333333;
+
+  .eventName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    color: #2c5a41;
+  }
 }
 
 .addIcon {

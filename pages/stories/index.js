@@ -14,6 +14,7 @@ const StoriesLinks = () => (
     <Link href="/stories/label-top">Label-Top</Link>
     <Link href="/stories/label">Label Types</Link>
     <Link href="/stories/label-left">Label-Left</Link>
+    <Link href="/stories/event-types">EventTypes</Link>
   </div>
 )
 

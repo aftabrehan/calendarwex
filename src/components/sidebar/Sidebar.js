@@ -1,6 +1,7 @@
 import stl from './Sidebar.module.scss'
 
 import AddIcon from '../../assets/addIcon.svg'
+import EllipseIcon from '../../assets/ellipse-1.svg'
 import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
 const Sidebar = ({
@@ -27,7 +28,10 @@ const Sidebar = ({
             <div className={stl.upcmngEvtCntnt}>
               {upcomingEvents[i].eventContent.map((eventCntnt, index) => (
                 <div key={index} className={stl.eventItem}>
-                  <div>{eventCntnt.eventName}</div>
+                  <div className={stl.eventName}>
+                    <EllipseIcon />
+                    {eventCntnt.eventName}
+                  </div>
                   <div>
                     {eventCntnt.eventTime || (
                       <AddIcon className={stl.addIcon} />

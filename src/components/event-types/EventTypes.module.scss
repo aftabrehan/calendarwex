@@ -1,0 +1,60 @@
+.eventDefHr {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 2px;
+  background: #bdffdb;
+  border: 1px solid #8fdcb2;
+  border-radius: 3px;
+}
+
+.eventDescHr {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 4px;
+  background: #bdffdb;
+  border: 1px solid #8fdcb2;
+  border-radius: 3px;
+
+  .defaultHorizontal {
+    padding: 3px;
+  }
+}
+
+.defaultHorizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+}
+
+.eventName,
+.eventTime,
+.eventDesc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  color: #2c5a41;
+}
+
+.eventSmallHr {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px;
+  gap: 4px;
+  border-radius: 3px;
+
+  .defaultHorizontal {
+    justify-content: space-between;
+    padding: 4px;
+  }
+}
