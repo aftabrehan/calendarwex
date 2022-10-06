@@ -10,6 +10,7 @@ const EventTypes = ({
   customClass,
   width,
   height,
+  backgroundClr,
   event,
   eventNameClr,
   eventTimeClr,
@@ -18,7 +19,7 @@ const EventTypes = ({
   console.log(eventTimeClr)
 
   return (
-    <div className={stl[`${eventType}`]}>
+    <div className={stl[`${eventType}`]} style={{ background: backgroundClr }}>
       <div
         className={clsx(stl.defaultHorizontal, customClass)}
         style={{ width, height }}

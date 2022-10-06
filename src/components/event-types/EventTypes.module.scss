@@ -1,6 +1,8 @@
 @import '../../../styles/colors.scss';
 
-.eventDefHr {
+.eventDefHr,
+.eventDescHr,
+.eventSmallHr {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -12,17 +14,24 @@
 }
 
 .eventDescHr {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding: 4px;
   gap: 4px;
-  background: $greenPastel;
-  border: 1px solid $greenPastelDarker;
-  border-radius: 3px;
 
   .defaultHorizontal {
     padding: 3px;
+  }
+}
+
+.eventSmallHr {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px;
+  gap: 4px;
+  background-color: transparent;
+  border: transparent;
+
+  .defaultHorizontal {
+    justify-content: space-between;
+    padding: 4px;
   }
 }
 
@@ -45,18 +54,4 @@
   font-weight: 600;
   font-size: 10px;
   color: $darkGreen;
-}
-
-.eventSmallHr {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 2px;
-  gap: 4px;
-  border-radius: 3px;
-
-  .defaultHorizontal {
-    justify-content: space-between;
-    padding: 4px;
-  }
 }
