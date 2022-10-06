@@ -7,7 +7,7 @@ const Label = ({
   type,
   variant,
   icon,
-  text,
+  content,
   id,
   width,
   height,
@@ -20,9 +20,9 @@ const Label = ({
       style={{ width, height }}
       className={clsx(stl[`${type}`], customClass)}
     >
-      <div className={clsx(stl.text, conCustomClass)}>
+      <div className={clsx(stl.content, conCustomClass)}>
         {icon}
-        {text}
+        {content}
       </div>
     </div>
   )
@@ -32,6 +32,6 @@ export default Label
 
 Label.defaultProps = {
   arg: 'labelTimeSideTop',
-  variant: 'labelTimeSideTop',
-  text: '00:00',
+  type: 'labelTimeSideTop',
+  content: '00:00',
 }

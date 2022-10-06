@@ -28,7 +28,7 @@ export default LabelTop
 
 LabelTop.defaultProps = {
   arg: 'Week',
-  variant: 'row',
+  type: 'row',
   days: [
     {
       day: 'Mon',
