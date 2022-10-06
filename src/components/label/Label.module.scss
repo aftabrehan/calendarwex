@@ -1,5 +1,18 @@
 @import 'styles/common';
 
+.container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 2rem;
+  width: 209px;
+  height: 110px;
+  border: 1px dashed #9747ff;
+  border-radius: 5px;
+}
+
 .label {
   box-sizing: border-box;
   display: flex;
@@ -8,8 +21,6 @@
   padding: 0px;
   width: 673px;
   height: 24px;
-  left: 20px;
-  top: 20px;
   border-bottom: 1px solid #dadce0;
 
   // for local use
@@ -29,4 +40,75 @@
   font-weight: 500;
   font-size: 12px;
   color: #333333;
+}
+
+.labelTimeSide {
+  padding: 0px 10px 10px;
+  gap: 10px;
+  width: 54px;
+  height: 28px;
+  @extend .redBorder;
+
+  .text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+  }
+}
+
+.labelTimeSideTop {
+  padding: 0px 10px;
+  gap: 10px;
+  width: 54px;
+  height: 26px;
+  @extend .redBorder;
+
+  .text {
+    width: 34px;
+    height: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 5px;
+    color: #333333;
+  }
+}
+
+.labelDaySide {
+  padding: 0px 10px 10px;
+  gap: 10px;
+  width: 44px;
+  height: 28px;
+  @extend .redBorder;
+
+  .text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+  }
+}
+
+.labelDayTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  gap: 10px;
+  width: 69px;
+  height: 26px;
+
+  @extend .redBorder;
+
+  .text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 69px;
+    height: 26px;
+  }
 }
