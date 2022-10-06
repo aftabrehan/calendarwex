@@ -4,6 +4,7 @@ import stl from './Label.module.scss'
 
 const Label = ({
   args,
+  type,
   variant,
   icon,
   text,
@@ -14,7 +15,11 @@ const Label = ({
   conCustomClass,
 }) => {
   return (
-    <div arg={args} className={clsx(stl[`${variant}`], customClass)}>
+    <div
+      arg={args}
+      style={{ width, height }}
+      className={clsx(stl[`${type}`], customClass)}
+    >
       <div className={clsx(stl.text, conCustomClass)}>
         {icon}
         {text}
@@ -24,3 +29,9 @@ const Label = ({
 }
 
 export default Label
+
+Label.defaultProps = {
+  arg: 'labelTimeSideTop',
+  variant: 'labelTimeSideTop',
+  text: '00:00',
+}
