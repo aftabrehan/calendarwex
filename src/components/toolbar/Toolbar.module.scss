@@ -1,3 +1,5 @@
+@import '../../../styles/colors.scss';
+
 .toolbar {
   display: flex;
   flex-direction: row;
@@ -7,8 +9,8 @@
   gap: 10px;
   width: 930px;
   height: 77px;
-  background-color: white;
-  border-bottom: 1px solid rgba(218, 220, 224, 0.6);
+  background-color: $white;
+  border-bottom: 1px solid $stroke;
   user-select: none;
 }
 
@@ -20,23 +22,23 @@
   padding: 8px;
   gap: 4px;
   background-color: transparent;
-  color: #0c41ff;
-  border: 1px solid #0c41ff;
+  color: $primary;
+  border: 1px solid $primary;
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
 
   svg {
-    fill: #0c41ff;
+    fill: $primary;
   }
 
   &:hover {
     transition: all 0.25s ease-in-out;
-    box-shadow: 0 4px 8px #353030;
-    background-color: #0c41ff;
-    color: #fff;
+    box-shadow: 0 4px 8px $boxShadow1;
+    background-color: $primary;
+    color: $white;
     svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 
@@ -48,10 +50,10 @@
 
   &:active {
     transition: all 0.25s ease-in-out;
-    background-color: #fff;
-    color: #0c41ff;
+    background-color: $white;
+    color: $primary;
     select {
-      border: 1px solid #0c41ff;
+      border: 1px solid $primary;
     }
   }
 }
@@ -63,7 +65,7 @@
 
   &:active {
     svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 }
@@ -100,5 +102,5 @@
   font-weight: 500;
   font-size: 30px;
   align-items: center;
-  color: #333333;
+  color: $text;
 }

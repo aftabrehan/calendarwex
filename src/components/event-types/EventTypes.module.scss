@@ -1,11 +1,13 @@
+@import '../../../styles/colors.scss';
+
 .eventDefHr {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 4px;
   gap: 2px;
-  background: #bdffdb;
-  border: 1px solid #8fdcb2;
+  background: $greenPastel;
+  border: 1px solid $greenPastelDarker;
   border-radius: 3px;
 }
 
@@ -15,8 +17,8 @@
   flex-direction: column;
   padding: 4px;
   gap: 4px;
-  background: #bdffdb;
-  border: 1px solid #8fdcb2;
+  background: $greenPastel;
+  border: 1px solid $greenPastelDarker;
   border-radius: 3px;
 
   .defaultHorizontal {
@@ -42,7 +44,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
-  color: #2c5a41;
+  color: $darkGreen;
 }
 
 .eventSmallHr {
