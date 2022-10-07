@@ -1,17 +1,19 @@
+import clsx from 'clsx'
+
 import stl from './Search.module.scss'
 import SearchIcon from '../../assets/srchIcon.svg'
 import Close from '../../assets/close.svg'
 
-const Search = () => {
+const Search = ({ id, customClass, variant, width }) => {
   const searchBoxHandler = () => {
     const searchInput = document.getElementById('srchInpt')
-    const searchox = document.getElementById('srchbox')
+    const searchbox = document.getElementById(id || 'srchbox')
     const svg = document.getElementById('srchIcon')
     const svg2 = document.getElementById('closeIcon')
     svg.style.display = 'none'
     svg2.style.display = 'block'
-    searchox.style.background = '#F5F5F5'
-    searchInput.style.width = '204px'
+    searchbox.style.background = '#F5F5F5'
+    searchInput.style.width = width
     searchInput.style.padding = '0 6px'
   }
 
@@ -22,10 +24,10 @@ const Search = () => {
 
   const svgClickHandler = () => {
     const searchInput = document.getElementById('srchInpt')
-    const searchox = document.getElementById('srchbox')
+    const searchbox = document.getElementById(id)
     const svg = document.getElementById('srchIcon')
     const svg2 = document.getElementById('closeIcon')
-    searchox.style.background = 'transparent'
+    searchbox.style.background = 'transparent'
     svg2.style.display = 'none'
     svg.style.display = 'block'
     searchInput.style.width = '0'
@@ -34,7 +36,7 @@ const Search = () => {
   }
 
   return (
-    <div id="srchbox" className={stl.searchBox}>
+    <div id={id} className={clsx(stl.searchBox, customClass)}>
       <input
         onChange={inputHandler}
         id="srchInpt"
@@ -55,3 +57,9 @@ const Search = () => {
 }
 
 export default Search
+
+Search.defaultProps = {
+  arg: 'Search',
+  id: 'srchbox',
+  width: '204px',
+}

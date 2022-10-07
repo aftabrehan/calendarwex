@@ -1,6 +1,7 @@
 import stl from './Sidebar.module.scss'
 
 import AddIcon from '../../assets/addIcon.svg'
+import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
 const Sidebar = ({
   arg,
@@ -43,3 +44,19 @@ const Sidebar = ({
 }
 
 export default Sidebar
+
+Sidebar.defaultProps = {
+  arg: 'SidebarEmpty',
+  monthName: 'January',
+  monthData: <MiniCalendar />,
+  upcomingEvents: [
+    {
+      eventHeading: 'Upcoming Events',
+      eventContent: [
+        {
+          eventName: 'No Upcoming Events',
+        },
+      ],
+    },
+  ],
+}

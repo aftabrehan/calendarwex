@@ -6,7 +6,6 @@ import CalendarIcon from '../../src/assets/calendar.svg'
 
 const sidebarEmpty = {
   arg: 'SidebarEmpty',
-  variant: 'emptySidebar',
   monthName: 'January',
   monthData: <MiniCalendar />,
   upcomingEvents: [
@@ -23,7 +22,6 @@ const sidebarEmpty = {
 
 const sidebarDefault = {
   arg: 'SidebarDefault',
-  variant: 'defaultSidebar',
   monthName: 'January',
   monthData: <MiniCalendar />,
   upcomingEvents: [

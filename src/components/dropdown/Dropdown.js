@@ -87,7 +87,7 @@ DropDown.defaultProps = {
   drplist: ['DropdownA'],
   transition: 'all 0.4s',
   onMouseUpCapture: mouseUpCaptureHandler,
-  variant: 'drpDwn',
+  variant: 'Dropdown',
   top: '-1rem',
   left: '50%',
   onClick: () => {},

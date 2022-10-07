@@ -12,7 +12,6 @@ import AddIcon from '../../assets/addIcon.svg'
 const Toolbar = ({
   argList,
   id,
-  args,
   icon,
   endIcon,
   children,
@@ -37,7 +36,7 @@ const Toolbar = ({
   onMouseUpCapture,
 }) => {
   return (
-    <div className={stl.toolbar}>
+    <div className={clsx(stl.toolbar, customClass)}>
       <div className={stl.right}>
         <Button
           customClass={clsx(stl.openSidebar)}
@@ -47,7 +46,6 @@ const Toolbar = ({
         ></Button>
         <span className={stl.label}>{label}</span>
         <DropDown
-          arg={args}
           drplist={['Day', 'Week', 'Month', 'Year']}
           name={name}
           height="250px"
@@ -66,3 +64,9 @@ const Toolbar = ({
 }
 
 export default Toolbar
+
+Toolbar.defaultProps = {
+  arg: 'Day',
+  label: '01 January 2022',
+  name: 'Day',
+}
