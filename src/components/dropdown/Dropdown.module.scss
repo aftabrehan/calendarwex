@@ -1,3 +1,5 @@
+@import '../../../styles/colors.scss';
+
 .drpdncontainer {
   position: relative;
 }
@@ -5,9 +7,9 @@
 .Dropdown {
   position: absolute;
   box-sizing: border-box;
-  background: #fff;
-  color: #0c41ff;
-  box-shadow: 0 0 75px rgb(215 215 215 / 50%);
+  background: $white;
+  color: $primary;
+  box-shadow: 0 0 75px $boxShadow2;
   border-radius: 12px;
   list-style: none;
   display: flex;
@@ -33,11 +35,11 @@
   }
 
   li:hover {
-    color: #fff;
-    background-color: #0c41ff;
+    color: $white;
+    background-color: $primary;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0px 4px 8px #353030;
+    box-shadow: 0px 4px 8px $boxShadow1;
     transition: all 0.25s;
   }
 

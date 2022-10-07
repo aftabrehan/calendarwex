@@ -1,3 +1,4 @@
+@import '../../../styles/colors.scss';
 @import 'styles/common';
 .fillBtn {
   display: flex;
@@ -7,37 +8,37 @@
   padding: 8px;
   gap: 4px;
   position: relative;
-  color: white;
-  background: #0c41ff;
+  color: $white;
+  background: $primary;
   border-radius: 3px;
   border: 1px solid transparent;
   transition: opacity 0.4s;
 
   cursor: pointer;
   user-select: none;
-  box-shadow: 0px 4px 8px #353030;
+  box-shadow: 0px 4px 8px $boxShadow1;
 
   svg {
-    fill: white;
+    fill: $white;
   }
 
   &:hover {
     transition: all 0.25s ease-in-out;
-    border: 1px solid #0c41ff;
+    border: 1px solid $primary;
     background-color: transparent;
-    box-shadow: 0px 4px 8px #0c41ff;
-    color: #0c41ff;
+    box-shadow: 0px 4px 8px $primary;
+    color: $primary;
     svg {
-      fill: #0c41ff;
+      fill: $primary;
     }
   }
 
   &:active {
     box-shadow: 0px 2px 5px;
     transform: scale(0.98);
-    color: #0c41ff;
+    color: $primary;
     svg {
-      fill: #0c41ff;
+      fill: $primary;
     }
   }
 
@@ -55,24 +56,24 @@
   align-items: center;
   padding: 8px;
   gap: 4px;
-  color: #0c41ff;
-  border: 1px solid #0c41ff;
+  color: $primary;
+  border: 1px solid $primary;
   border-radius: 3px;
   cursor: pointer;
   transition: opacity 0.4s;
   user-select: none;
 
   svg {
-    fill: #0c41ff;
+    fill: $primary;
   }
 
   &:hover {
     transition: all 0.25s ease-in-out;
-    box-shadow: 0 4px 8px #353030;
-    background-color: #0c41ff;
-    color: #fff;
+    box-shadow: 0 4px 8px $boxShadow1;
+    background-color: $primary;
+    color: $white;
     svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 
@@ -85,11 +86,11 @@
   &:active {
     transition: all 0.25s ease-in-out;
     transform: scale(0.98);
-    box-shadow: 0 2px 4px #353030;
-    background-color: #fff;
-    color: #0c41ff;
+    box-shadow: 0 2px 4px $boxShadow1;
+    background-color: $white;
+    color: $primary;
     svg {
-      fill: #0c41ff;
+      fill: $primary;
     }
   }
 }
@@ -102,7 +103,7 @@
   padding: 8px;
   position: relative;
   gap: 4px;
-  color: #0c41ff;
+  color: $primary;
   background-color: transparent;
   transition: opacity 0.4s;
   border-radius: 3px;
@@ -111,14 +112,14 @@
   user-select: none;
 
   svg {
-    fill: #0c41ff;
+    fill: $primary;
   }
 
   &:hover {
     transition: 0.1s ease-in-out;
     background-color: transparent;
-    box-shadow: 0 4px 8px #353030;
-    border: 1px solid #0c41ff;
+    box-shadow: 0 4px 8px $boxShadow1;
+    border: 1px solid $primary;
   }
 
   &:disabled {
@@ -130,12 +131,12 @@
   &:active {
     transition: all 0.25s;
     transform: scale(0.98);
-    box-shadow: 0 2px 4px #353030;
-    background-color: #0c41ff;
-    color: #fff;
+    box-shadow: 0 2px 4px $boxShadow1;
+    background-color: $primary;
+    color: $white;
 
     svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 }
