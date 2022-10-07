@@ -1,0 +1,27 @@
+@import '../../../styles/colors.scss';
+
+.week {
+  display: flex;
+  justify-content: center;
+  width: 118px;
+  height: 62px;
+  background: $white;
+  border: 1px solid $stroke;
+}
+
+.bottomPartialSingle {
+  align-items: flex-end;
+}
+
+.middleSingle {
+  align-items: center;
+}
+
+.topFullSingle {
+  padding: 3px;
+}
+
+.bottomFullSingle {
+  align-items: flex-end;
+  padding: 3px;
+}

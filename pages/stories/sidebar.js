@@ -116,13 +116,11 @@ const sidebarDefault = {
   icon: <CalendarIcon />,
 }
 
-const SidebarStory = () => {
-  return (
-    <Stories
-      argList={[sidebarEmpty, sidebarDefault]}
-      template={args => <Sidebar {...args} />}
-    />
-  )
-}
+const SidebarStory = () => (
+  <Stories
+    argList={[sidebarEmpty, sidebarDefault]}
+    template={args => <Sidebar {...args} />}
+  />
+)
 
 export default SidebarStory

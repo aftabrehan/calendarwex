@@ -10,10 +10,8 @@ const drpdnmenu = {
   top: '-1rem',
 }
 
-const DropDownStory = () => {
-  return (
-    <Stories argList={[drpdnmenu]} template={args => <DropDown {...args} />} />
-  )
-}
+const DropDownStory = () => (
+  <Stories argList={[drpdnmenu]} template={args => <DropDown {...args} />} />
+)
 
 export default DropDownStory
