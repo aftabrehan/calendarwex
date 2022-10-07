@@ -2,17 +2,6 @@ import stl from './Label.module.scss'
 import Label from './Label'
 
 const LabelLeft = () => {
-  //For 24 Hr format
-
-  // const date = new Date()
-  // let options = {
-  //   hour: 'numeric',
-  //   minute: 'numeric',
-  //   hour12: false,
-  // }
-  // const time = date.toLocaleString('en-US', options)
-  // console.log(time)
-
   const hourArray = [
     '00:00',
     '01:00',

@@ -2,13 +2,13 @@ import clsx from 'clsx'
 
 import stl from './Label.module.scss'
 
-import Icon1 from '../../assets/brain.svg'
-import Icon2 from '../../assets/camel.svg'
-import Icon3 from '../../assets/cocktail-glass.svg'
-import Icon4 from '../../assets/hot-beverage.svg'
-import Icon5 from '../../assets/zombie.svg'
-import Icon6 from '../../assets/party-popper.svg'
-import Icon7 from '../../assets/women-getting-massage.svg'
+import BrainIcon from '../../assets/brain.svg'
+import CamelIcon from '../../assets/camel.svg'
+import CocktailGlassIcon from '../../assets/cocktail-glass.svg'
+import HotBeverageIcon from '../../assets/hot-beverage.svg'
+import ZombieIcon from '../../assets/zombie.svg'
+import PartyPopperIcon from '../../assets/party-popper.svg'
+import MassageIcon from '../../assets/women-getting-massage.svg'
 
 const LabelTop = ({ arg, type, variant, days, gap, customClass }) => {
   return (
@@ -32,31 +32,31 @@ LabelTop.defaultProps = {
   days: [
     {
       day: 'Mon',
-      icon: <Icon1 />,
+      icon: <BrainIcon />,
     },
     {
       day: 'Tue',
-      icon: <Icon2 />,
+      icon: <CamelIcon />,
     },
     {
       day: 'Wed',
-      icon: <Icon3 />,
+      icon: <CocktailGlassIcon />,
     },
     {
       day: 'Thu',
-      icon: <Icon4 />,
+      icon: <HotBeverageIcon />,
     },
     {
       day: 'Fri',
-      icon: <Icon5 />,
+      icon: <ZombieIcon />,
     },
     {
       day: 'Sat',
-      icon: <Icon6 />,
+      icon: <PartyPopperIcon />,
     },
     {
       day: 'Sun',
-      icon: <Icon7 />,
+      icon: <MassageIcon />,
     },
   ],
 }
