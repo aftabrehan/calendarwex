@@ -6,8 +6,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 4px;
-  gap: 2px;
   background: $greenPastel;
   border: 1px solid $greenPastelDarker;
   border-radius: 3px;
@@ -25,14 +23,11 @@
 .eventSmallHr {
   flex-direction: row;
   align-items: flex-start;
-  padding: 2px;
-  gap: 4px;
   background-color: transparent;
-  border: transparent;
+  border: none;
 
   .defaultHorizontal {
     justify-content: space-between;
-    padding: 4px;
   }
 }
 
@@ -41,7 +36,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2px;
+  padding: 4px;
 }
 
 .eventName,

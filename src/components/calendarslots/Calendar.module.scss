@@ -1,6 +1,7 @@
 @import '../../../styles/colors.scss';
 
 .week {
+  box-sizing: content-box;
   display: flex;
   justify-content: center;
   width: 118px;
@@ -9,19 +10,56 @@
   border: 1px solid $stroke;
 }
 
-.bottomPartialSingle {
-  align-items: flex-end;
+.month {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  padding: 3px 4px;
+  gap: 10px;
+  width: 106px;
+  height: 102px;
+  background: $white;
+  border: 1px solid $stroke 0.6;
 }
 
-.middleSingle {
+.bottomPartialSingleWeek {
+  align-items: flex-end;
+  width: 118px;
+}
+
+.middleSingleWeek {
   align-items: center;
 }
 
-.topFullSingle {
+.topFullSingleWeek {
   padding: 3px;
 }
 
-.bottomFullSingle {
+.bottomFullSingleWeek {
   align-items: flex-end;
   padding: 3px;
+}
+
+.fullSingleMonth {
+  justify-content: space-between;
+}
+
+.fullDoubleMonth {
+  justify-content: space-between;
+}
+
+.fullTripleMonth {
+  justify-content: space-between;
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 4px;
+  width: 330px;
+  height: 295px;
+  background: $white;
 }
