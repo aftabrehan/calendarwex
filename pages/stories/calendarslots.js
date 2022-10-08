@@ -1,62 +1,189 @@
 import Stories from 'components/stories'
 import CalendarSlots from 'components/calendarslots'
 import EventTypes from 'components/event-types'
+import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
-const blankNone = {
-  arg: 'BlankNone',
-  variant: 'blankNone',
-}
+import EllipseIcon from '../../src/assets/ellipse-1.svg'
 
-const topPartialSingle = {
-  arg: 'TopPartialSingle',
-  variant: 'topPartialSingle',
-  event: <EventTypes width="110px" height="31px" borderRadius="0 0 3px 3px" />,
-}
+import stl from './Stories.module.scss'
 
-const bottomPartialSingle = {
-  arg: 'BottomPartialSingle',
-  variant: 'bottomPartialSingle',
-  event: <EventTypes width="110px" height="31px" borderRadius="3px 3px 0 0" />,
-}
-
-const fullSingle = {
-  arg: 'FullSingle',
+const blankNoneWeek = {
+  arg: 'BlankNoneWeek',
+  variant: 'blankNoneWeek',
   type: 'week',
-  variant: 'fullSingle',
-  event: <EventTypes width="110px" height="60px" />,
+  event: [],
 }
 
-const middleSingle = {
-  arg: 'MiddleSingle',
+const topPartialSingleWeek = {
+  arg: 'TopPartialSingleWeek',
+  variant: 'topPartialSingleWeek',
   type: 'week',
-  variant: 'middleSingle',
-  event: <EventTypes width="110px" height="62px" />,
+  event: [
+    <EventTypes width="110px" height="31px" borderRadius="0 0 3px 3px" />,
+  ],
 }
 
-const topFullSingle = {
-  arg: 'TopFullSingle',
+const bottomPartialSingleWeek = {
+  arg: 'BottomPartialSingleWeek',
+  variant: 'bottomPartialSingleWeek',
   type: 'week',
-  variant: 'topFullSingle',
-  event: <EventTypes width="110px" height="27px" />,
+  event: [
+    <EventTypes width="110px" height="31px" borderRadius="3px 3px 0 0" />,
+  ],
 }
 
-const bottomFullSingle = {
-  arg: 'BottomFullSingle',
+const fullSingleWeek = {
+  arg: 'FullSingleWeek',
   type: 'week',
-  variant: 'bottomFullSingle',
-  event: <EventTypes width="110px" height="27px" />,
+  variant: 'fullSingleWeek',
+  event: [<EventTypes width="110px" height="60px" />],
+}
+
+const middleSingleWeek = {
+  arg: 'MiddleSingleWeek',
+  type: 'week',
+  variant: 'middleSingleWeek',
+  event: [<EventTypes width="110px" height="62px" />],
+}
+
+const topFullSingleWeek = {
+  arg: 'TopFullSingleWeek',
+  type: 'week',
+  variant: 'topFullSingleWeek',
+  event: [<EventTypes width="110px" height="27px" />],
+}
+
+const bottomFullSingleWeek = {
+  arg: 'BottomFullSingleWeek',
+  type: 'week',
+  variant: 'bottomFullSingleWeek',
+  event: [<EventTypes width="110px" height="27px" />],
+}
+
+const blankNoneMonth = {
+  arg: 'BlankNoneMonth',
+  variant: 'blankNoneMonth',
+  type: 'month',
+  date: (
+    <div className={stl.dateMonth}>
+      <div className={stl.date}>
+        <span>01</span>
+      </div>
+    </div>
+  ),
+  event: [],
+}
+
+const fullSingleMonth = {
+  arg: 'FullSingleMonth',
+  variant: 'fullSingleMonth',
+  type: 'month',
+  date: (
+    <div className={stl.dateMonth}>
+      <div className={stl.date}>
+        <span>01</span>
+      </div>
+    </div>
+  ),
+  event: [
+    <EventTypes
+      icon={<EllipseIcon />}
+      eventType="eventSmallHr"
+      width="98px"
+      height="19px"
+      Cls={stl.eventContainer}
+      padding="0"
+    />,
+  ],
+}
+
+const fullDoubleMonth = {
+  arg: 'FullDoubleMonth',
+  variant: 'fullDoubleMonth',
+  type: 'month',
+  date: (
+    <div className={stl.dateMonth}>
+      <div className={stl.date}>
+        <span>01</span>
+      </div>
+    </div>
+  ),
+  event: [
+    <EventTypes
+      icon={<EllipseIcon />}
+      eventType="eventSmallHr"
+      width="98px"
+      height="19px"
+      padding="0"
+    />,
+    <EventTypes
+      icon={<EllipseIcon />}
+      eventType="eventSmallHr"
+      width="98px"
+      height="19px"
+      padding="0"
+    />,
+  ],
+}
+
+const fullTripleMonth = {
+  arg: 'FullTripleMonth',
+  variant: 'fullTripleMonth',
+  type: 'month',
+  date: (
+    <div className={stl.dateMonth}>
+      <div className={stl.date}>
+        <span>01</span>
+      </div>
+    </div>
+  ),
+  event: [
+    <EventTypes
+      icon={<EllipseIcon />}
+      eventType="eventSmallHr"
+      width="98px"
+      height="19px"
+      padding="0"
+    />,
+    <EventTypes
+      icon={<EllipseIcon />}
+      eventType="eventSmallHr"
+      width="98px"
+      height="19px"
+      padding="0"
+    />,
+  ],
+  toggle: (
+    <div className={stl.toggle}>
+      <span className={stl.toggleName}>+2 More</span>
+    </div>
+  ),
+}
+
+const yearMonthView = {
+  arg: 'Year-MonthView',
+  type: 'year',
+  variant: 'yearMonthView',
+  event: [],
+  monthNumber: '01',
+  monthData: <MiniCalendar />,
 }
 
 const CalendarSlotsStory = () => (
   <Stories
     argList={[
-      blankNone,
-      topPartialSingle,
-      bottomPartialSingle,
-      fullSingle,
-      middleSingle,
-      topFullSingle,
-      bottomFullSingle,
+      blankNoneWeek,
+      topPartialSingleWeek,
+      bottomPartialSingleWeek,
+      fullSingleWeek,
+      middleSingleWeek,
+      topFullSingleWeek,
+      bottomFullSingleWeek,
+      blankNoneMonth,
+      fullSingleMonth,
+      fullDoubleMonth,
+      fullTripleMonth,
+      yearMonthView,
     ]}
     template={args => <CalendarSlots {...args} />}
   />
