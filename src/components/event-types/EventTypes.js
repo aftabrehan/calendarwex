@@ -15,15 +15,14 @@ const EventTypes = ({
   eventNameClr,
   eventTimeClr,
   eventDescClr,
+  borderRadius,
 }) => {
-  console.log(eventTimeClr)
-
   return (
-    <div className={stl[`${eventType}`]} style={{ background: backgroundClr }}>
-      <div
-        className={clsx(stl.defaultHorizontal, customClass)}
-        style={{ width, height }}
-      >
+    <div
+      className={stl[`${eventType}`]}
+      style={{ background: backgroundClr, width, height, borderRadius }}
+    >
+      <div className={clsx(stl.defaultHorizontal, customClass)}>
         <div className={stl.eventName} style={{ color: eventNameClr }}>
           {icon}
           {event.eventName}

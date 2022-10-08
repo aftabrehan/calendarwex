@@ -35,13 +35,11 @@ const smallHorizontal = {
   },
 }
 
-const EventTypesStory = () => {
-  return (
-    <Stories
-      argList={[defaultHorizontal, defaultDescHorizontal, smallHorizontal]}
-      template={args => <EventTypes {...args} />}
-    />
-  )
-}
+const EventTypesStory = () => (
+  <Stories
+    argList={[defaultHorizontal, defaultDescHorizontal, smallHorizontal]}
+    template={args => <EventTypes {...args} />}
+  />
+)
 
 export default EventTypesStory

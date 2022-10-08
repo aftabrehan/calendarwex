@@ -5,8 +5,8 @@ const primary = {
   arg: 'Search',
 }
 
-const SearchStory = () => {
-  return <Stories argList={[primary]} template={args => <Search {...args} />} />
-}
+const SearchStory = () => (
+  <Stories argList={[primary]} template={args => <Search {...args} />} />
+)
 
 export default SearchStory

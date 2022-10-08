@@ -28,13 +28,11 @@ const labelDayTop = {
   content: 'Day',
 }
 
-const LabelStory = () => {
-  return (
-    <Stories
-      argList={[labelTimeSide, labelTimeSideTop, labelDaySide, labelDayTop]}
-      template={args => <Label {...args} />}
-    />
-  )
-}
+const LabelStory = () => (
+  <Stories
+    argList={[labelTimeSide, labelTimeSideTop, labelDaySide, labelDayTop]}
+    template={args => <Label {...args} />}
+  />
+)
 
 export default LabelStory

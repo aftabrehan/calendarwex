@@ -25,13 +25,11 @@ const toolbarYear = {
   name: 'Year',
 }
 
-const ToolbarStory = () => {
-  return (
-    <Stories
-      argList={[toolbarDay, toolbarWeek, toolbarMonth, toolbarYear]}
-      template={args => <Toolbar {...args} />}
-    />
-  )
-}
+const ToolbarStory = () => (
+  <Stories
+    argList={[toolbarDay, toolbarWeek, toolbarMonth, toolbarYear]}
+    template={args => <Toolbar {...args} />}
+  />
+)
 
 export default ToolbarStory

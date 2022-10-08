@@ -1,13 +1,13 @@
 import Stories from 'components/stories'
 import LabelTop from 'components/label'
 
-import Icon1 from '../../src/assets/brain.svg'
-import Icon2 from '../../src/assets/camel.svg'
-import Icon3 from '../../src/assets/cocktail-glass.svg'
-import Icon4 from '../../src/assets/hot-beverage.svg'
-import Icon5 from '../../src/assets/zombie.svg'
-import Icon6 from '../../src/assets/party-popper.svg'
-import Icon7 from '../../src/assets/women-getting-massage.svg'
+import BrainIcon from '../../src/assets/brain.svg'
+import CamelIcon from '../../src/assets/camel.svg'
+import CocktailGlassIcon from '../../src/assets/cocktail-glass.svg'
+import HotBeverageIcon from '../../src/assets/hot-beverage.svg'
+import ZombieIcon from '../../src/assets/zombie.svg'
+import PartyPopperIcon from '../../src/assets/party-popper.svg'
+import MassageIcon from '../../src/assets/women-getting-massage.svg'
 import BlankIcon from '../../src/assets/blank.svg'
 
 const labelTopWeek = {
@@ -17,31 +17,31 @@ const labelTopWeek = {
   days: [
     {
       day: 'Mon',
-      icon: <Icon1 />,
+      icon: <BrainIcon />,
     },
     {
       day: 'Tue',
-      icon: <Icon2 />,
+      icon: <CamelIcon />,
     },
     {
       day: 'Wed',
-      icon: <Icon3 />,
+      icon: <CocktailGlassIcon />,
     },
     {
       day: 'Thu',
-      icon: <Icon4 />,
+      icon: <HotBeverageIcon />,
     },
     {
       day: 'Fri',
-      icon: <Icon5 />,
+      icon: <ZombieIcon />,
     },
     {
       day: 'Sat',
-      icon: <Icon6 />,
+      icon: <PartyPopperIcon />,
     },
     {
       day: 'Sun',
-      icon: <Icon7 />,
+      icon: <MassageIcon />,
     },
   ],
 }
@@ -52,42 +52,40 @@ const labelTopMonth = {
   days: [
     {
       day: 'Mon',
-      icon: <Icon1 />,
+      icon: <BrainIcon />,
     },
     {
       day: 'Tue',
-      icon: <Icon2 />,
+      icon: <CamelIcon />,
     },
     {
       day: 'Wed',
-      icon: <Icon3 />,
+      icon: <CocktailGlassIcon />,
     },
     {
       day: 'Thu',
-      icon: <Icon4 />,
+      icon: <HotBeverageIcon />,
     },
     {
       day: 'Fri',
-      icon: <Icon5 />,
+      icon: <ZombieIcon />,
     },
     {
       day: 'Sat',
-      icon: <Icon6 />,
+      icon: <PartyPopperIcon />,
     },
     {
       day: 'Sun',
-      icon: <Icon7 />,
+      icon: <MassageIcon />,
     },
   ],
 }
 
-const LabelStory = () => {
-  return (
-    <Stories
-      argList={[labelTopWeek, labelTopMonth]}
-      template={args => <LabelTop {...args} />}
-    />
-  )
-}
+const LabelStory = () => (
+  <Stories
+    argList={[labelTopWeek, labelTopMonth]}
+    template={args => <LabelTop {...args} />}
+  />
+)
 
 export default LabelStory
