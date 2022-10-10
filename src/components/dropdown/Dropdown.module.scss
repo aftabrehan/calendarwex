@@ -1,4 +1,5 @@
-@import '../../../styles/colors.scss';
+@import '/styles/common';
+@import '/styles/colors';
 
 .drpdncontainer {
   position: relative;
@@ -12,9 +13,7 @@
   box-shadow: 0 0 75px $boxShadow2;
   border-radius: 12px;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  @extend .flexColSpaceEvenly;
   width: 0;
   padding: 0;
   translate: -50%;

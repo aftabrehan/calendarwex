@@ -1,10 +1,10 @@
-@import '../../../styles/colors.scss';
+@import '/styles/colors';
+@import '/styles/common';
 
 .searchBox {
   background: transparent;
   height: 37px;
-  display: flex;
-  align-items: center;
+  @extend .flexRowCenter;
   border-radius: 99px;
   padding-left: 5px;
 }
@@ -16,9 +16,7 @@
   height: 35px;
   border-radius: 50%;
   background: $backgroundGrayWhite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend .flexCenter;
   transition: 8 0.4s;
 
   svg {

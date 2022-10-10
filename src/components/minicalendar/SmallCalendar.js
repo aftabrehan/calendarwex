@@ -3,6 +3,8 @@ import clsx from 'clsx'
 import stl from './SmallCalendar.module.scss'
 import React from 'react'
 
+import DateMonth from 'components/date-month'
+
 const MiniCalendar = ({
   arg,
   Days,
@@ -19,42 +21,32 @@ const MiniCalendar = ({
       <div className={stl.smallCalendarContent}>
         <div className={stl.smallCalendarDays}>
           {Days.map((dy, i) => (
-            <div key={i}>{dy}</div>
+            <DateMonth key={i} content={dy} />
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row1.map((dt, i) => (
-            <div key={i} id={i} className={stl.dates}>
-              {dt}
-            </div>
+            <DateMonth key={i} id={i} content={dt} />
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row2.map((dt, i) => (
-            <div key={i} id={i} className={stl.dates}>
-              {dt}
-            </div>
+            <DateMonth key={i} id={i} content={dt} />
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row3.map((dt, i) => (
-            <div key={i} id={i} className={stl.dates}>
-              {dt}
-            </div>
+            <DateMonth key={i} id={i} content={dt} />
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row4.map((dt, i) => (
-            <div key={i} id={i} className={stl.dates}>
-              {dt}
-            </div>
+            <DateMonth key={i} id={i} content={dt} />
           ))}
         </div>
         <div className={stl.smallCalendarDateWeek}>
           {row5.map((dt, i) => (
-            <div key={i} id={i} className={stl.dates}>
-              {dt}
-            </div>
+            <DateMonth key={i} id={i} content={dt} />
           ))}
         </div>
       </div>

@@ -1,10 +1,9 @@
-@import '../../../styles/colors.scss';
+@import '/styles/colors';
+@import '/styles/common';
 
 .label {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  @extend .flexRowStart;
   padding: 0px;
   width: 673px;
   height: 24px;
@@ -13,10 +12,7 @@
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @extend .flexRowCenter;
   padding: 0px 10px;
   gap: 10px;
   width: 96.14px;
@@ -78,10 +74,7 @@
 }
 
 .labelDayTop {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @extend .flexRowCenter;
   padding: 0px 10px;
   gap: 10px;
   width: 69px;
@@ -90,8 +83,7 @@
   user-select: none;
 
   .content {
-    display: flex;
-    align-items: center;
+    @extend .flexAlignCenter;
     gap: 10px;
     width: 69px;
     height: 26px;
