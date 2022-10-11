@@ -6,8 +6,6 @@ import stl from '../Structure.module.scss'
 const StructureColumn = ({ customClass, slotWidth }) => {
   const n = 24
 
-  console.log(slotWidth)
-
   return (
     <div className={clsx(stl.structureColumn, customClass)}>
       {[...Array(n)].map((item, i) => (
