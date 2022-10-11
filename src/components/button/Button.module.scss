@@ -1,21 +1,21 @@
-@import '../../../styles/colors.scss';
+@import '/styles/colors';
 @import 'styles/common';
-.fillBtn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+
+.btn {
+  @extend .flexRowCenter;
   padding: 8px;
   gap: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fillBtn {
   position: relative;
   color: $white;
   background: $primary;
-  border-radius: 3px;
   border: 1px solid transparent;
   transition: opacity 0.4s;
-
-  cursor: pointer;
-  user-select: none;
   box-shadow: 0px 4px 8px $boxShadow1;
 
   svg {
@@ -50,18 +50,9 @@
 }
 
 .borderedBtn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  gap: 4px;
   color: $primary;
   border: 1px solid $primary;
-  border-radius: 3px;
-  cursor: pointer;
   transition: opacity 0.4s;
-  user-select: none;
 
   svg {
     fill: $primary;
@@ -96,20 +87,11 @@
 }
 
 .transparentBtn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
   position: relative;
-  gap: 4px;
   color: $primary;
   background-color: transparent;
   transition: opacity 0.4s;
-  border-radius: 3px;
   border: 1px solid transparent;
-  cursor: pointer;
-  user-select: none;
 
   svg {
     fill: $primary;

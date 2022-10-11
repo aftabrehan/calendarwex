@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import stl from './Calendar.module.scss'
+import stl from './CalendarSlots.module.scss'
 
 const CalendarSlots = ({
   type,

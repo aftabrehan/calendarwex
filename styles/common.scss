@@ -6,6 +6,16 @@
   justify-content: flex-start;
 }
 
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColSpaceEvenly {
+  @extend .flexCol;
+  justify-content: space-evenly;
+}
+
 .flexColStart {
   display: flex;
   align-items: flex-start;
@@ -18,9 +28,29 @@
   justify-content: center;
 }
 
-.flexCenterCol {
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRowStart {
+  @extend .flexRow;
+  align-items: flex-start;
+}
+
+.flexRowCenter {
+  @extend .flexCenter;
+  flex-direction: row;
+}
+
+.flexColCenter {
   @extend .flexCenter;
   flex-direction: column;
+}
+
+.flexAlignCenter {
+  display: flex;
+  align-items: center;
 }
 
 .redBorder {

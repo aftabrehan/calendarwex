@@ -1,9 +1,9 @@
-@import '../../../styles/colors.scss';
+@import '/styles/colors';
+@import '/styles/common';
 
 .sidebar {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  @extend .flexCol;
   align-items: flex-start;
   padding: 0px;
   width: 250px;
@@ -28,9 +28,6 @@
 
 .upcomingEvents {
   box-sizing: border-box;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 10px 16px;
   gap: 10px;
   width: 250px;
@@ -55,26 +52,22 @@
 }
 
 .upcmngEvtCntnt {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @extend .flexColCenter;
+  align-items: stretch;
   gap: 10px;
   width: 218px;
   min-height: 139px;
 }
 
 .eventItem {
-  display: flex;
-  flex-direction: row;
+  @extend .flexRow;
   justify-content: space-between;
   font-weight: 600;
   font-size: 10px;
   color: $text;
 
   .eventName {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @extend .flexRowCenter;
     gap: 2px;
     color: $darkGreen;
   }

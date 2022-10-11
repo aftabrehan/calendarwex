@@ -1,4 +1,5 @@
-@import '../../../styles/colors.scss';
+@import '/styles/colors';
+@import '/styles/common';
 
 .eventDefHr,
 .eventDescHr,
@@ -21,8 +22,7 @@
 }
 
 .eventSmallHr {
-  flex-direction: row;
-  align-items: flex-start;
+  @extend .flexRowStart;
   background-color: transparent;
   border: none;
 
@@ -32,19 +32,16 @@
 }
 
 .defaultHorizontal {
-  display: flex;
-  flex-direction: row;
+  @extend .flexRowCenter;
   justify-content: space-between;
-  align-items: center;
   padding: 4px;
 }
 
 .eventName,
 .eventTime,
 .eventDesc {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @extend .flexRowCenter;
+  justify-content: space-between;
   gap: 2px;
   font-weight: 600;
   font-size: 10px;

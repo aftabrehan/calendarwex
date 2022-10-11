@@ -1,9 +1,10 @@
-@import '../../../styles/colors.scss';
+@import '/styles/colors';
+@import '/styles/common.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:wght@500&display=swap');
 
 .dateMonth {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .flexCenter;
   padding: 4px;
   gap: 10px;
   width: 30px;
@@ -11,9 +12,7 @@
 }
 
 .date {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend .flexCenter;
   padding: 5px;
   gap: 10px;
   width: 22px;
@@ -21,6 +20,8 @@
 
   span {
     font-weight: 500;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Poppins', sans-serif;
     font-size: 10px;
     color: $text;
   }
