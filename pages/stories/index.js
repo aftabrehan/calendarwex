@@ -17,7 +17,8 @@ const StoriesLinks = () => (
     <Link href="/stories/event-types">EventTypes</Link>
     <Link href="/stories/calendarslots">CalendarSlots</Link>
     <Link href="/stories/datemonth">Date-Month</Link>
-    <Link href="/stories/structure-column">Structure</Link>
+    <Link href="/stories/structure-column">Structure-Column</Link>
+    <Link href="/stories/structure-grid">Structure-Grid</Link>
   </div>
 )
 
