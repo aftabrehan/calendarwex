@@ -7,32 +7,6 @@
   gap: 10px;
 }
 
-.dateMonth {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  gap: 10px;
-  width: 30px;
-  height: 33px;
-
-  .date {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    gap: 10px;
-    width: 22px;
-    height: 25px;
-
-    span {
-      font-weight: 500;
-      font-size: 10px;
-      color: $text;
-    }
-  }
-}
-
 .toggle {
   box-sizing: border-box;
   display: flex;
@@ -48,4 +22,12 @@
     font-size: 10px;
     color: $primary;
   }
+}
+
+.calendarSlots {
+  border: 1px solid $stroke;
+}
+
+.monthDaySlots {
+  box-sizing: content-box;
 }

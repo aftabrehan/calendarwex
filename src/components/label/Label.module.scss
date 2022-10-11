@@ -4,7 +4,6 @@
 .label {
   box-sizing: border-box;
   @extend .flexRowStart;
-  padding: 0px;
   width: 673px;
   height: 24px;
   border-bottom: 1px solid $stroke;
@@ -44,7 +43,6 @@
   gap: 10px;
   width: 54px;
   height: 26px;
-  border: 1px solid $stroke;
   user-select: none;
 
   .content {

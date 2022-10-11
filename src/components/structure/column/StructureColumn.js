@@ -1,11 +1,15 @@
+import clsx from 'clsx'
+
 import CalendarSlots from 'components/calendarslots'
 import stl from '../Structure.module.scss'
 
-const StructureColumn = () => {
+const StructureColumn = ({ customClass, slotWidth }) => {
   const n = 24
 
+  console.log(slotWidth)
+
   return (
-    <div className={stl.structureColumn}>
+    <div className={clsx(stl.structureColumn, customClass)}>
       {[...Array(n)].map((item, i) => (
         <CalendarSlots
           height="80px"
@@ -13,7 +17,7 @@ const StructureColumn = () => {
           variant="blankNoneWeek"
           type="week"
           event={[]}
-          customClass={stl.calendarSlots}
+          width={slotWidth}
         />
       ))}
     </div>

@@ -18,6 +18,16 @@
   width: 22px;
   height: 25px;
 
+  &:hover {
+    background-color: $hoverWhite;
+    border-radius: 999px;
+  }
+
+  &:active {
+    background-color: $primary;
+    border-radius: 99px;
+  }
+
   span {
     font-weight: 500;
     font-family: 'Aboreto', cursive;
