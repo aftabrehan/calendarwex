@@ -1,5 +1,5 @@
 import Stories from 'components/stories'
-import StructureColumn from 'components/structure'
+import StructureColumn from 'components/structure/column'
 
 const structure = {
   arg: 'structure',

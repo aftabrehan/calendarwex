@@ -1,5 +1,23 @@
-.structureColumn {
-  h1 {
-    color: red;
-  }
+@import '/styles/colors';
+
+.common {
+  width: 80vw;
+}
+
+.yearColumn {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.monthView {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.weekView {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
 }

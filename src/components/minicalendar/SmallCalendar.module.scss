@@ -2,44 +2,15 @@
 @import '/styles/common';
 
 .smallCalendar {
-  border: 1px solid $stroke;
   width: 250px;
   height: 218px;
   padding: 10px;
   user-select: none;
 }
 
-.smallCalendarContent {
-  width: 238px;
-  height: 198px;
-}
-
-.smallCalendarDays,
-.smallCalendarDateWeek {
-  @extend .flexRowCenter;
-  justify-content: space-around;
+.smallCalendarDays {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
   width: 238px;
   height: 33px;
-  opacity: 0.7;
-}
-
-.dates {
-  padding: 5px;
-  font-size: 10px;
-  border-radius: 62rem;
-  cursor: pointer;
-  color: $text;
-
-  &:hover {
-    background-color: $hoverWhite;
-  }
-
-  &:active {
-    background-color: $primary;
-    color: $white;
-  }
-}
-
-.monthData {
-  border: none;
 }

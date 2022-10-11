@@ -2,6 +2,7 @@ import Stories from 'components/stories'
 import CalendarSlots from 'components/calendarslots'
 import EventTypes from 'components/event-types'
 import MiniCalendar from 'components/minicalendar/SmallCalendar'
+import DateMonth from 'components/date-month'
 
 import EllipseIcon from '../../src/assets/ellipse-1.svg'
 
@@ -64,13 +65,7 @@ const blankNoneMonth = {
   arg: 'BlankNoneMonth',
   variant: 'blankNoneMonth',
   type: 'month',
-  date: (
-    <div className={stl.dateMonth}>
-      <div className={stl.date}>
-        <span>01</span>
-      </div>
-    </div>
-  ),
+  date: <DateMonth />,
   event: [],
 }
 
@@ -78,13 +73,7 @@ const fullSingleMonth = {
   arg: 'FullSingleMonth',
   variant: 'fullSingleMonth',
   type: 'month',
-  date: (
-    <div className={stl.dateMonth}>
-      <div className={stl.date}>
-        <span>01</span>
-      </div>
-    </div>
-  ),
+  date: <DateMonth />,
   event: [
     <EventTypes
       icon={<EllipseIcon />}
@@ -101,13 +90,7 @@ const fullDoubleMonth = {
   arg: 'FullDoubleMonth',
   variant: 'fullDoubleMonth',
   type: 'month',
-  date: (
-    <div className={stl.dateMonth}>
-      <div className={stl.date}>
-        <span>01</span>
-      </div>
-    </div>
-  ),
+  date: <DateMonth />,
   event: [
     <EventTypes
       icon={<EllipseIcon />}
@@ -130,13 +113,7 @@ const fullTripleMonth = {
   arg: 'FullTripleMonth',
   variant: 'fullTripleMonth',
   type: 'month',
-  date: (
-    <div className={stl.dateMonth}>
-      <div className={stl.date}>
-        <span>01</span>
-      </div>
-    </div>
-  ),
+  date: <DateMonth />,
   event: [
     <EventTypes
       icon={<EllipseIcon />}
