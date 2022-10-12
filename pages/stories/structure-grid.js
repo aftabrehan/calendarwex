@@ -60,12 +60,14 @@ const monthView = {
 
 const weekView = {
   arg: 'WeekView',
+  type: 'weekView',
   hours: <LabelLeft />,
   days,
 }
 
 const dayView = {
   arg: 'DayView',
+  type: 'dayView',
   hours: <LabelLeft />,
   day: <StructureColumn slotWidth="1100px" />,
 }

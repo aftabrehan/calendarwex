@@ -1,0 +1,36 @@
+@import '/styles/colors';
+
+.layout {
+  display: flex;
+  width: 90vw;
+  max-height: 100vh;
+  background: $white;
+
+  .sideBar {
+    width: 16%;
+  }
+
+  .main {
+    width: 84%;
+    border: 1px solid red;
+  }
+
+  .container {
+    height: 92.2%;
+    overflow: scroll;
+    border: 1px solid blue;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .labelTop {
+    width: 100%;
+  }
+
+  .labelLeft {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -7,7 +7,7 @@ import DateMonth from 'components/date-month'
 
 const MiniCalendar = ({ arg, Days, dates, customClass, variant }) => {
   return (
-    <div className={clsx(stl.smallCalendar, stl.monthData, customClass)}>
+    <div className={clsx(stl.smallCalendar, customClass)}>
       <div className={stl.smallCalendarDays}>
         {Days.map((dy, i) => (
           <DateMonth key={i} content={dy} />

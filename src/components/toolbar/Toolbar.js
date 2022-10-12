@@ -36,7 +36,7 @@ const Toolbar = ({
   onMouseUpCapture,
 }) => {
   return (
-    <div className={clsx(stl.toolbar, customClass)}>
+    <div className={clsx(stl.toolbar, customClass)} style={{ width, height }}>
       <div className={stl.right}>
         <Button
           customClass={clsx(stl.openSidebar)}

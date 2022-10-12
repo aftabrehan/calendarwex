@@ -10,12 +10,21 @@ import ZombieIcon from '../../assets/zombie.svg'
 import PartyPopperIcon from '../../assets/party-popper.svg'
 import MassageIcon from '../../assets/women-getting-massage.svg'
 
-const LabelTop = ({ arg, type, variant, days, gap, customClass }) => {
+const LabelTop = ({
+  arg,
+  type,
+  width,
+  height,
+  variant,
+  days,
+  gap,
+  customClass,
+}) => {
   return (
-    <div className={stl.label}>
+    <div className={clsx(stl.label, customClass)}>
       <div>{gap}</div>
       {days.map((item, i) => (
-        <div key={i} className={clsx(stl[`${type}`], customClass)}>
+        <div key={i} className={clsx(stl[`${type}`])} style={{ width, height }}>
           {item.icon}
           {item.day}
         </div>
