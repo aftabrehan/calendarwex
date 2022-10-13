@@ -95,4 +95,6 @@
   font-size: 30px;
   align-items: center;
   color: $text;
+  width: max-content;
+  transition: width 3s;
 }

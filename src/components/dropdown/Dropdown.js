@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 import stl from './Dropdown.module.scss'
 import Button from 'components/button'
+import { useState } from 'react'
 
 const mouseUpCaptureHandler = () => {
   const btn = document.getElementById('drpBtn')
@@ -16,6 +17,7 @@ const mouseUpCaptureHandler = () => {
 }
 
 const DropDown = ({
+  handleValue,
   id,
   icon,
   endIcon,
@@ -50,6 +52,7 @@ const DropDown = ({
     dropDown.style.opacity = '1'
     dropDown.style.zIndex = '1'
   }
+
   return (
     <div className={stl.drpdncontainer}>
       <Button
@@ -72,7 +75,12 @@ const DropDown = ({
           <li
             value={index + 1}
             key={index}
-            onClick={liOnClick}
+            onClick={
+              liOnClick ||
+              (e => {
+                handleValue(e.target.value)
+              })
+            }
             onMouseUpCapture={onMouseUpCapture}
           >
             {i || children}
