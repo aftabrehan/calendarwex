@@ -3,7 +3,7 @@
 .layout {
   display: flex;
   width: 90vw;
-  max-height: 100vh;
+  height: 100vh;
   background: $white;
 
   .sideBar {
@@ -15,9 +15,9 @@
   }
 
   .container {
-    height: 92.2%;
+    height: 89.7%;
+    border: 1px solid red;
     overflow: scroll;
-    border: 1px solid blue;
 
     &::-webkit-scrollbar {
       display: none;
@@ -26,11 +26,14 @@
 
   .labelTop {
     width: 100%;
-    border: 1px solid red;
   }
 
   .labelLeft {
     width: 100%;
     justify-content: center;
   }
+}
+
+.monthDaySlots {
+  box-sizing: content-box;
 }

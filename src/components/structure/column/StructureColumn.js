@@ -7,7 +7,7 @@ const StructureColumn = ({ customClass, width, slotWidth, height }) => {
   const n = 24
 
   return (
-    <div className={clsx(stl.structureColumn, customClass)}>
+    <div className={clsx(stl.structureColumn, customClass)} style={{ width }}>
       {[...Array(n)].map((item, i) => (
         <CalendarSlots
           key={i}

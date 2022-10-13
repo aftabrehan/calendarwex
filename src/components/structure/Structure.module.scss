@@ -3,13 +3,17 @@
 .yearColumn {
   width: 80vw;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
   justify-items: center;
 }
 
-.common > div {
-  @extend .flexCenter;
+.common {
+  width: 100%;
+  > div {
+    width: 100%;
+    @extend .flexCenter;
+  }
 }
 
 .monthView {
@@ -20,8 +24,4 @@
 .weekView {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
-}
-
-.structureColumn {
-  width: 100%;
 }
