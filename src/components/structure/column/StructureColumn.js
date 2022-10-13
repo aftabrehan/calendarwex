@@ -16,6 +16,7 @@ const StructureColumn = ({ customClass, width, slotWidth, height }) => {
           type="week"
           height="80px"
           event={[]}
+          customClass={stl.slot}
         />
       ))}
     </div>
