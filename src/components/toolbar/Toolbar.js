@@ -11,6 +11,7 @@ import AddIcon from '../../assets/addIcon.svg'
 import { useState } from 'react'
 
 const Toolbar = ({
+  handleType,
   argList,
   id,
   icon,
@@ -40,6 +41,8 @@ const Toolbar = ({
   const [drpLabel, setdDrpLabel] = useState('Day')
 
   const valueHandler = props => {
+    handleType(props)
+
     if (
       (props === 1 && setTitle('01 January 2022')) ||
       (props === 2 && setTitle('01-07 January 2022')) ||
