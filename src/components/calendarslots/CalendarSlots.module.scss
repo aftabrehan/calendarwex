@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   min-width: 118px;
-  height: 62px;
+  min-height: 62px;
   background: $white;
   border: 1px solid $stroke;
 }
@@ -16,8 +16,8 @@
   @extend .flexCol;
   padding: 3px 4px;
   gap: 10px;
-  width: 106px;
-  height: 102px;
+  min-width: 106px;
+  min-height: 102px;
   background: $white;
   border: 1px solid $stroke;
 }
@@ -55,7 +55,6 @@
   @extend .flexColCenter;
   padding: 20px;
   gap: 4px;
-  width: 330px;
   height: 295px;
   background: $white;
 }

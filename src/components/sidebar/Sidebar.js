@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+
 import stl from './Sidebar.module.scss'
 
 import AddIcon from '../../assets/addIcon.svg'
@@ -11,9 +13,10 @@ const Sidebar = ({
   monthName,
   monthData,
   upcomingEvents,
+  customClass,
 }) => {
   return (
-    <div arg={arg} className={stl.sidebar}>
+    <div arg={arg} className={clsx(stl.sidebar, customClass)}>
       <div className={stl.monthHeader}>
         <div className={stl.monthName}>{monthName}</div>
       </div>

@@ -12,9 +12,9 @@ import BlankIcon from '../../src/assets/blank.svg'
 
 const labelTopWeek = {
   arg: 'Week',
-  variant: 'row',
+  type: 'row',
   gap: <BlankIcon />,
-  days: [
+  dayHeader: [
     {
       day: 'Mon',
       icon: <BrainIcon />,
@@ -48,8 +48,8 @@ const labelTopWeek = {
 
 const labelTopMonth = {
   arg: 'Month',
-  variant: 'row',
-  days: [
+  type: 'row',
+  dayHeader: [
     {
       day: 'Mon',
       icon: <BrainIcon />,

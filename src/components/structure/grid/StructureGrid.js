@@ -1,10 +1,26 @@
 import clsx from 'clsx'
+
 import stl from '../Structure.module.scss'
 
-const StructureGrid = ({ variant, hours, days, day, months, month }) => (
-  <div className={clsx(stl[`${variant}`], stl.common)}>
+const StructureGrid = ({
+  variant,
+  customClass,
+  customClassWeek,
+  type,
+  hours,
+  width,
+  height,
+  days,
+  day,
+  months,
+  month,
+}) => (
+  <div
+    className={clsx(stl[`${variant}`], stl.common, customClass)}
+    style={{ width, height }}
+  >
     {months || month || (
-      <div className={stl.weekView}>
+      <div className={clsx(stl[`${type}`], customClassWeek)}>
         {hours}
         {days || day}
       </div>
@@ -13,25 +29,3 @@ const StructureGrid = ({ variant, hours, days, day, months, month }) => (
 )
 
 export default StructureGrid
-
-let months = []
-
-for (let i = 0; i < 12; i++) {
-  months.push(
-    <CalendarSlots
-      type="year"
-      variant="yearMonthView"
-      event={[]}
-      monthNumber="01"
-      monthData={<MiniCalendar />}
-      key={months.length}
-      customClass={stl.monthDaySlots}
-    />
-  )
-}
-
-StructureGrid.defaultProps = {
-  arg: 'YearColumn',
-  variant: 'yearColumn',
-  months,
-}

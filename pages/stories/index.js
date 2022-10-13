@@ -19,6 +19,7 @@ const StoriesLinks = () => (
     <Link href="/stories/datemonth">Date-Month</Link>
     <Link href="/stories/structure-column">Structure-Column</Link>
     <Link href="/stories/structure-grid">Structure-Grid</Link>
+    <Link href="/stories/layout">Layout</Link>
   </div>
 )
 

@@ -43,7 +43,7 @@ for (let i = 0; i < 35; i++) {
 }
 
 for (let i = 0; i < 7; i++) {
-  days.push(<StructureColumn />)
+  days.push(<StructureColumn slotWidth="100%" />)
 }
 
 const yearColumn = {
@@ -60,14 +60,16 @@ const monthView = {
 
 const weekView = {
   arg: 'WeekView',
+  type: 'weekView',
   hours: <LabelLeft />,
   days,
 }
 
 const dayView = {
   arg: 'DayView',
+  type: 'dayView',
   hours: <LabelLeft />,
-  day: <StructureColumn slotWidth="1100px" />,
+  day: <StructureColumn width="100%" />,
 }
 
 const StructureGridStory = () => (
