@@ -202,12 +202,24 @@ const Layout = () => {
         months: months,
       })
     }
-    console.log(data)
+  }
+
+  const time = new Date()
+
+  const handleSidebar = () => {
+    console.log('hi')
+    const sidebar = document.getElementById('sidebar')
+    if (sidebar.style.display === 'none') {
+      sidebar.style.display = 'flex'
+    } else {
+      sidebar.style.display = 'none'
+    }
   }
 
   return (
     <div className={stl.layout}>
       <Sidebar
+        id="sidebar"
         customClass={stl.sideBar}
         monthName="January"
         monthData={<MiniCalendar customClass={stl.miniCalendar} />}
@@ -216,35 +228,41 @@ const Layout = () => {
             eventHeading: 'Today',
             eventContent: [
               {
-                eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventName: 'Daily Standup Daily Standup Daily Standup',
+                eventTime: time.getHours() + ':' + time.getMinutes(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: time.getHours() + ':' + time.getMinutes(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: time.getHours() + ':' + time.getMinutes(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: time.getHours() + ':' + time.getMinutes(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: time.getHours() + ':' + time.getMinutes(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: time.getHours() + ':' + time.getMinutes(),
               },
             ],
           },
         ]}
       />
       <div className={stl.main}>
-        <Toolbar handleType={typeHandler} width="100%" />
+        <Toolbar
+          toggleBtnClass={stl.toggleBtn}
+          sidebarBtnId="toggleSidebar"
+          sideBarHandler={handleSidebar}
+          handleType={typeHandler}
+          width="100%"
+        />
         {label}
         <div className={stl.container}>
           <StructureGrid

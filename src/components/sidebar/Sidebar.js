@@ -8,6 +8,7 @@ import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
 const Sidebar = ({
   arg,
+  id,
   variant,
   icon,
   monthName,
@@ -16,7 +17,7 @@ const Sidebar = ({
   customClass,
 }) => {
   return (
-    <div arg={arg} className={clsx(stl.sidebar, customClass)}>
+    <div id={id} arg={arg} className={clsx(stl.sidebar, customClass)}>
       <div className={stl.monthHeader}>
         <div className={stl.monthName}>{monthName}</div>
       </div>
@@ -32,7 +33,7 @@ const Sidebar = ({
               {upcomingEvents[i].eventContent.map((eventCntnt, index) => (
                 <div key={index} className={stl.eventItem}>
                   <div className={stl.eventName}>
-                    <EllipseIcon />
+                    {/* <EllipseIcon /> */}
                     {eventCntnt.eventName}
                   </div>
                   <div>

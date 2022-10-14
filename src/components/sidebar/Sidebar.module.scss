@@ -4,9 +4,9 @@
 .sidebar {
   box-sizing: border-box;
   @extend .flexCol;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
-  width: 250px;
+  min-width: max-content;
   min-height: 458px;
   background: $white;
   border: 1px solid $stroke;
@@ -16,7 +16,7 @@
 .monthHeader {
   padding: 10px 16px;
   gap: 10px;
-  width: 250px;
+  // width: max-content;
   height: 47px;
 }
 
@@ -30,7 +30,6 @@
   box-sizing: border-box;
   padding: 10px 16px;
   gap: 10px;
-  width: 250px;
   height: 193px;
   overflow: auto;
 
@@ -68,7 +67,6 @@
 
   .eventName {
     @extend .flexRowCenter;
-    gap: 2px;
     color: $darkGreen;
   }
 }
