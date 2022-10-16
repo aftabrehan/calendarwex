@@ -11,6 +11,7 @@ import StructureGrid from 'components/structure/grid'
 import LabelTop from 'components/label'
 import CalendarSlots from 'components/calendarslots'
 import DateMonth from 'components/date-month'
+import EventTypes from 'components/event-types'
 
 import BrainIcon from '../../assets/brain.svg'
 import CamelIcon from '../../assets/camel.svg'
@@ -20,6 +21,7 @@ import ZombieIcon from '../../assets/zombie.svg'
 import PartyPopperIcon from '../../assets/party-popper.svg'
 import MassageIcon from '../../assets/women-getting-massage.svg'
 import BlankIcon from '../../assets/blank.svg'
+import BellIcon from '../../assets/bell.svg'
 
 const Layout = () => {
   const [data, setData] = useState({
@@ -27,7 +29,7 @@ const Layout = () => {
     hours: <LabelLeft />,
     day: <StructureColumn width="100%" />,
   })
-  const [label, setLabel] = useState()
+  const [label, setLabel] = useState(<LabelTop type="row" mainWidth="100%" />)
 
   let days = []
 
@@ -68,10 +70,25 @@ const Layout = () => {
 
   const typeHandler = props => {
     if (props === 1) {
+      setLabel(<LabelTop type="row" width="100%" />)
       setData({
         type: 'dayView',
         hours: <LabelLeft />,
-        day: <StructureColumn width="100%" />,
+        day: (
+          <StructureColumn
+            events={
+              <EventTypes
+                eventType="eventDefHr"
+                icon={<BellIcon />}
+                event={{
+                  eventName: 'Event Name',
+                  eventTime: '08:00',
+                }}
+              />
+            }
+            width="100%"
+          />
+        ),
       })
     } else if (props === 2) {
       setLabel(
@@ -202,24 +219,12 @@ const Layout = () => {
         months: months,
       })
     }
-  }
-
-  const time = new Date()
-
-  const handleSidebar = () => {
-    console.log('hi')
-    const sidebar = document.getElementById('sidebar')
-    if (sidebar.style.display === 'none') {
-      sidebar.style.display = 'flex'
-    } else {
-      sidebar.style.display = 'none'
-    }
+    console.log(data)
   }
 
   return (
     <div className={stl.layout}>
       <Sidebar
-        id="sidebar"
         customClass={stl.sideBar}
         monthName="January"
         monthData={<MiniCalendar customClass={stl.miniCalendar} />}
@@ -228,43 +233,37 @@ const Layout = () => {
             eventHeading: 'Today',
             eventContent: [
               {
-                eventName: 'Daily Standup Daily Standup Daily Standup',
-                eventTime: time.getHours() + ':' + time.getMinutes(),
+                eventName: 'Daily Standup',
+                eventTime: new Date().toLocaleTimeString(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: time.getHours() + ':' + time.getMinutes(),
+                eventTime: new Date().toLocaleTimeString(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: time.getHours() + ':' + time.getMinutes(),
+                eventTime: new Date().toLocaleTimeString(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: time.getHours() + ':' + time.getMinutes(),
+                eventTime: new Date().toLocaleTimeString(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: time.getHours() + ':' + time.getMinutes(),
+                eventTime: new Date().toLocaleTimeString(),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: time.getHours() + ':' + time.getMinutes(),
+                eventTime: new Date().toLocaleTimeString(),
               },
             ],
           },
         ]}
       />
-      <div className={stl.main}>
-        <Toolbar
-          toggleBtnClass={stl.toggleBtn}
-          sidebarBtnId="toggleSidebar"
-          sideBarHandler={handleSidebar}
-          handleType={typeHandler}
-          width="100%"
-        />
+      <div className={stl.main} style={{ width: '100%' }}>
+        <Toolbar handleType={typeHandler} width="100%" />
         {label}
-        <div className={stl.container}>
+        <div className={stl.container} style={{ width: '100%' }}>
           <StructureGrid
             width="100%"
             type={data.type}

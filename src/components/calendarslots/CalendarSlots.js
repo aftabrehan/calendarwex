@@ -19,12 +19,12 @@ const CalendarSlots = ({
     <div
       id={id}
       className={clsx(stl[`${type}`], stl[`${variant}`], customClass)}
-      style={{ width, height }}
+      style={{ width: '100%', height }}
     >
       <div>{date || monthNumber}</div>
       <div>
         {event.map((item, i) => (
-          <div className={stl.event} key={i}>
+          <div className={stl.event} key={i} style={{ width: '100%' }}>
             {item}
           </div>
         ))}
