@@ -22,12 +22,12 @@ const Button = ({
 }) => {
   return (
     <button
+      className={clsx(stl[`${variant}Btn`], stl.btn, customClass)}
       id={id}
       onClick={onClick}
       disabled={disabled}
       type={type}
       style={style}
-      className={clsx(stl[`${variant}Btn`], stl.btn, customClass)}
     >
       {label || children}
       {icon}
@@ -37,7 +37,7 @@ const Button = ({
 
 Button.defaultProps = {
   label: '',
-  onClick: () => console.log('Button Clicked!'),
+  // onClick: () => console.log('Button Clicked!'),
   variant: 'fill',
   size: 'normal',
   disabled: false,

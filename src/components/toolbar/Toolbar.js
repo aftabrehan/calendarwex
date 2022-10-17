@@ -12,6 +12,9 @@ import { useState } from 'react'
 
 const Toolbar = ({
   handleType,
+  sideBarHandler,
+  sidebarBtnId,
+  toggleBtnClass,
   argList,
   id,
   icon,
@@ -62,10 +65,12 @@ const Toolbar = ({
     <div className={clsx(stl.toolbar, customClass)} style={{ width, height }}>
       <div className={stl.right}>
         <Button
-          customClass={clsx(stl.openSidebar)}
+          id={sidebarBtnId}
+          customClass={toggleBtnClass}
           icon={<OptIcon />}
           variant="transparent"
           style={{ flex: 'none', grow: '0', order: '0' }}
+          onClick={sideBarHandler}
         ></Button>
         <span className={stl.label}>{label || title}</span>
         <DropDown
@@ -88,9 +93,3 @@ const Toolbar = ({
 }
 
 export default Toolbar
-
-Toolbar.defaultProps = {
-  arg: 'Day',
-  // label: '01 January 2022',
-  // name: 'Day',
-}

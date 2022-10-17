@@ -14,6 +14,8 @@
 .month {
   box-sizing: content-box;
   @extend .flexCol;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 3px 4px;
   gap: 10px;
   min-width: 106px;

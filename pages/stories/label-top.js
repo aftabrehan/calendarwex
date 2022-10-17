@@ -10,6 +10,11 @@ import PartyPopperIcon from '../../src/assets/party-popper.svg'
 import MassageIcon from '../../src/assets/women-getting-massage.svg'
 import BlankIcon from '../../src/assets/blank.svg'
 
+const labelTopEmpty = {
+  arg: 'Empty',
+  type: 'row',
+}
+
 const labelTopWeek = {
   arg: 'Week',
   type: 'row',
@@ -83,7 +88,7 @@ const labelTopMonth = {
 
 const LabelStory = () => (
   <Stories
-    argList={[labelTopWeek, labelTopMonth]}
+    argList={[labelTopEmpty, labelTopWeek, labelTopMonth]}
     template={args => <LabelTop {...args} />}
   />
 )

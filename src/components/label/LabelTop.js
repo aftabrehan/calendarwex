@@ -11,19 +11,19 @@ import PartyPopperIcon from '../../assets/party-popper.svg'
 import MassageIcon from '../../assets/women-getting-massage.svg'
 
 const LabelTop = ({
-  arg,
   type,
   width,
   height,
+  mainWidth,
   variant,
   dayHeader,
   gap,
   customClass,
 }) => {
   return (
-    <div className={clsx(stl.label, customClass)}>
+    <div className={clsx(stl.label, customClass)} style={{ width: mainWidth }}>
       <div>{gap}</div>
-      {dayHeader.map((item, i) => (
+      {dayHeader?.map((item, i) => (
         <div key={i} className={clsx(stl[`${type}`])} style={{ width, height }}>
           {item.icon}
           {item.day}
@@ -35,37 +35,37 @@ const LabelTop = ({
 
 export default LabelTop
 
-LabelTop.defaultProps = {
-  arg: 'Week',
-  type: 'row',
-  dayHeader: [
-    {
-      day: 'Mon',
-      icon: <BrainIcon />,
-    },
-    {
-      day: 'Tue',
-      icon: <CamelIcon />,
-    },
-    {
-      day: 'Wed',
-      icon: <CocktailGlassIcon />,
-    },
-    {
-      day: 'Thu',
-      icon: <HotBeverageIcon />,
-    },
-    {
-      day: 'Fri',
-      icon: <ZombieIcon />,
-    },
-    {
-      day: 'Sat',
-      icon: <PartyPopperIcon />,
-    },
-    {
-      day: 'Sun',
-      icon: <MassageIcon />,
-    },
-  ],
-}
+// LabelTop.defaultProps = {
+//   arg: 'Week',
+//   type: 'row',
+//   dayHeader: [
+//     {
+//       day: 'Mon',
+//       icon: <BrainIcon />,
+//     },
+//     {
+//       day: 'Tue',
+//       icon: <CamelIcon />,
+//     },
+//     {
+//       day: 'Wed',
+//       icon: <CocktailGlassIcon />,
+//     },
+//     {
+//       day: 'Thu',
+//       icon: <HotBeverageIcon />,
+//     },
+//     {
+//       day: 'Fri',
+//       icon: <ZombieIcon />,
+//     },
+//     {
+//       day: 'Sat',
+//       icon: <PartyPopperIcon />,
+//     },
+//     {
+//       day: 'Sun',
+//       icon: <MassageIcon />,
+//     },
+//   ],
+// }

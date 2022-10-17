@@ -20,24 +20,31 @@ const EventTypes = ({
   borderRadius,
 }) => {
   return (
-    <div
-      className={clsx(stl[`${eventType}`], Cls)}
-      style={{ background, borderRadius }}
-    >
-      <div
-        className={clsx(stl.defaultHorizontal, customClass)}
-        style={{ width, height, padding }}
-      >
-        <div className={stl.eventName} style={{ color: eventNameClr }}>
-          {icon}
-          {event.eventName}
+    <div style={{ width: '100%' }}>
+      <div style={{ width: '100%' }}>
+        <div
+          className={clsx(stl[`${eventType}`], Cls)}
+          style={{ background, borderRadius, width: '100%' }}
+        >
+          <div
+            className={clsx(stl.defaultHorizontal, customClass)}
+            style={{ width: '100%', height, padding }}
+          >
+            <div className={stl.eventName} style={{ color: eventNameClr }}>
+              {icon}
+              {event.eventName}
+            </div>
+            <div className={stl.eventTime} style={{ color: eventTimeClr }}>
+              {event.eventTime}
+            </div>
+          </div>
+          <div
+            className={stl.eventDesc}
+            style={{ color: eventDescClr, width: '100%' }}
+          >
+            {event.eventDesc}
+          </div>
         </div>
-        <div className={stl.eventTime} style={{ color: eventTimeClr }}>
-          {event.eventTime}
-        </div>
-      </div>
-      <div className={stl.eventDesc} style={{ color: eventDescClr }}>
-        {event.eventDesc}
       </div>
     </div>
   )
