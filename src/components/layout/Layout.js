@@ -34,7 +34,23 @@ const Layout = () => {
   let days = []
 
   for (let i = 0; i < 7; i++) {
-    days.push(<StructureColumn width="100%" />)
+    days.push(
+      <StructureColumn
+        // events={
+        //   <EventTypes
+        //     customClass={stl.eventWeek}
+        //     eventType="eventDescHr"
+        //     icon={<BellIcon />}
+        //     event={{
+        //       eventName: 'Event Name',
+        //       eventTime: '08:00',
+        //       eventDesc: 'DescriptionDescriptionDescriptionDescription',
+        //     }}
+        //   />
+        // }
+        width="100%"
+      />
+    )
   }
 
   let month = []
@@ -78,6 +94,7 @@ const Layout = () => {
           <StructureColumn
             events={
               <EventTypes
+                customClass={stl.event}
                 eventType="eventDefHr"
                 icon={<BellIcon />}
                 event={{
@@ -219,7 +236,6 @@ const Layout = () => {
         months: months,
       })
     }
-    console.log(data)
   }
 
   return (
