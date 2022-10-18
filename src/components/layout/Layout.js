@@ -21,7 +21,11 @@ import ZombieIcon from '../../assets/zombie.svg'
 import PartyPopperIcon from '../../assets/party-popper.svg'
 import MassageIcon from '../../assets/women-getting-massage.svg'
 import BlankIcon from '../../assets/blank.svg'
-import BellIcon from '../../assets/bell.svg'
+
+const getTimeHHMM = d => {
+  const date = d
+  return date.getHours() + ':' + date.getMinutes()
+}
 
 const Layout = () => {
   const [data, setData] = useState({
@@ -34,23 +38,7 @@ const Layout = () => {
   let days = []
 
   for (let i = 0; i < 7; i++) {
-    days.push(
-      <StructureColumn
-        // events={
-        //   <EventTypes
-        //     customClass={stl.eventWeek}
-        //     eventType="eventDescHr"
-        //     icon={<BellIcon />}
-        //     event={{
-        //       eventName: 'Event Name',
-        //       eventTime: '08:00',
-        //       eventDesc: 'DescriptionDescriptionDescriptionDescription',
-        //     }}
-        //   />
-        // }
-        width="100%"
-      />
-    )
+    days.push(<StructureColumn width="100%" />)
   }
 
   let month = []
@@ -62,8 +50,12 @@ const Layout = () => {
         type="month"
         date={<DateMonth />}
         event={[]}
-        width="100%"
-        height="167.5px"
+        style={{
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          width: '100%',
+          height: '167.5px',
+        }}
       />
     )
   }
@@ -86,26 +78,11 @@ const Layout = () => {
 
   const typeHandler = props => {
     if (props === 1) {
-      setLabel(<LabelTop type="row" width="100%" />)
+      setLabel(<LabelTop type="row" mainWidth="100%" />)
       setData({
         type: 'dayView',
         hours: <LabelLeft />,
-        day: (
-          <StructureColumn
-            events={
-              <EventTypes
-                customClass={stl.event}
-                eventType="eventDefHr"
-                icon={<BellIcon />}
-                event={{
-                  eventName: 'Event Name',
-                  eventTime: '08:00',
-                }}
-              />
-            }
-            width="100%"
-          />
-        ),
+        day: <StructureColumn width="100%" />,
       })
     } else if (props === 2) {
       setLabel(
@@ -243,34 +220,34 @@ const Layout = () => {
       <Sidebar
         customClass={stl.sideBar}
         monthName="January"
-        monthData={<MiniCalendar customClass={stl.miniCalendar} />}
+        monthData={<MiniCalendar />}
         upcomingEvents={[
           {
             eventHeading: 'Today',
             eventContent: [
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: getTimeHHMM(new Date()),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: getTimeHHMM(new Date()),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: getTimeHHMM(new Date()),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: getTimeHHMM(new Date()),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: getTimeHHMM(new Date()),
               },
               {
                 eventName: 'Daily Standup',
-                eventTime: new Date().toLocaleTimeString(),
+                eventTime: getTimeHHMM(new Date()),
               },
             ],
           },
