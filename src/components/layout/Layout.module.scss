@@ -3,7 +3,6 @@
 .layout {
   display: flex;
   width: 90vw;
-  border: 1px solid red;
   height: 100vh;
   background: $white;
 
@@ -12,11 +11,12 @@
   }
 
   .main {
+    border: 1px solid red;
     width: 84%;
   }
 
   .container {
-    height: 88.7%;
+    height: 89.8%;
     overflow: scroll;
 
     &::-webkit-scrollbar {
@@ -36,6 +36,16 @@
 
 .monthDaySlots {
   box-sizing: content-box;
+}
+
+.eve {
+  padding: 0 10px;
+}
+
+.monthEvent {
+  justify-content: space-between;
+  border: 1px solid red;
+  align-items: stretch;
 }
 
 @media screen and (max-width: 1260px) {

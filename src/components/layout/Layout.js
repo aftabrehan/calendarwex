@@ -1,5 +1,7 @@
 import stl from './Layout.module.scss'
 
+import { format } from 'date-fns'
+
 import { useState } from 'react'
 
 import Sidebar from 'components/sidebar'
@@ -21,10 +23,12 @@ import ZombieIcon from '../../assets/zombie.svg'
 import PartyPopperIcon from '../../assets/party-popper.svg'
 import MassageIcon from '../../assets/women-getting-massage.svg'
 import BlankIcon from '../../assets/blank.svg'
+import EllipseIcon from '../../assets/ellipse.svg'
 
 const getTimeHHMM = d => {
   const date = d
-  return date.getHours() + ':' + date.getMinutes()
+  const time = format(date, 'HH:mm')
+  return time
 }
 
 const Layout = () => {
@@ -38,7 +42,27 @@ const Layout = () => {
   let days = []
 
   for (let i = 0; i < 7; i++) {
-    days.push(<StructureColumn width="100%" />)
+    days.push(
+      <StructureColumn
+        calendarSlotData={{
+          variant: 'topPartialSingleWeek',
+          type: 'week',
+          event: [
+            <EventTypes
+              borderRadius="0 0 3px 3px"
+              eventType="eventDescHr"
+              event={{
+                eventName: 'Event Name',
+                eventTime: '08:00',
+                eventDesc: 'Description',
+              }}
+            />,
+          ],
+        }}
+        width="100%"
+        key={days.length}
+      />
+    )
   }
 
   let month = []
@@ -46,16 +70,37 @@ const Layout = () => {
   for (let i = 0; i < 35; i++) {
     month.push(
       <CalendarSlots
-        variant="blankNoneMonth"
+        variant="fullTripleMonth"
         type="month"
         date={<DateMonth />}
-        event={[]}
+        event={[
+          <EventTypes
+            eventType="eventSmallHr"
+            icon={<EllipseIcon />}
+            event={{
+              eventName: 'Event Name',
+              eventTime: '08:00',
+            }}
+            padding="0"
+          />,
+          <EventTypes
+            eventType="eventSmallHr"
+            icon={<EllipseIcon />}
+            event={{
+              eventName: 'Event Name',
+              eventTime: '08:00',
+            }}
+            padding="0"
+          />,
+        ]}
+        customClass={stl.monthEvent}
         style={{
-          justifyContent: 'flex-start',
+          justifyContent: 'space-evenly',
           alignItems: 'flex-start',
           width: '100%',
-          height: '167.5px',
+          height: '167px',
         }}
+        key={month.length}
       />
     )
   }
@@ -82,7 +127,23 @@ const Layout = () => {
       setData({
         type: 'dayView',
         hours: <LabelLeft />,
-        day: <StructureColumn width="100%" />,
+        day: (
+          <StructureColumn
+            width="100%"
+            events={
+              <EventTypes
+                width="100%"
+                height="100%"
+                eventType="eventDefHr"
+                event={{
+                  eventName: 'Event Name',
+                  eventTime: '08:00',
+                }}
+                Cls={stl.eve}
+              />
+            }
+          />
+        ),
       })
     } else if (props === 2) {
       setLabel(

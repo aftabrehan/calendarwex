@@ -11,13 +11,15 @@
 .common {
   width: 100%;
   > div {
-    width: 100%;
+    // width: 100%;
     @extend .flexCenter;
   }
 }
 
 .monthView {
+  border: 1px solid red;
   display: grid;
+  padding: 0;
   grid-template-columns: auto auto auto auto auto auto auto;
 }
 
