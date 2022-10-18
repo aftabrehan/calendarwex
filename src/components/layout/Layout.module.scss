@@ -11,6 +11,7 @@
   }
 
   .main {
+    border: 1px solid red;
     width: 84%;
   }
 
@@ -39,6 +40,12 @@
 
 .eve {
   padding: 0 10px;
+}
+
+.monthEvent {
+  justify-content: space-between;
+  border: 1px solid red;
+  align-items: stretch;
 }
 
 @media screen and (max-width: 1260px) {

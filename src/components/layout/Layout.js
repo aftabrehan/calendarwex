@@ -60,6 +60,7 @@ const Layout = () => {
           ],
         }}
         width="100%"
+        key={days.length}
       />
     )
   }
@@ -69,16 +70,37 @@ const Layout = () => {
   for (let i = 0; i < 35; i++) {
     month.push(
       <CalendarSlots
-        variant="blankNoneMonth"
+        variant="fullTripleMonth"
         type="month"
         date={<DateMonth />}
-        event={[]}
+        event={[
+          <EventTypes
+            eventType="eventSmallHr"
+            icon={<EllipseIcon />}
+            event={{
+              eventName: 'Event Name',
+              eventTime: '08:00',
+            }}
+            padding="0"
+          />,
+          <EventTypes
+            eventType="eventSmallHr"
+            icon={<EllipseIcon />}
+            event={{
+              eventName: 'Event Name',
+              eventTime: '08:00',
+            }}
+            padding="0"
+          />,
+        ]}
+        customClass={stl.monthEvent}
         style={{
-          justifyContent: 'flex-start',
+          justifyContent: 'space-evenly',
           alignItems: 'flex-start',
           width: '100%',
-          height: '167.5px',
+          height: '167px',
         }}
+        key={month.length}
       />
     )
   }
