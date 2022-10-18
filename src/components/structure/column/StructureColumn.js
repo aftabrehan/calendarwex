@@ -15,7 +15,6 @@ const StructureColumn = ({ customClass, width, slotWidth, height, events }) => {
         <CalendarSlots
           key={i}
           variant="blankNoneWeek"
-          // width={slotWidth}
           width="100%"
           type="week"
           height="80px"

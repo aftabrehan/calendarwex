@@ -38,12 +38,13 @@ for (let i = 0; i < 35; i++) {
       customClass={stl.calendarSlots}
       width="170px"
       height="134px"
+      key={month.length}
     />
   )
 }
 
 for (let i = 0; i < 7; i++) {
-  days.push(<StructureColumn slotWidth="100%" />)
+  days.push(<StructureColumn key={days.length} slotWidth="100%" />)
 }
 
 const yearColumn = {
