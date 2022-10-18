@@ -23,14 +23,12 @@ const CalendarSlots = ({
       style={style || { height }}
     >
       <div>{date || monthNumber}</div>
-      <div>
-        {event.map((item, i) => (
-          <div className={stl.common} key={i}>
-            {item}
-          </div>
-        ))}
-        {toggle || monthData}
-      </div>
+      {event.map((item, i) => (
+        <div className={stl.event} key={i}>
+          {item}
+        </div>
+      ))}
+      {toggle || monthData}
     </div>
   )
 }
