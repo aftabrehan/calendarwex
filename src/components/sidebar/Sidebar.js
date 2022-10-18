@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import stl from './Sidebar.module.scss'
 
 import AddIcon from '../../assets/addIcon.svg'
-import EllipseIcon from '../../assets/ellipse-1.svg'
 import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
 const Sidebar = ({

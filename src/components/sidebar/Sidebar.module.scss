@@ -30,7 +30,7 @@
   box-sizing: border-box;
   padding: 10px 16px;
   gap: 10px;
-  height: 193px;
+  min-height: 193px;
   overflow: auto;
 
   &::-webkit-scrollbar {

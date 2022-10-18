@@ -1,0 +1,23 @@
+.input {
+  display: flex;
+  justify-content: center;
+}
+
+.dataContainer {
+  margin-top: 5rem;
+  border: 1px solid #c1c1c1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  input {
+  }
+
+  .name,
+  .userName {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
