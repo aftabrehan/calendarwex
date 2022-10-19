@@ -10,7 +10,6 @@
 }
 
 .searchButton {
-  // all: unset;
   outline: none;
   border: none;
   cursor: pointer;
@@ -19,9 +18,6 @@
   border-radius: 50%;
   background: $backgroundGrayWhite;
   @extend .flexCenter;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   transition: 8 0.4s;
 
   svg {

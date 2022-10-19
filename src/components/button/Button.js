@@ -37,7 +37,6 @@ const Button = ({
 
 Button.defaultProps = {
   label: '',
-  // onClick: () => console.log('Button Clicked!'),
   variant: 'fill',
   size: 'normal',
   disabled: false,

@@ -34,38 +34,3 @@ const LabelTop = ({
 }
 
 export default LabelTop
-
-// LabelTop.defaultProps = {
-//   arg: 'Week',
-//   type: 'row',
-//   dayHeader: [
-//     {
-//       day: 'Mon',
-//       icon: <BrainIcon />,
-//     },
-//     {
-//       day: 'Tue',
-//       icon: <CamelIcon />,
-//     },
-//     {
-//       day: 'Wed',
-//       icon: <CocktailGlassIcon />,
-//     },
-//     {
-//       day: 'Thu',
-//       icon: <HotBeverageIcon />,
-//     },
-//     {
-//       day: 'Fri',
-//       icon: <ZombieIcon />,
-//     },
-//     {
-//       day: 'Sat',
-//       icon: <PartyPopperIcon />,
-//     },
-//     {
-//       day: 'Sun',
-//       icon: <MassageIcon />,
-//     },
-//   ],
-// }
