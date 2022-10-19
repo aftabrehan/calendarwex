@@ -73,8 +73,8 @@ const DropDown = ({
       >
         {drplist.map((i, index) => (
           <li
-            value={index + 1}
             key={index}
+            value={index + 1}
             onClick={
               liOnClick ||
               (e => {

@@ -44,23 +44,23 @@ const Layout = () => {
   for (let i = 0; i < 7; i++) {
     days.push(
       <StructureColumn
+        key={days.length}
         calendarSlotData={{
           variant: 'topPartialSingleWeek',
           type: 'week',
           event: [
-            <EventTypes
-              borderRadius="0 0 3px 3px"
-              eventType="eventDescHr"
-              event={{
+            {
+              borderRadius: '0 0 3px 3px',
+              eventType: 'eventDescHr',
+              event: {
                 eventName: 'Event Name',
                 eventTime: '08:00',
                 eventDesc: 'Description',
-              }}
-            />,
+              },
+            },
           ],
         }}
         width="100%"
-        key={days.length}
       />
     )
   }
@@ -74,24 +74,24 @@ const Layout = () => {
         type="month"
         date={<DateMonth />}
         event={[
-          <EventTypes
-            eventType="eventSmallHr"
-            icon={<EllipseIcon />}
-            event={{
+          {
+            eventType: 'eventSmallHr',
+            icon: <EllipseIcon />,
+            event: {
               eventName: 'Event Name',
               eventTime: '08:00',
-            }}
-            padding="0"
-          />,
-          <EventTypes
-            eventType="eventSmallHr"
-            icon={<EllipseIcon />}
-            event={{
+            },
+            padding: '0',
+          },
+          {
+            eventType: 'eventSmallHr',
+            icon: <EllipseIcon />,
+            event: {
               eventName: 'Event Name',
               eventTime: '08:00',
-            }}
-            padding="0"
-          />,
+            },
+            padding: '0',
+          },
         ]}
         customClass={stl.monthEvent}
         style={{
