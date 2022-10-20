@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import '/styles/colors.scss';
 
 .container {
@@ -14,15 +14,32 @@
   padding: 75px 0;
 }
 
-.signUpForm {
+.signInContent {
+  display: flex;
+  padding: 67px 0 87px 0;
+}
+
+.signUpForm,
+.signInForm {
   margin: 0 75px;
   padding-left: 34px;
   width: 50%;
   overflow: hidden;
 }
 
+.signInForm {
+  margin: 0 90px 0 80px;
+  padding: 0;
+}
+
 .formTitle {
+  margin: 0;
   margin-bottom: 33px;
+  line-height: 1.66;
+  font-weight: bolder;
+  color: $black-1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
 }
 
 .form {
@@ -33,12 +50,6 @@
   position: relative;
   margin-bottom: 25px;
   overflow: hidden;
-
-  &:nth-child(5) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
 
   &:last-child {
     margin-bottom: 0;
@@ -68,11 +79,13 @@
   font-size: 13px;
 }
 
-.agreeTerm[type='checkbox'] {
+.agreeTerm[type='checkbox'],
+.rememberMe[type='checkbox'] {
   appearance: checkbox !important;
 }
 
-.agreeTerm[type='checkbox']:not(old) {
+.agreeTerm[type='checkbox']:not(old),
+.rememberMe[type='checkbox']:not(old) {
   width: 2em;
   margin: 0;
   padding: 0;
@@ -85,6 +98,11 @@
 }
 
 .agreeTerm[type='checkbox']:not(old) + .labelAgreeTerm {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.rememberMe[type='checkbox']:not(old) + .labelAgreeTerm {
   display: inline-block;
   margin-top: 6px;
 }
@@ -124,7 +142,8 @@
   }
 }
 
-.signUpImage {
+.signUpImage,
+.signInImage {
   margin: 0 55px;
   margin-top: 45px;
   width: 50%;
@@ -137,11 +156,63 @@
   }
 }
 
-.signUpImageLink {
+.signInImage {
+  margin: 10px 20px 0 110px;
+}
+
+.signUpImageLink,
+.signInImageLink {
   font-size: 14px;
   display: block;
   text-align: center;
   color: $black-1;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.socialLogin {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 13px solid $black-1;
+}
+
+.socialLabel {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: $black-1;
+}
+
+.socials {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 5px;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.linkFacebook,
+.linkTwitter {
+  width: 30px;
+  height: 30px;
+}
+
+.linkGoogle {
+  width: 31px;
+  height: 31px;
+  border-radius: 5px;
 }

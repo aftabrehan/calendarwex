@@ -1,7 +1,7 @@
 import Stories from 'components/stories'
 import Label from 'components/label/Label'
 
-import WaveIcon from '../../src/assets/waving-hand.svg'
+import WaveIcon from 'assets/waving-hand.svg'
 
 const labelTimeSide = {
   arg: 'labelTimeSide',

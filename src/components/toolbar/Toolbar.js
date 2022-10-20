@@ -1,14 +1,14 @@
 import clsx from 'clsx'
+import { useState } from 'react'
 
 import DropDown from 'components/dropdown'
 import Button from 'components/button'
 import stl from './Toolbar.module.scss'
 import Search from 'components/search'
 
-import OptIcon from '../../assets/optIcon.svg'
-import DropDownIcon from '../../assets/drpdwnIcon.svg'
-import AddIcon from '../../assets/addIcon.svg'
-import { useState } from 'react'
+import OptIcon from 'assets/optIcon.svg'
+import DropDownIcon from 'assets/drpdwnIcon.svg'
+import AddIcon from 'assets/addIcon.svg'
 
 const Toolbar = ({
   handleType,

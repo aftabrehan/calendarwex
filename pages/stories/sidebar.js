@@ -2,7 +2,7 @@ import Stories from 'components/stories'
 import Sidebar from 'components/sidebar'
 import MiniCalendar from 'components/minicalendar/SmallCalendar'
 
-import CalendarIcon from '../../src/assets/calendar.svg'
+import CalendarIcon from 'assets/calendar.svg'
 
 const sidebarEmpty = {
   arg: 'SidebarEmpty',

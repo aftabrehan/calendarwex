@@ -4,10 +4,10 @@ import stl from '../SignUp&SignIn.module.scss'
 
 import Image from 'next/image'
 
-import PersonIcon from '../../../assets/person_filled_FILL1_wght400_GRAD0_opsz20.svg'
-import MailIcon from '../../../assets/mail_FILL1_wght400_GRAD0_opsz20.svg'
-import PassIcon from '../../../assets/lock_FILL1_wght400_GRAD0_opsz20.svg'
-import ConfirmPassIcon from '../../../assets/lock_FILL0_wght400_GRAD0_opsz20.svg'
+import PersonIcon from 'assets/person_filled_FILL1_wght400_GRAD0_opsz20.svg'
+import MailIcon from 'assets/mail_FILL1_wght400_GRAD0_opsz20.svg'
+import PassIcon from 'assets/lock_FILL1_wght400_GRAD0_opsz20.svg'
+import ConfirmPassIcon from 'assets/lock_FILL0_wght400_GRAD0_opsz20.svg'
 import SignUpImage from '../images/signup-image.jpg'
 
 const SignUp = () => {
@@ -16,7 +16,7 @@ const SignUp = () => {
       <div className={stl.signUpContent}>
         <div className={stl.signUpForm}>
           <h2 className={stl.formTitle}>Sign Up</h2>
-          <form className={stl.form}>
+          <form className={stl.form} id="signupform">
             <div className={stl.formGroup}>
               <label for="name" className={stl.label}>
                 <PersonIcon className={stl.icon} />
@@ -65,17 +65,14 @@ const SignUp = () => {
                 className={stl.input}
               />
             </div>
-            <div className={stl.formGroup}>
+            <div className={clsx(stl.formGroup, stl.checkbox)}>
               <input
                 type="checkbox"
-                name="agree-term"
-                id="agree-term"
+                name="agreeterm"
+                id="agreeterm"
                 className={stl.agreeTerm}
               />
-              <label for="agree-term" className={stl.labelAgreeTerm}>
-                {/* <span>
-                  <span></span>
-                </span> */}
+              <label for="agreeterm" className={stl.labelAgreeTerm}>
                 <span>
                   I agree all statements in &nbsp;
                   <a href="#" className={stl.termService}>
@@ -89,6 +86,7 @@ const SignUp = () => {
                 type="submit"
                 name="signup"
                 id="signup"
+                value="Sign Up"
                 className={stl.formSubmit}
               />
             </div>
