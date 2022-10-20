@@ -10,7 +10,7 @@ import PassIcon from 'assets/lock_FILL1_wght400_GRAD0_opsz20.svg'
 import ConfirmPassIcon from 'assets/lock_FILL0_wght400_GRAD0_opsz20.svg'
 import SignUpImage from '../images/signup-image.jpg'
 
-const SignUp = () => {
+const SignUp = ({ onClickHandler }) => {
   return (
     <div className={stl.container}>
       <div className={stl.signUpContent}>
@@ -18,7 +18,7 @@ const SignUp = () => {
           <h2 className={stl.formTitle}>Sign Up</h2>
           <form className={stl.form} id="signupform">
             <div className={stl.formGroup}>
-              <label for="name" className={stl.label}>
+              <label className={stl.label}>
                 <PersonIcon className={stl.icon} />
               </label>
               <input
@@ -30,7 +30,7 @@ const SignUp = () => {
               />
             </div>
             <div className={stl.formGroup}>
-              <label for="email" className={stl.label}>
+              <label className={stl.label}>
                 <MailIcon className={stl.icon} />
               </label>
               <input
@@ -42,7 +42,7 @@ const SignUp = () => {
               />
             </div>
             <div className={stl.formGroup}>
-              <label for="pass" className={stl.label}>
+              <label className={stl.label}>
                 <PassIcon className={stl.icon} />
               </label>
               <input
@@ -54,7 +54,7 @@ const SignUp = () => {
               />
             </div>
             <div className={stl.formGroup}>
-              <label for="confrimPass" className={stl.label}>
+              <label className={stl.label}>
                 <ConfirmPassIcon className={stl.icon} />
               </label>
               <input
@@ -72,7 +72,7 @@ const SignUp = () => {
                 id="agreeterm"
                 className={stl.agreeTerm}
               />
-              <label for="agreeterm" className={stl.labelAgreeTerm}>
+              <label className={stl.labelAgreeTerm}>
                 <span>
                   I agree all statements in &nbsp;
                   <a href="#" className={stl.termService}>
@@ -94,11 +94,16 @@ const SignUp = () => {
         </div>
         <div className={stl.signUpImage}>
           <figure>
-            <Image src={SignUpImage} alt="Sign Up Image" />
+            <Image src={SignUpImage} alt="Sign Up Image" priority />
           </figure>
-          <a href="./signin" className={stl.signUpImageLink}>
+          <button
+            onClick={() => {
+              onClickHandler(1)
+            }}
+            className={stl.signUpImageLink}
+          >
             I am already member
-          </a>
+          </button>
         </div>
       </div>
     </div>

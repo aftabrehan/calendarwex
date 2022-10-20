@@ -11,23 +11,28 @@ import FacebookIcon from 'assets/facebook-svgrepo-com.svg'
 import GoogleIcon from 'assets/google-plus-3-logo-svgrepo-com.svg'
 import TwitterIcon from 'assets/twitter-svgrepo-com.svg'
 
-const SignIn = () => {
+const SignIn = ({ onClickHandler }) => {
   return (
     <div className={stl.container}>
       <div className={stl.signInContent}>
         <div className={stl.signInImage}>
           <figure>
-            <Image src={SignInImage} alt="Sign In Image" />
+            <Image src={SignInImage} alt="Sign In Image" priority />
           </figure>
-          <a href="./signup" className={stl.signInImageLink}>
+          <button
+            onClick={() => {
+              onClickHandler(0)
+            }}
+            className={stl.signInImageLink}
+          >
             Create an Account
-          </a>
+          </button>
         </div>
         <div className={stl.signInForm}>
           <h2 className={stl.formTitle}>Sign In</h2>
           <form className={stl.form} id="loginform">
             <div className={stl.formGroup}>
-              <label for="yourname" className={stl.label}>
+              <label className={stl.label}>
                 <PersonIcon className={stl.icon} />
               </label>
               <input
@@ -39,7 +44,7 @@ const SignIn = () => {
               />
             </div>
             <div className={stl.formGroup}>
-              <label for="yourpass" className={stl.label}>
+              <label className={stl.label}>
                 <PassIcon className={stl.icon} />
               </label>
               <input
@@ -56,9 +61,7 @@ const SignIn = () => {
                 name="rememberme"
                 className={stl.rememberMe}
               />
-              <label for="rememberme" className={stl.labelAgreeTerm}>
-                Remember Me
-              </label>
+              <label className={stl.labelAgreeTerm}>Remember Me</label>
             </div>
             <div className={clsx(stl.formGroup, stl.formButton)}>
               <input

@@ -25,11 +25,17 @@
   padding-left: 34px;
   width: 50%;
   overflow: hidden;
+  animation-name: signUpFormAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
 }
 
 .signInForm {
   margin: 0 90px 0 80px;
   padding: 0;
+  animation-name: signInFormAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
 }
 
 .formTitle {
@@ -44,6 +50,7 @@
 
 .form {
   width: 100%;
+  position: relative;
 }
 
 .formGroup {
@@ -116,33 +123,48 @@
   text-decoration: underline;
 }
 
+.formButton {
+  margin-top: 70px;
+}
+
 .formSubmit {
   all: unset;
+  position: relative;
   display: inline-block;
-  background: #059862;
   color: $white;
-  border-bottom: none;
+  background: $btnGreen;
+  border: 1px solid transparent;
+  transition: opacity 0.4s;
+  box-shadow: 0px 4px 8px $boxShadow1;
+  box-sizing: border-box;
   width: auto;
   padding: 15px 40px;
   border-radius: 5px;
   margin-top: 25px;
   cursor: pointer;
   user-select: none;
-  white-space: pre;
-  align-items: flex-start;
-  text-align: center;
 
   &:hover {
-    opacity: 0.7;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid $btnGreen;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px $btnGreen;
+    color: $btnGreen;
   }
 }
 
 .signUpImage,
 .signInImage {
+  display: flex;
+  flex-direction: column;
   margin: 0 55px;
   margin-top: 45px;
   width: 50%;
+  align-items: center;
   overflow: hidden;
+  animation-name: signUpImageAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
 
   figure {
     margin: 0;
@@ -153,19 +175,43 @@
 
 .signInImage {
   margin: 10px 20px 0 110px;
+  animation-name: signInImageAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
 }
 
 .signUpImageLink,
 .signInImageLink {
+  all: unset;
   font-size: 14px;
-  display: block;
-  text-align: center;
+  display: inline-block;
+  position: relative;
+  width: max-content;
   color: $black-1;
   cursor: pointer;
-  text-decoration: underline;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -10%;
+    left: 0;
+    background-color: $btnGreen;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 .checkbox {
+  position: absolute;
+  left: -2.2%;
   display: flex;
   align-items: center;
 }
@@ -204,10 +250,58 @@
 .linkTwitter {
   width: 30px;
   height: 30px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 1.15;
+  }
 }
 
 .linkGoogle {
   width: 31px;
   height: 31px;
   border-radius: 5px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 1.15;
+  }
+}
+
+@keyframes signUpFormAnime {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes signInFormAnime {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes signUpImageAnime {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes signInImageAnime {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
