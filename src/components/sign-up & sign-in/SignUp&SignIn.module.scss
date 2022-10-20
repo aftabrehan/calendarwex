@@ -97,14 +97,9 @@
   width: auto;
 }
 
-.agreeTerm[type='checkbox']:not(old) + .labelAgreeTerm {
-  display: inline-block;
-  margin-top: 6px;
-}
-
+.agreeTerm[type='checkbox']:not(old) + .labelAgreeTerm,
 .rememberMe[type='checkbox']:not(old) + .labelAgreeTerm {
   display: inline-block;
-  margin-top: 6px;
 }
 
 .labelAgreeTerm {
