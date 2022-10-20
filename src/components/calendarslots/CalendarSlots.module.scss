@@ -33,8 +33,15 @@
   align-items: flex-end;
 }
 
+.topPartialSingleWeek,
+.bottomPartialSingleWeek,
+.fullSingleWeek {
+  padding: 0 4px;
+}
+
 .middleSingleWeek {
   align-items: center;
+  padding: 0 4px;
 }
 
 .topFullSingleWeek {

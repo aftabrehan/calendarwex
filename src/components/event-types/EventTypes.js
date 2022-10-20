@@ -10,10 +10,12 @@ const EventTypes = ({
   customClass,
   width,
   height,
+  style,
   padding,
   background,
   event,
   eventNameClr,
+  justifyContent,
   eventTimeClr,
   eventDescClr,
   borderRadius,
@@ -21,9 +23,17 @@ const EventTypes = ({
   return (
     <div
       className={clsx(stl[`${eventType}`], Cls)}
-      style={{ background, borderRadius, width, height }}
+      style={{
+        background,
+        borderRadius,
+        width,
+        height,
+      }}
     >
-      <div className={clsx(stl.defaultHorizontal, customClass)}>
+      <div
+        className={clsx(stl.defaultHorizontal, customClass)}
+        style={{ gap: '0 17px' }}
+      >
         <div className={stl.eventName} style={{ color: eventNameClr }}>
           {icon}
           {event?.eventName}
