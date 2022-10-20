@@ -96,7 +96,7 @@ const SignUp = () => {
           <figure>
             <Image src={SignUpImage} alt="Sign Up Image" />
           </figure>
-          <a href="#" className={stl.signUpImageLink}>
+          <a href="./signin" className={stl.signUpImageLink}>
             I am already member
           </a>
         </div>
