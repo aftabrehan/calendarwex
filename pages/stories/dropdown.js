@@ -5,9 +5,10 @@ const drpdnmenu = {
   arg: 'Dropdown',
   variant: 'Dropdown',
   drplist: ['Day', 'Week', 'Month', 'Year'],
-  height: '250px',
-  width: '130px',
+  height: '0',
+  width: '0',
   top: '-1rem',
+  styleBtn: { backgroundColor: 'tranparent' },
 }
 
 const DropDownStory = () => (

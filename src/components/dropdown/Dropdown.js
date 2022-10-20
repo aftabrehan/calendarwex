@@ -3,7 +3,6 @@ import clsx from 'clsx'
 
 import stl from './Dropdown.module.scss'
 import Button from 'components/button'
-import { useState } from 'react'
 
 const mouseUpCaptureHandler = () => {
   const btn = document.getElementById('drpBtn')
@@ -28,6 +27,7 @@ const DropDown = ({
   variant,
   btnType,
   style,
+  styleBtn,
   size,
   type,
   disabled,
@@ -38,6 +38,7 @@ const DropDown = ({
   width,
   height,
   customClass,
+  customClassBtn,
   name,
   drplist,
   onMouseUpCapture,
@@ -54,12 +55,12 @@ const DropDown = ({
   }
 
   return (
-    <div className={stl.drpdncontainer}>
+    <div className={stl.drpdncontainer} style={style}>
       <Button
         id="drpBtn"
-        style={style}
+        style={styleBtn}
         variant="bordered"
-        customClass={clsx(stl.new)}
+        customClass={clsx(stl.new, customClassBtn)}
         label={name}
         icon={icon}
         onClick={bntOnClick || bntOnClickHandler}
@@ -67,7 +68,14 @@ const DropDown = ({
       <ul
         id="dropMenu"
         className={clsx(stl[`${variant}`], customClass)}
-        style={{ top, left, bottom, right, width, height }}
+        style={{
+          top,
+          left,
+          bottom,
+          right,
+          width,
+          height,
+        }}
         onClick={onClick}
         height={height}
       >
@@ -75,12 +83,9 @@ const DropDown = ({
           <li
             key={index}
             value={index + 1}
-            onClick={
-              liOnClick ||
-              (e => {
-                handleValue(e.target.value)
-              })
-            }
+            onClick={e => {
+              liOnClick || handleValue(e.target.value)
+            }}
             onMouseUpCapture={onMouseUpCapture}
           >
             {i || children}
@@ -93,9 +98,9 @@ const DropDown = ({
 
 DropDown.defaultProps = {
   drplist: ['DropdownA'],
-  transition: 'all 0.4s',
   onMouseUpCapture: mouseUpCaptureHandler,
   variant: 'Dropdown',
+  liOnClick: () => {},
   top: '-1rem',
   left: '50%',
   onClick: () => {},

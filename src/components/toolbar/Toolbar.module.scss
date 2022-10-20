@@ -85,7 +85,7 @@
   flex-grow: 0;
 }
 
-.newDrop {
+.dropDown {
   font-size: 18px;
   font-weight: 500;
 }
@@ -97,4 +97,13 @@
   color: $text;
   width: max-content;
   transition: width 3s;
+}
+
+.newDrop {
+  background: transparent;
+}
+
+.newDrop:hover {
+  background-color: $primary;
+  color: $white;
 }
