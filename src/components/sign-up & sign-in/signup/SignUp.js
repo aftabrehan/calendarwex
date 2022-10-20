@@ -96,11 +96,11 @@ const SignUp = () => {
         </div>
         <div className={stl.signUpImage}>
           <figure>
-            <Image src={SignUpImage} />
-            <a href="#" className={stl.signUpImageLink}>
-              I am already member
-            </a>
+            <Image src={SignUpImage} alt="Sign Up Image" />
           </figure>
+          <a href="#" className={stl.signUpImageLink}>
+            I am already member
+          </a>
         </div>
       </div>
     </div>

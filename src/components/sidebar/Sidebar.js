@@ -31,10 +31,7 @@ const Sidebar = ({
             <div className={stl.upcmngEvtCntnt}>
               {upcomingEvents[i].eventContent.map((eventCntnt, ix) => (
                 <div key={i} className={stl.eventItem}>
-                  <div className={stl.eventName}>
-                    {/* <EllipseIcon /> */}
-                    {eventCntnt.eventName}
-                  </div>
+                  <div className={stl.eventName}>{eventCntnt.eventName}</div>
                   <div>
                     {eventCntnt.eventTime || (
                       <AddIcon className={stl.addIcon} />
