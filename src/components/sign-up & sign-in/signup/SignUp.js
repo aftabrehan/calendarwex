@@ -1,3 +1,22 @@
+import { initializeApp } from 'firebase/app'
+import { getDatabase } from 'firebase/database'
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyA0LrLoI9FQwuejm12mb9j1g3OyqwsMndc',
+  authDomain: 'airy-shadow-364605.firebaseapp.com',
+  databaseURL: 'https://airy-shadow-364605-default-rtdb.firebaseio.com',
+  projectId: 'airy-shadow-364605',
+  storageBucket: 'airy-shadow-364605.appspot.com',
+  messagingSenderId: '540875195301',
+  appId: '1:540875195301:web:8157a875164d49f381de4c',
+  measurementId: 'G-FZHDB6MED1',
+}
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+const auth = getAuth()
+
 import clsx from 'clsx'
 
 import stl from '../SignUp&SignIn.module.scss'
@@ -9,14 +28,32 @@ import MailIcon from 'assets/mail_FILL1_wght400_GRAD0_opsz20.svg'
 import PassIcon from 'assets/lock_FILL1_wght400_GRAD0_opsz20.svg'
 import ConfirmPassIcon from 'assets/lock_FILL0_wght400_GRAD0_opsz20.svg'
 import SignUpImage from '../images/signup-image.jpg'
+import { useState } from 'react'
 
 const SignUp = ({ onClickHandler }) => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const submitHandler = () => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(userCredential => {
+        const user = userCredential.user
+        alert('Signed in')
+      })
+      .catch(error => {
+        const errorCode = error.code
+        const errorMessage = error.message
+        alert(errorMessage)
+      })
+  }
+
   return (
     <div className={stl.container}>
       <div className={stl.signUpContent}>
         <div className={stl.signUpForm}>
           <h2 className={stl.formTitle}>Sign Up</h2>
-          <form className={stl.form} id="signupform">
+          <div className={stl.form} id="signupform">
             <div className={stl.formGroup}>
               <label className={stl.label}>
                 <PersonIcon className={stl.icon} />
@@ -27,6 +64,7 @@ const SignUp = ({ onClickHandler }) => {
                 name="name"
                 id="name"
                 placeholder="Your Name"
+                onChange={e => setName(e.target.value)}
               />
             </div>
             <div className={stl.formGroup}>
@@ -39,6 +77,7 @@ const SignUp = ({ onClickHandler }) => {
                 id="email"
                 placeholder="Your Email"
                 className={stl.input}
+                onChange={e => setEmail(e.target.value)}
               />
             </div>
             <div className={stl.formGroup}>
@@ -51,6 +90,7 @@ const SignUp = ({ onClickHandler }) => {
                 id="pass"
                 placeholder="Password"
                 className={stl.input}
+                onChange={e => setPassword(e.target.value)}
               />
             </div>
             <div className={stl.formGroup}>
@@ -84,13 +124,13 @@ const SignUp = ({ onClickHandler }) => {
             <div className={clsx(stl.formGroup, stl.formButton)}>
               <input
                 type="submit"
-                name="signup"
                 id="signup"
-                value="Sign Up"
+                value="SignUp"
                 className={stl.formSubmit}
+                onClick={submitHandler}
               />
             </div>
-          </form>
+          </div>
         </div>
         <div className={stl.signUpImage}>
           <figure>
