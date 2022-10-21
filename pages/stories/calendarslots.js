@@ -18,42 +18,88 @@ const topPartialSingleWeek = {
   arg: 'TopPartialSingleWeek',
   variant: 'topPartialSingleWeek',
   type: 'week',
-  event: [{ width: '110px', height: '31px', borderRadius: '0 0 3px 3px' }],
+  event: [
+    {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
+      width: '110px',
+      height: '31px',
+      borderRadius: '0 0 3px 3px',
+      eventType: 'eventDefHr',
+    },
+  ],
 }
 
 const bottomPartialSingleWeek = {
   arg: 'BottomPartialSingleWeek',
   variant: 'bottomPartialSingleWeek',
   type: 'week',
-  event: [{ width: '110px', height: '31px', borderRadius: '3px 3px 0 0' }],
+  event: [
+    {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
+      width: '110px',
+      height: '31px',
+      borderRadius: '3px 3px 0 0',
+      eventType: 'eventDefHr',
+    },
+  ],
 }
 
 const fullSingleWeek = {
   arg: 'FullSingleWeek',
   type: 'week',
   variant: 'fullSingleWeek',
-  event: [{ width: '110px', height: '60px' }],
+  event: [
+    {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
+      width: '110px',
+      height: '100%',
+      borderRadius: '3px 3px 0 0',
+      eventType: 'eventDescHr',
+      borderRadius: '3px',
+    },
+  ],
 }
 
 const middleSingleWeek = {
   arg: 'MiddleSingleWeek',
   type: 'week',
   variant: 'middleSingleWeek',
-  event: [{ width: '110px', height: '62px' }],
+  event: [
+    {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
+      width: '110px',
+      height: '72px',
+      eventType: 'eventDescHr',
+    },
+  ],
 }
 
 const topFullSingleWeek = {
   arg: 'TopFullSingleWeek',
   type: 'week',
   variant: 'topFullSingleWeek',
-  event: [{ width: '110px', height: '27px' }],
+  event: [
+    {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
+      width: '110px',
+      height: '27px',
+      eventType: 'eventDefHr',
+    },
+  ],
 }
 
 const bottomFullSingleWeek = {
   arg: 'BottomFullSingleWeek',
   type: 'week',
   variant: 'bottomFullSingleWeek',
-  event: [{ width: '110px', height: '27px' }],
+  event: [
+    {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
+      width: '110px',
+      height: '27px',
+      eventType: 'eventDefHr',
+    },
+  ],
 }
 
 const blankNoneMonth = {
@@ -71,12 +117,14 @@ const fullSingleMonth = {
   date: <DateMonth />,
   event: [
     {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
       icon: <EllipseIcon />,
       eventType: 'eventSmallHr',
-      width: '98px',
-      height: '19px',
-      Cls: stl.eventContainer,
+      width: '118px',
+      customClass: stl.eventContainer,
       padding: '0',
+      eventType: 'eventSmallHr',
+      justifyContent: 'space-between',
     },
   ],
 }
@@ -88,18 +136,20 @@ const fullDoubleMonth = {
   date: <DateMonth />,
   event: [
     {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
       icon: <EllipseIcon />,
       eventType: 'eventSmallHr',
-      width: '98px',
-      height: '19px',
+      width: '118px',
       padding: '0',
+      eventType: 'eventSmallHr',
     },
     {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
       icon: <EllipseIcon />,
       eventType: 'eventSmallHr',
-      width: '98px',
-      height: '19px',
+      width: '118px',
       padding: '0',
+      eventType: 'eventSmallHr',
     },
   ],
 }
@@ -111,18 +161,20 @@ const fullTripleMonth = {
   date: <DateMonth />,
   event: [
     {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
       icon: <EllipseIcon />,
       eventType: 'eventSmallHr',
-      width: '98px',
-      height: '19px',
+      width: '118px',
       padding: '0',
+      eventType: 'eventSmallHr',
     },
     {
+      event: { eventName: 'Event Name', eventTime: '08:00' },
       icon: <EllipseIcon />,
       eventType: 'eventSmallHr',
-      width: '98px',
-      height: '19px',
+      width: '118px',
       padding: '0',
+      eventType: 'eventSmallHr',
     },
   ],
   toggle: (
