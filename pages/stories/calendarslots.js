@@ -3,7 +3,7 @@ import CalendarSlots from 'components/calendarslots'
 import MiniCalendar from 'components/minicalendar/SmallCalendar'
 import DateMonth from 'components/date-month'
 
-import EllipseIcon from 'assets/ellipse.svg'
+import EllipseIcon from 'assets/ellipse-1.svg'
 
 import stl from './Stories.module.scss'
 
