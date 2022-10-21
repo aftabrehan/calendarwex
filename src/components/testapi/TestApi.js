@@ -1,4 +1,4 @@
-import User from '../../../pages/api/firebase-config'
+// import User from '../../../pages/api/firebase-config'
 import { addDoc, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 

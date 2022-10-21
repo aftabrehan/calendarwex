@@ -1,21 +1,5 @@
-import { initializeApp } from 'firebase/app'
-import { getDatabase } from 'firebase/database'
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyA0LrLoI9FQwuejm12mb9j1g3OyqwsMndc',
-  authDomain: 'airy-shadow-364605.firebaseapp.com',
-  databaseURL: 'https://airy-shadow-364605-default-rtdb.firebaseio.com',
-  projectId: 'airy-shadow-364605',
-  storageBucket: 'airy-shadow-364605.appspot.com',
-  messagingSenderId: '540875195301',
-  appId: '1:540875195301:web:8157a875164d49f381de4c',
-  measurementId: 'G-FZHDB6MED1',
-}
-
-const app = initializeApp(firebaseConfig)
-const database = getDatabase(app)
-const auth = getAuth()
+import { auth } from '../../../../pages/api/firebase-config'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 import clsx from 'clsx'
 
@@ -34,18 +18,41 @@ const SignUp = ({ onClickHandler }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const submitHandler = () => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(userCredential => {
-        const user = userCredential.user
-        alert('Signed in')
-      })
-      .catch(error => {
-        const errorCode = error.code
-        const errorMessage = error.message
-        alert(errorMessage)
-      })
+    let flag = 1
+    const checkbox = document.getElementById('agreeterm')
+
+    ;(name === '' && ((flag = 0), alert('Name is Empty'))) ||
+      (email === '' && ((flag = 0), alert('Email is Empty'))) ||
+      (password === '' && ((flag = 0), alert('Password is Empty'))) ||
+      (confirmPassword === '' && ((flag = 0), alert('Confirm Password!'))) ||
+      (password !== confirmPassword &&
+        ((flag = 0), alert('Password did not match'))) ||
+      (checkbox.checked == false &&
+        ((flag = 0), alert('Please check the Agree Terms checkbox')))
+
+    if (flag) {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(userCredential => {
+          const user = userCredential.user
+          alert('Signed in')
+        })
+        .catch(error => {
+          const errorCode = error.code
+          const errorMessage = error.message
+          alert(errorMessage)
+        })
+    } else {
+      console.log(flag)
+    }
+
+    setName('')
+    setEmail('')
+    setPassword('')
+    setConfirmPassword('')
+    checkbox.checked = false
   }
 
   return (
@@ -65,6 +72,7 @@ const SignUp = ({ onClickHandler }) => {
                 id="name"
                 placeholder="Your Name"
                 onChange={e => setName(e.target.value)}
+                value={name}
               />
             </div>
             <div className={stl.formGroup}>
@@ -78,6 +86,7 @@ const SignUp = ({ onClickHandler }) => {
                 placeholder="Your Email"
                 className={stl.input}
                 onChange={e => setEmail(e.target.value)}
+                value={email}
               />
             </div>
             <div className={stl.formGroup}>
@@ -91,6 +100,7 @@ const SignUp = ({ onClickHandler }) => {
                 placeholder="Password"
                 className={stl.input}
                 onChange={e => setPassword(e.target.value)}
+                value={password}
               />
             </div>
             <div className={stl.formGroup}>
@@ -99,10 +109,12 @@ const SignUp = ({ onClickHandler }) => {
               </label>
               <input
                 type="password"
-                name="confrimPass"
-                id="confrimPass"
+                name="confirmPass"
+                id="confirmPass"
                 placeholder="Confirm Your Password"
                 className={stl.input}
+                onChange={e => setConfirmPassword(e.target.value)}
+                value={confirmPassword}
               />
             </div>
             <div className={clsx(stl.formGroup, stl.checkbox)}>
