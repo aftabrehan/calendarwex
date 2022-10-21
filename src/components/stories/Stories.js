@@ -16,8 +16,8 @@ const Stories = ({ argList, template, customClass }) => {
         onChange={e => setArg(e.target.value)}
         className={clsx(stl.variantSelector)}
       >
-        {argList.map(el => (
-          <option key={el.arg} value={el.arg}>
+        {argList.map((el, i) => (
+          <option key={i} value={el.arg}>
             {el.arg}
           </option>
         ))}

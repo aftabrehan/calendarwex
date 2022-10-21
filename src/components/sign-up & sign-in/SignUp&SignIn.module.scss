@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import '/styles/colors.scss';
+
+.container {
+  max-width: 100vw;
+  background: $white;
+  margin: 0 auto;
+  box-shadow: 0px 15px 16.83px 0.17px rgb(0 0 0 / 5%);
+  border-radius: 20px;
+}
+
+.signUpContent {
+  display: flex;
+  padding: 75px 0;
+}
+
+.signInContent {
+  display: flex;
+  padding: 67px 0 87px 0;
+}
+
+.signUpForm,
+.signInForm {
+  margin: 0 75px;
+  padding-left: 34px;
+  width: 50%;
+  overflow: hidden;
+  animation-name: signUpFormAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+}
+
+.signInForm {
+  margin: 0 90px 0 80px;
+  padding: 0;
+  animation-name: signInFormAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+}
+
+.formTitle {
+  margin: 0;
+  margin-bottom: 33px;
+  line-height: 1.66;
+  font-weight: bolder;
+  color: $black-1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+}
+
+.formGroup {
+  position: relative;
+  margin-bottom: 25px;
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 22%;
+  color: $black-1;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid $border;
+  padding: 6px 30px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 13px;
+}
+
+.agreeTerm[type='checkbox'],
+.rememberMe[type='checkbox'] {
+  appearance: checkbox !important;
+}
+
+.agreeTerm[type='checkbox']:not(old),
+.rememberMe[type='checkbox']:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+.agreeTerm {
+  display: inline-block;
+  width: auto;
+}
+
+.agreeTerm[type='checkbox']:not(old) + .labelAgreeTerm,
+.rememberMe[type='checkbox']:not(old) + .labelAgreeTerm {
+  display: inline-block;
+}
+
+.labelAgreeTerm {
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+  font-size: 13px;
+}
+
+.termService {
+  font-size: 13px;
+  color: $black-1;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.formButton {
+  margin-top: 70px;
+}
+
+.formSubmit {
+  all: unset;
+  position: relative;
+  display: inline-block;
+  color: $white;
+  background: $btnGreen;
+  border: 1px solid transparent;
+  transition: opacity 0.4s;
+  box-shadow: 0px 4px 8px $boxShadow1;
+  box-sizing: border-box;
+  width: auto;
+  padding: 15px 40px;
+  border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    transition: all 0.25s ease-in-out;
+    border: 1px solid $btnGreen;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px $btnGreen;
+    color: $btnGreen;
+  }
+}
+
+.signUpImage,
+.signInImage {
+  display: flex;
+  flex-direction: column;
+  margin: 0 55px;
+  margin-top: 45px;
+  width: 50%;
+  align-items: center;
+  overflow: hidden;
+  animation-name: signUpImageAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+
+  figure {
+    margin: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+
+.signInImage {
+  margin: 10px 20px 0 110px;
+  animation-name: signInImageAnime;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+}
+
+.signUpImageLink,
+.signInImageLink {
+  all: unset;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  width: max-content;
+  color: $black-1;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -10%;
+    left: 0;
+    background-color: $btnGreen;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  left: -2.2%;
+  display: flex;
+  align-items: center;
+}
+
+.socialLogin {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 13px solid $black-1;
+}
+
+.socialLabel {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: $black-1;
+}
+
+.socials {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 5px;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.linkFacebook,
+.linkTwitter {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 1.15;
+  }
+}
+
+.linkGoogle {
+  width: 31px;
+  height: 31px;
+  border-radius: 5px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 1.15;
+  }
+}
+
+@keyframes signUpFormAnime {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes signInFormAnime {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes signUpImageAnime {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes signInImageAnime {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,14 +1,14 @@
 import Stories from 'components/stories'
 import LabelTop from 'components/label'
 
-import BrainIcon from '../../src/assets/brain.svg'
-import CamelIcon from '../../src/assets/camel.svg'
-import CocktailGlassIcon from '../../src/assets/cocktail-glass.svg'
-import HotBeverageIcon from '../../src/assets/hot-beverage.svg'
-import ZombieIcon from '../../src/assets/zombie.svg'
-import PartyPopperIcon from '../../src/assets/party-popper.svg'
-import MassageIcon from '../../src/assets/women-getting-massage.svg'
-import BlankIcon from '../../src/assets/blank.svg'
+import BrainIcon from 'assets/brain.svg'
+import CamelIcon from 'assets/camel.svg'
+import CocktailGlassIcon from 'assets/cocktail-glass.svg'
+import HotBeverageIcon from 'assets/hot-beverage.svg'
+import ZombieIcon from 'assets/zombie.svg'
+import PartyPopperIcon from 'assets/party-popper.svg'
+import MassageIcon from 'assets/women-getting-massage.svg'
+import BlankIcon from 'assets/blank.svg'
 
 const labelTopEmpty = {
   arg: 'Empty',

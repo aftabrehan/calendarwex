@@ -44,9 +44,10 @@ const TestApi = () => {
     const getUsers = async () => {
       const data = await getDocs(User)
       setUsers(
-        data.docs.map(doc => ({
+        data.docs.map((doc, i) => ({
           id: doc.id,
           ...doc.data(),
+          key: i,
         }))
       )
     }

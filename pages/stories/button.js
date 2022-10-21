@@ -1,7 +1,7 @@
 import Stories from 'components/stories'
 import Button from 'components/button'
 
-import BtnIcon from '../../src/assets/btnIcon.svg'
+import BtnIcon from 'assets/btnIcon.svg'
 
 const fill = {
   arg: 'Fill',

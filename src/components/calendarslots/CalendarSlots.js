@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import EventTypes from 'components/event-types'
 
 import stl from './CalendarSlots.module.scss'
 
@@ -10,8 +11,6 @@ const CalendarSlots = ({
   date,
   toggle,
   monthNumber,
-  width,
-  height,
   style,
   monthData,
   customClass,
@@ -20,12 +19,12 @@ const CalendarSlots = ({
     <div
       id={id}
       className={clsx(stl[`${type}`], stl[`${variant}`], customClass)}
-      style={style || { height }}
+      style={style}
     >
       <div>{date || monthNumber}</div>
       {event.map((item, i) => (
-        <div className={stl.event} key={i}>
-          {item}
+        <div key={i} className={stl.event}>
+          <EventTypes {...item} />
         </div>
       ))}
       {toggle || monthData}

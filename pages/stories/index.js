@@ -21,6 +21,9 @@ const StoriesLinks = () => (
     <Link href="/stories/structure-grid">Structure-Grid</Link>
     <Link href="/stories/layout">Layout</Link>
     <Link href="/stories/testapi">TestApi</Link>
+    <Link href="/stories/signup">SignUp</Link>
+    <Link href="/stories/signin">SignIn</Link>
+    <Link href="/stories/form">Form</Link>
   </div>
 )
 

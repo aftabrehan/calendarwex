@@ -15,15 +15,15 @@ import CalendarSlots from 'components/calendarslots'
 import DateMonth from 'components/date-month'
 import EventTypes from 'components/event-types'
 
-import BrainIcon from '../../assets/brain.svg'
-import CamelIcon from '../../assets/camel.svg'
-import CocktailGlassIcon from '../../assets/cocktail-glass.svg'
-import HotBeverageIcon from '../../assets/hot-beverage.svg'
-import ZombieIcon from '../../assets/zombie.svg'
-import PartyPopperIcon from '../../assets/party-popper.svg'
-import MassageIcon from '../../assets/women-getting-massage.svg'
-import BlankIcon from '../../assets/blank.svg'
-import EllipseIcon from '../../assets/ellipse.svg'
+import BrainIcon from 'assets/brain.svg'
+import CamelIcon from 'assets/camel.svg'
+import CocktailGlassIcon from 'assets/cocktail-glass.svg'
+import HotBeverageIcon from 'assets/hot-beverage.svg'
+import ZombieIcon from 'assets/zombie.svg'
+import PartyPopperIcon from 'assets/party-popper.svg'
+import MassageIcon from 'assets/women-getting-massage.svg'
+import BlankIcon from 'assets/blank.svg'
+import EllipseIcon from 'assets/ellipse.svg'
 
 const getTimeHHMM = d => {
   const date = d
@@ -44,23 +44,23 @@ const Layout = () => {
   for (let i = 0; i < 7; i++) {
     days.push(
       <StructureColumn
+        key={days.length}
         calendarSlotData={{
           variant: 'topPartialSingleWeek',
           type: 'week',
           event: [
-            <EventTypes
-              borderRadius="0 0 3px 3px"
-              eventType="eventDescHr"
-              event={{
+            {
+              borderRadius: '0 0 3px 3px',
+              eventType: 'eventDescHr',
+              event: {
                 eventName: 'Event Name',
                 eventTime: '08:00',
                 eventDesc: 'Description',
-              }}
-            />,
+              },
+            },
           ],
         }}
         width="100%"
-        key={days.length}
       />
     )
   }
@@ -74,24 +74,24 @@ const Layout = () => {
         type="month"
         date={<DateMonth />}
         event={[
-          <EventTypes
-            eventType="eventSmallHr"
-            icon={<EllipseIcon />}
-            event={{
+          {
+            eventType: 'eventSmallHr',
+            icon: <EllipseIcon />,
+            event: {
               eventName: 'Event Name',
               eventTime: '08:00',
-            }}
-            padding="0"
-          />,
-          <EventTypes
-            eventType="eventSmallHr"
-            icon={<EllipseIcon />}
-            event={{
+            },
+            padding: '0',
+          },
+          {
+            eventType: 'eventSmallHr',
+            icon: <EllipseIcon />,
+            event: {
               eventName: 'Event Name',
               eventTime: '08:00',
-            }}
-            padding="0"
-          />,
+            },
+            padding: '0',
+          },
         ]}
         customClass={stl.monthEvent}
         style={{

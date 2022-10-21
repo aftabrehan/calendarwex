@@ -40,12 +40,3 @@ const EventTypes = ({
 }
 
 export default EventTypes
-
-// EventTypes.defaultProps = {
-//   arg: 'defaultHorizontal',
-//   eventType: 'eventDefHr',
-//   event: {
-//     eventName: 'Event Name',
-//     eventTime: '08:00',
-//   },
-// }
