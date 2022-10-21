@@ -2,7 +2,7 @@ import Stories from 'components/stories'
 import EventTypes from 'components/event-types'
 
 import BellIcon from 'assets/bell.svg'
-import EllipseIcon from 'assets/ellipse-1.svg'
+import EllipseIcon from 'assets/ellipse.svg'
 
 const defaultHorizontal = {
   arg: 'defaultHorizontal',
