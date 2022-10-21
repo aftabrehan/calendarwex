@@ -1,13 +1,12 @@
 {
-  "name": "calendarar",
+  "name": "calendarwex",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@svgr/webpack": "^6.3.1",
@@ -28,16 +27,16 @@
     "eslint-config-next": "12.1.4",
     "sass": "^1.49.11"
   },
-  "description": "Calendarar is a simple calendar web application.",
+  "description": "Calendarwex is a simple calendar web application.",
   "main": "next.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Calendarar/calendarar.git"
+    "url": "git+https://github.com/calendarwex/calendarwex.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Calendarar/calendarar/issues"
+    "url": "https://github.com/calendarwex/calendarwex/issues"
   },
-  "homepage": "https://github.com/Calendarar/calendarar#readme"
+  "homepage": "https://github.com/calendarwex/calendarwex#readme"
 }
