@@ -1,5 +1,6 @@
-import { auth } from '../../../../pages/api/firebase-config'
+import { auth, database } from '../../../../pages/api/firebase-config'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { set, ref } from 'firebase/database'
 
 import clsx from 'clsx'
 
@@ -37,7 +38,13 @@ const SignUp = ({ onClickHandler }) => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(userCredential => {
           const user = userCredential.user
-          alert('Signed in')
+
+          set(ref(database, 'users/' + user.uid), {
+            username: name,
+            email: email,
+          })
+
+          alert('User Created')
         })
         .catch(error => {
           const errorCode = error.code
@@ -137,7 +144,7 @@ const SignUp = ({ onClickHandler }) => {
               <input
                 type="submit"
                 id="signup"
-                value="SignUp"
+                value="Sign up"
                 className={stl.formSubmit}
                 onClick={submitHandler}
               />

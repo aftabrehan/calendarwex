@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import SignUp from './signup'
 import SignIn from './signin'
+import LoggedIn from './LoggedIn'
 
 const Form = () => {
   const [formType, setFormType] = useState(0)
@@ -13,6 +14,9 @@ const Form = () => {
 
       case 1:
         return <SignIn onClickHandler={setFormType} />
+
+      case 2:
+        return <LoggedIn onClickHandler={setFormType} />
 
       default:
         return <SignUp onClickHandler={setFormType} />

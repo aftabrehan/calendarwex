@@ -306,3 +306,23 @@
     transform: translateX(0);
   }
 }
+
+.loggedInContainer {
+  width: 75vw;
+  background-color: $white;
+  height: 100vh;
+  text-align: center;
+
+  .userData {
+    .user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        width: max-content;
+        height: max-content;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
