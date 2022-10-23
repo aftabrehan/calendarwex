@@ -1,7 +1,6 @@
 import { auth, database } from '../../../../pages/api/firebase-config'
 import {
   createUserWithEmailAndPassword,
-  onAuthStateChanged,
   sendEmailVerification,
   signOut,
 } from 'firebase/auth'
@@ -43,6 +42,7 @@ const SignUp = ({ onClickHandler }) => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(userCredential => {
           const user = userCredential.user
+
           sendEmailVerification(user)
             .then(() => {
               alert(`Email verification link sent to: ${user.email}`)

@@ -2,9 +2,10 @@ import clsx from 'clsx'
 
 import { auth, database } from '../../../../pages/api/firebase-config'
 import {
-  onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from 'firebase/auth'
 import { update, ref } from 'firebase/database'
 
@@ -24,6 +25,34 @@ import TwitterIcon from 'assets/twitter-svgrepo-com.svg'
 const SignIn = ({ onClickHandler }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const loginWithGoogle = () => {
+    const provider = new GoogleAuthProvider()
+
+    signInWithPopup(auth, provider)
+      .then(result => {
+        // Google Access Token to use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result)
+        const token = credential.accessToken
+        // Signed-in user info.
+        const user = result.user
+
+        console.log(user)
+
+        onClickHandler(2)
+        // ...
+      })
+      .catch(error => {
+        const errorCode = error.code
+        const errorMessage = error.message
+        alert(errorMessage)
+        // The email of the user's account used.
+        const email = error.customData.email
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error)
+        // ...
+      })
+  }
 
   const loginHandler = () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -138,19 +167,19 @@ const SignIn = ({ onClickHandler }) => {
             <span className={stl.socialLabel}>Or login with</span>
             <ul className={stl.socials}>
               <li>
-                <a href="https://www.facebook.com">
+                <button onClick={() => console.log('Facebook button clicked')}>
                   <FacebookIcon className={stl.linkFacebook} />
-                </a>
+                </button>
               </li>
               <li>
-                <a href="https://www.google.com">
+                <button onClick={loginWithGoogle}>
                   <GoogleIcon className={stl.linkGoogle} />
-                </a>
+                </button>
               </li>
               <li>
-                <a href="https://www.twitter.com">
+                <button onClick={() => console.log('Twitter button clicked')}>
                   <TwitterIcon className={stl.linkTwitter} />
-                </a>
+                </button>
               </li>
             </ul>
           </div>

@@ -240,7 +240,8 @@
   li {
     padding: 5px;
 
-    a {
+    button {
+      all: unset;
       text-decoration: none;
       cursor: pointer;
     }
