@@ -1,5 +1,10 @@
 import { auth, database } from '../../../../pages/api/firebase-config'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  sendEmailVerification,
+  signOut,
+} from 'firebase/auth'
 import { set, ref } from 'firebase/database'
 
 import clsx from 'clsx'
@@ -38,6 +43,15 @@ const SignUp = ({ onClickHandler }) => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(userCredential => {
           const user = userCredential.user
+          sendEmailVerification(user)
+            .then(() => {
+              alert(`Email verification link sent to: ${user.email}`)
+            })
+            .catch(error => {
+              alert(error.message)
+            })
+
+          signOut(auth)
 
           set(ref(database, 'users/' + user.uid), {
             username: name,
@@ -51,8 +65,10 @@ const SignUp = ({ onClickHandler }) => {
           const errorMessage = error.message
           alert(errorMessage)
         })
+
+      onClickHandler(1)
     } else {
-      console.log(flag)
+      console.log(false)
     }
 
     setName('')

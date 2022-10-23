@@ -1,7 +1,11 @@
 import clsx from 'clsx'
 
 import { auth, database } from '../../../../pages/api/firebase-config'
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from 'firebase/auth'
 import { update, ref } from 'firebase/database'
 
 import { useState } from 'react'
@@ -25,15 +29,21 @@ const SignIn = ({ onClickHandler }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
         const user = userCredential.user
+        if (user.emailVerified === false) {
+          signOut(auth)
+          alert('User is not Verified')
+        } else {
+          const dt = new Date()
 
-        const dt = new Date()
+          const date = dt.toLocaleString()
 
-        const date = dt.toLocaleString()
+          update(ref(database, 'users/' + user.uid), {
+            last_login: date,
+          })
 
-        update(ref(database, 'users/' + user.uid), {
-          last_login: date,
-        })
-        alert('User Logged in!')
+          onClickHandler(2)
+          alert('User Logged in!')
+        }
       })
       .catch(error => {
         const errorCode = error.code
