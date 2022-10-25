@@ -1,3 +1,6 @@
+import { signOut } from 'firebase/auth'
+import { auth } from '../../../pages/api/firebase-config'
+
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
@@ -26,7 +29,8 @@ const Button = ({
       className={clsx(stl[`${variant}Btn`], stl.btn, customClass)}
       id={id}
       onClick={() => {
-        logoutHandler(1)
+        onClick || logoutHandler(1)
+        signOut(auth)
       }}
       disabled={disabled}
       type={type}
