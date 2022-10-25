@@ -2,10 +2,10 @@ import clsx from 'clsx'
 
 import stl from './DateMonth.module.scss'
 
-const DateMonth = ({ content, customClass }) => {
+const DateMonth = ({ style, content, customClass }) => {
   return (
     <div className={clsx(stl.dateMonth, customClass)}>
-      <div className={stl.date}>
+      <div style={style} className={stl.date}>
         <span>{content}</span>
       </div>
     </div>

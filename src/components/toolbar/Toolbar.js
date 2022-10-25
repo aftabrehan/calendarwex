@@ -9,6 +9,7 @@ import Search from 'components/search'
 import OptIcon from 'assets/optIcon.svg'
 import DropDownIcon from 'assets/drpdwnIcon.svg'
 import AddIcon from 'assets/addIcon.svg'
+import LogoutIcon from 'assets/logout.svg'
 
 const Toolbar = ({
   handleType,
@@ -90,7 +91,12 @@ const Toolbar = ({
       <div className={stl.left}>
         <Search />
         <Button variant="fill" icon={<AddIcon />} label="Add Event" />
-        <Button logoutHandler={logout} variant="transparent" label="Logout" />
+        <Button
+          logoutHandler={logout}
+          variant="transparent"
+          icon={<LogoutIcon />}
+          style={{ padding: '5px' }}
+        />
       </div>
     </div>
   )
