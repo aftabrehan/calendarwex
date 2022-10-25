@@ -15,6 +15,7 @@ const Toolbar = ({
   sideBarHandler,
   sidebarBtnId,
   toggleBtnClass,
+  logout,
   argList,
   id,
   icon,
@@ -89,6 +90,7 @@ const Toolbar = ({
       <div className={stl.left}>
         <Search />
         <Button variant="fill" icon={<AddIcon />} label="Add Event" />
+        <Button logoutHandler={logout} variant="transparent" label="Logout" />
       </div>
     </div>
   )

@@ -7,6 +7,7 @@ const Button = ({
   label,
   id,
   icon,
+  logoutHandler,
   endIcon,
   children,
   onClick,
@@ -24,7 +25,9 @@ const Button = ({
     <button
       className={clsx(stl[`${variant}Btn`], stl.btn, customClass)}
       id={id}
-      onClick={onClick}
+      onClick={() => {
+        logoutHandler(1)
+      }}
       disabled={disabled}
       type={type}
       style={style}
