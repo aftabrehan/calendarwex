@@ -1,9 +1,11 @@
 import { auth, database } from '../../../../pages/api/firebase-config'
 import {
+  updateProfile,
   createUserWithEmailAndPassword,
   sendEmailVerification,
   signOut,
 } from 'firebase/auth'
+
 import { set, ref } from 'firebase/database'
 
 import clsx from 'clsx'
@@ -42,6 +44,10 @@ const SignUp = ({ onClickHandler }) => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(userCredential => {
           const user = userCredential.user
+
+          updateProfile(auth.currentUser, {
+            displayName: name,
+          })
 
           sendEmailVerification(user)
             .then(() => {

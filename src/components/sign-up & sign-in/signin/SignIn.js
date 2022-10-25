@@ -92,13 +92,6 @@ const SignIn = ({ onClickHandler }) => {
 
   return (
     <div className={stl.container}>
-      <button
-        onClick={() => {
-          onClickHandler(2)
-        }}
-      >
-        Logged in User
-      </button>
       <div className={stl.signInContent}>
         <div className={stl.signInImage}>
           <figure>
