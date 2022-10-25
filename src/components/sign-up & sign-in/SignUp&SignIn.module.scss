@@ -26,16 +26,16 @@
   width: 50%;
   overflow: hidden;
   animation-name: signUpFormAnime;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
 }
 
 .signInForm {
   margin: 0 90px 0 80px;
   padding: 0;
   animation-name: signInFormAnime;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
 }
 
 .formTitle {
@@ -125,6 +125,7 @@
 
 .formButton {
   margin-top: 70px;
+  margin-bottom: 5px;
 }
 
 .formSubmit {
@@ -163,8 +164,8 @@
   align-items: center;
   overflow: hidden;
   animation-name: signUpImageAnime;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
 
   figure {
     margin: 0;
@@ -176,8 +177,8 @@
 .signInImage {
   margin: 10px 20px 0 110px;
   animation-name: signInImageAnime;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-duration: 0.3s;
 }
 
 .signUpImageLink,
@@ -239,7 +240,8 @@
   li {
     padding: 5px;
 
-    a {
+    button {
+      all: unset;
       text-decoration: none;
       cursor: pointer;
     }
@@ -290,7 +292,7 @@
 
 @keyframes signUpImageAnime {
   0% {
-    transform: translateX(200%);
+    transform: translateX(-200%);
   }
   100% {
     transform: translateX(0);
@@ -299,9 +301,29 @@
 
 @keyframes signInImageAnime {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(200%);
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+.loggedInContainer {
+  width: 75vw;
+  background-color: $white;
+  height: 100vh;
+  text-align: center;
+
+  .userData {
+    .user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        width: max-content;
+        height: max-content;
+        padding: 10px 20px;
+      }
+    }
   }
 }
