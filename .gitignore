@@ -10,7 +10,7 @@
 
 
 #.env
-./.env
+.env
 
 # next.js
 /.next/
