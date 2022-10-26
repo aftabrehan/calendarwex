@@ -31,7 +31,7 @@ const getTimeHHMM = d => {
   return time
 }
 
-const Layout = ({ logoutHandler }) => {
+const Layout = ({ logoutHandler, signOut }) => {
   const [data, setData] = useState({
     type: 'dayView',
     hours: <LabelLeft />,
@@ -315,7 +315,7 @@ const Layout = ({ logoutHandler }) => {
         ]}
       />
       <div className={stl.main} style={{ width: '100%' }}>
-        <Toolbar logout={logoutHandler} handleType={typeHandler} width="100%" />
+        <Toolbar logout={signOut} handleType={typeHandler} width="100%" />
         {label}
         <div className={stl.container} style={{ width: '100%' }}>
           <StructureGrid

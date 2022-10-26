@@ -124,7 +124,7 @@ const Toolbar = ({
           label="Add Event"
         />
         <Button
-          logoutHandler={logout}
+          onClick={logout}
           variant="transparent"
           icon={<LogoutIcon />}
           style={{ padding: '5px', zIndex: '1' }}
