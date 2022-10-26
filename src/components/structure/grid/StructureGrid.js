@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import stl from '../Structure.module.scss'
 
 const StructureGrid = ({
+  id,
   variant,
   customClass,
   customClassWeek,
@@ -16,11 +17,14 @@ const StructureGrid = ({
   month,
 }) => (
   <div
+    id={id}
     className={clsx(stl[`${variant}`], stl.common, customClass)}
     style={{ width, height }}
   >
     {months || month || (
-      <div className={clsx(stl[`${type}`], customClassWeek)}>{days || day}</div>
+      <div id={id} className={clsx(stl[`${type}`], customClassWeek)}>
+        {days || day}
+      </div>
     )}
   </div>
 )

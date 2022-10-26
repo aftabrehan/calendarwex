@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import stl from './Label.module.scss'
 import Label from './Label'
 
-const LabelLeft = ({ customClass, customClassLbl }) => {
+const LabelLeft = ({ customClass, customClassLbl, id }) => {
   const hourArray = [
     '00:00',
     '01:00',
@@ -32,7 +32,7 @@ const LabelLeft = ({ customClass, customClassLbl }) => {
   ]
 
   return (
-    <div className={clsx(stl.labelLeft, customClass)}>
+    <div id={id} className={clsx(stl.labelLeft, customClass)}>
       {hourArray.map((hr, i) => (
         <Label
           key={i}
