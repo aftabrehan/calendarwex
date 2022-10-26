@@ -329,6 +329,13 @@ const Layout = ({ logoutHandler }) => {
             months={data.months}
             customClass={stl.structureGrid}
           />
+          <button
+            onClick={() => {
+              logoutHandler(1)
+            }}
+          >
+            Click me!
+          </button>
         </div>
       </div>
     </div>

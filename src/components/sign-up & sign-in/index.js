@@ -5,7 +5,17 @@ import SignIn from './signin'
 import Layout from 'components/layout'
 
 const Form = () => {
-  const [formType, setFormType] = useState(1)
+  const [formType, setFormType] = useState(null)
+  const user =
+    typeof window !== 'undefined' && JSON.parse(localStorage.getItem('user'))
+
+  useEffect(() => {
+    if (!user) {
+      setFormType(1)
+    } else {
+      setFormType(2)
+    }
+  }, [user])
 
   const getElm = () => {
     switch (formType) {
@@ -17,9 +27,6 @@ const Form = () => {
 
       case 2:
         return <Layout logoutHandler={setFormType} />
-
-      default:
-        return <SignIn onClickHandler={setFormType} />
     }
   }
 

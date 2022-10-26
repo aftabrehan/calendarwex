@@ -9,7 +9,7 @@ import {
 } from 'firebase/auth'
 import { update, ref } from 'firebase/database'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import stl from '../SignUp&SignIn.module.scss'
 
@@ -66,10 +66,12 @@ const SignIn = ({ onClickHandler }) => {
 
           const date = dt.toLocaleString()
 
+          window.localStorage.setItem('user', JSON.stringify([email]))
+
           update(ref(database, 'users/' + user.uid), {
             last_login: date,
-          })
-
+          }),
+            keyValue
           onClickHandler(2)
           alert('User Logged in!')
         }
@@ -178,6 +180,13 @@ const SignIn = ({ onClickHandler }) => {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => {
+          onClickHandler(2)
+        }}
+      >
+        Click me!
+      </button>
     </div>
   )
 }
