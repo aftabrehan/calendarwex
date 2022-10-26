@@ -45,6 +45,7 @@ const Toolbar = ({
 }) => {
   const [title, setTitle] = useState('01 January 2022')
   const [drpLabel, setdDrpLabel] = useState('Day')
+  const [inputValue, setInputValue] = useState('')
 
   const valueHandler = props => {
     handleType(props)
@@ -66,6 +67,7 @@ const Toolbar = ({
 
   const hideInput = () => {
     document.getElementById('inputToolbar').style.display = 'none'
+    document.getElementById('input').value = ''
     document.getElementById('toolbarLeft').style.display = 'flex'
     document.getElementById('toolbarRight').style.display = 'flex'
   }
@@ -79,7 +81,14 @@ const Toolbar = ({
   return (
     <div className={clsx(stl.toolbar, customClass)} style={{ width, height }}>
       <div id="inputToolbar" className={stl.inputToolbar}>
-        <input className={stl.searchInput} type="text" placeholder="Search" />
+        <input
+          id="input"
+          className={stl.searchInput}
+          type="text"
+          value={inputValue}
+          placeholder="Search"
+          onChange={e => setInputValue(e.target.value)}
+        />
         <button
           onClick={() => {
             hideInput()
