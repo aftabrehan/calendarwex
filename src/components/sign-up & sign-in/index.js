@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 
 import SignUp from './signup'
 import SignIn from './signin'
-import LoggedIn from './LoggedIn'
+import Layout from 'components/layout'
 
 const Form = () => {
-  const [formType, setFormType] = useState(0)
+  const [formType, setFormType] = useState(1)
 
   const getElm = () => {
     switch (formType) {
@@ -16,10 +16,10 @@ const Form = () => {
         return <SignIn onClickHandler={setFormType} />
 
       case 2:
-        return <LoggedIn onClickHandler={setFormType} />
+        return <Layout />
 
       default:
-        return <SignUp onClickHandler={setFormType} />
+        return <SignIn onClickHandler={setFormType} />
     }
   }
 

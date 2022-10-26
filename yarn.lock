@@ -2300,6 +2300,11 @@ domutils@^2.8.0:
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
 
+dotenv@^16.0.3:
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.3.tgz#115aec42bac5053db3c456db30cc243a5a836a07"
+  integrity sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==
+
 electron-to-chromium@^1.4.251:
   version "1.4.256"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.256.tgz#c735032f412505e8e0482f147a8ff10cfca45bf4"
@@ -3293,10 +3298,10 @@ node-releases@^2.0.6:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
   integrity sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==
 
-node@^18.11.0:
-  version "18.11.0"
-  resolved "https://registry.yarnpkg.com/node/-/node-18.11.0.tgz#53c57bf2477cc962d11ab535c85b9746d16ea82e"
-  integrity sha512-HXpfv0Znmuah/KaxWzVnjBChw3fm+VhU2en/LPr7PU4OtfrnwL1M6hEMOAiRoVB7+L9+5VYCUG8EZJ1J3KqfkA==
+node@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/node/-/node-19.0.0.tgz#a688a439dd97b20f3b8169a8584f862774fad38b"
+  integrity sha512-joJ5busDTd1YUMBXsunjSk1kOlg2NajA87Hkem/bk/4KST6/56w5Pmq3RfIRzjVTwBOIhrcV1iS80qvzEsvZhQ==
   dependencies:
     node-bin-setup "^1.0.0"
 
