@@ -13,10 +13,26 @@
   .main {
     width: 84%;
     border: 1px solid red;
+    min-width: 630px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .container {
     height: 89.8%;
+    display: flex;
+    // overflow: scroll;
+
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+
+  .structureGrid {
+    width: 100%;
     overflow: scroll;
 
     &::-webkit-scrollbar {
@@ -48,10 +64,10 @@
   align-items: stretch;
 }
 
-// @media screen and (max-width: 1260px) {
-//   .layout {
-//     .sideBar {
-//       display: none;
-//     }
-//   }
-// }
+@media screen and (max-width: 900px) {
+  .layout {
+    .sideBar {
+      display: none;
+    }
+  }
+}

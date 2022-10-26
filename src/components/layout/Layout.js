@@ -34,7 +34,6 @@ const getTimeHHMM = d => {
 const Layout = ({ logoutHandler, signOut }) => {
   const [data, setData] = useState({
     type: 'dayView',
-    hours: <LabelLeft />,
     day: <StructureColumn width="100%" />,
   })
   const [label, setLabel] = useState(<LabelTop type="row" mainWidth="100%" />)
@@ -126,7 +125,6 @@ const Layout = ({ logoutHandler, signOut }) => {
       setLabel(<LabelTop type="row" mainWidth="100%" />)
       setData({
         type: 'dayView',
-        hours: <LabelLeft />,
         day: (
           <StructureColumn
             width="100%"
@@ -186,7 +184,6 @@ const Layout = ({ logoutHandler, signOut }) => {
       )
       setData({
         type: 'weekView',
-        hours: <LabelLeft />,
         days,
       })
     } else if (props === 3) {
@@ -318,24 +315,27 @@ const Layout = ({ logoutHandler, signOut }) => {
         <Toolbar logout={signOut} handleType={typeHandler} width="100%" />
         {label}
         <div className={stl.container} style={{ width: '100%' }}>
-          <StructureGrid
-            width="100%"
-            type={data.type}
-            variant={data.variant}
-            hours={data.hours}
-            day={data.day}
-            days={data.days}
-            month={data.month}
-            months={data.months}
-            customClass={stl.structureGrid}
-          />
-          <button
+          <LabelLeft />
+          <div className={stl.structureGrid}>
+            <StructureGrid
+              width="100%"
+              type={data.type}
+              variant={data.variant}
+              day={data.day}
+              days={data.days}
+              month={data.month}
+              months={data.months}
+              customClass={stl.structureGrid}
+            />
+          </div>
+          {/* for testing purpose */}
+          {/* <button
             onClick={() => {
               logoutHandler(1)
             }}
           >
             Click me!
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
