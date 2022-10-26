@@ -56,6 +56,7 @@ const SignUp = ({ onClickHandler }) => {
             .catch(error => {
               alert(error.message)
             })
+          onClickHandler(1)
 
           signOut(auth)
 
@@ -71,8 +72,6 @@ const SignUp = ({ onClickHandler }) => {
           const errorMessage = error.message
           alert(errorMessage)
         })
-
-      onClickHandler(1)
     } else {
       console.log(false)
     }

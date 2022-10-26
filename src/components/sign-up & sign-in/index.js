@@ -16,7 +16,7 @@ const Form = () => {
         return <SignIn onClickHandler={setFormType} />
 
       case 2:
-        return <Layout />
+        return <Layout logoutHandler={setFormType} />
 
       default:
         return <SignIn onClickHandler={setFormType} />
