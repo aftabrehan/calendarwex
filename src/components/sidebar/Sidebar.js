@@ -29,7 +29,7 @@ const Sidebar = ({
               {events.eventHeading}
             </div>
             <div className={stl.upcmngEvtCntnt}>
-              {upcomingEvents[i].eventContent.map((eventCntnt, ix) => (
+              {upcomingEvents[i].eventContent.map((eventCntnt, i) => (
                 <div key={i} className={stl.eventItem}>
                   <div className={stl.eventName}>{eventCntnt.eventName}</div>
                   <div>

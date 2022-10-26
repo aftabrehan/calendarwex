@@ -31,6 +31,7 @@ const Button = ({
       onClick={() => {
         onClick || logoutHandler(1)
         signOut(auth)
+        window.localStorage.setItem('user', JSON.stringify(null))
       }}
       disabled={disabled}
       type={type}
