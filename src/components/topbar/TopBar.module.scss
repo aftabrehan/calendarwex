@@ -1,0 +1,42 @@
+@import 'styles/colors';
+
+.topBar {
+  width: 100vw;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: $white;
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin: 0 10px;
+    }
+
+    span {
+      margin: 0 10px;
+    }
+  }
+
+  .rightSection {
+    border-left: 2px solid $border;
+    display: flex;
+    justify-content: center;
+
+    .settingsButton,
+    .notificationButton,
+    .accountButton {
+      all: unset;
+      background: transparent;
+      padding: 0 10px;
+      transition: 0.3s;
+
+      &:hover {
+        scale: 1.3;
+      }
+    }
+  }
+}
