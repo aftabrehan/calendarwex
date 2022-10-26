@@ -2,7 +2,7 @@
 
 .layout {
   display: flex;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   background: $white;
 
@@ -12,6 +12,7 @@
 
   .main {
     width: 84%;
+    border: 1px solid red;
   }
 
   .container {

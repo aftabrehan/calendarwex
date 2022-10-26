@@ -24,14 +24,18 @@ const Button = ({
   customClass,
   style,
 }) => {
+  const signOutFunction = () => {
+    signOut(auth)
+    window.localStorage.setItem('user', JSON.stringify(null))
+    logoutHandler(1)
+  }
+
   return (
     <button
       className={clsx(stl[`${variant}Btn`], stl.btn, customClass)}
       id={id}
       onClick={() => {
-        onClick || logoutHandler(1)
-        signOut(auth)
-        window.localStorage.setItem('user', JSON.stringify(null))
+        onClick || signOutFunction()
       }}
       disabled={disabled}
       type={type}
@@ -48,6 +52,7 @@ Button.defaultProps = {
   variant: 'fill',
   size: 'normal',
   disabled: false,
+  onClick: () => console.log('Button clicked'),
 }
 
 Button.propTypes = {
