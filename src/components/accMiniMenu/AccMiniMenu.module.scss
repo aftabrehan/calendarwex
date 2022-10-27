@@ -1,0 +1,32 @@
+@import 'styles/colors';
+
+.accMiniMenu {
+  border: 1px solid $border;
+  padding: 15px;
+  border-radius: 20px;
+  background: $white;
+
+  .upperSection {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      padding: 5px;
+    }
+  }
+
+  .lowerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: left;
+
+    button {
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
