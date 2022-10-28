@@ -21,7 +21,7 @@ import ConfirmPassIcon from 'assets/lock_FILL0_wght400_GRAD0_opsz20.svg'
 import SignUpImage from '../images/signup-image.jpg'
 import { useState } from 'react'
 
-const SignUp = ({ onClickHandler, keyValue }) => {
+const SignUp = ({ onClickHandler }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -59,8 +59,6 @@ const SignUp = ({ onClickHandler, keyValue }) => {
           onClickHandler(1)
 
           signOut(auth)
-
-          window.localStorage.setItem('users')
 
           set(ref(database, 'users/' + user.uid), {
             username: name,

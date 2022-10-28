@@ -37,6 +37,8 @@ const SignIn = ({ onClickHandler }) => {
         // Signed-in user info.
         const user = result.user
 
+        window.localStorage.setItem('user', JSON.stringify([user.email]))
+
         console.log(user)
 
         onClickHandler(2)
@@ -71,8 +73,7 @@ const SignIn = ({ onClickHandler }) => {
           update(ref(database, 'users/' + user.uid), {
             last_login: date,
           }),
-            keyValue
-          onClickHandler(2)
+            onClickHandler(2)
           alert('User Logged in!')
         }
       })
