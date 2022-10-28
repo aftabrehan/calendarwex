@@ -2,6 +2,7 @@
 
 .yearColumn {
   width: 80vw;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
@@ -16,13 +17,14 @@
 }
 
 .monthView {
-  border: 1px solid red;
   display: grid;
   padding: 0;
+  height: 100%;
   grid-template-columns: auto auto auto auto auto auto auto;
 }
 
 .weekView {
   display: grid;
+  height: 120rem;
   grid-template-columns: auto auto auto auto auto auto auto auto;
 }

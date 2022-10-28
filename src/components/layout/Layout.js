@@ -14,6 +14,7 @@ import LabelTop from 'components/label'
 import CalendarSlots from 'components/calendarslots'
 import DateMonth from 'components/date-month'
 import EventTypes from 'components/event-types'
+import TopBar from 'components/topbar'
 
 import BrainIcon from 'assets/brain.svg'
 import CamelIcon from 'assets/camel.svg'
@@ -274,68 +275,72 @@ const Layout = ({ logoutHandler, signOut }) => {
   }
 
   return (
-    <div className={stl.layout}>
-      <Sidebar
-        customClass={stl.sideBar}
-        monthName="January"
-        monthData={<MiniCalendar />}
-        upcomingEvents={[
-          {
-            eventHeading: 'Today',
-            eventContent: [
-              {
-                eventName: 'Daily Standup',
-                eventTime: getTimeHHMM(new Date()),
-              },
-              {
-                eventName: 'Daily Standup',
-                eventTime: getTimeHHMM(new Date()),
-              },
-              {
-                eventName: 'Daily Standup',
-                eventTime: getTimeHHMM(new Date()),
-              },
-              {
-                eventName: 'Daily Standup',
-                eventTime: getTimeHHMM(new Date()),
-              },
-              {
-                eventName: 'Daily Standup',
-                eventTime: getTimeHHMM(new Date()),
-              },
-              {
-                eventName: 'Daily Standup',
-                eventTime: getTimeHHMM(new Date()),
-              },
-            ],
-          },
-        ]}
-      />
-      <div className={stl.main} style={{ width: '100%' }}>
-        <Toolbar logout={signOut} handleType={typeHandler} width="100%" />
-        {label}
-        <div className={stl.container} style={{ width: '100%' }}>
-          <LabelLeft />
-          <div className={stl.structureGrid}>
-            <StructureGrid
-              width="100%"
-              type={data.type}
-              variant={data.variant}
-              day={data.day}
-              days={data.days}
-              month={data.month}
-              months={data.months}
-              customClass={stl.structureGrid}
-            />
-          </div>
-          {/* for testing purpose */}
-          {/* <button
+    <div className={stl.layoutContainer}>
+      <TopBar />
+      <div className={stl.layout}>
+        <Sidebar
+          customClass={stl.sideBar}
+          monthName="January"
+          monthData={<MiniCalendar />}
+          upcomingEvents={[
+            {
+              eventHeading: 'Today',
+              eventContent: [
+                {
+                  eventName: 'Daily Standup',
+                  eventTime: getTimeHHMM(new Date()),
+                },
+                {
+                  eventName: 'Daily Standup',
+                  eventTime: getTimeHHMM(new Date()),
+                },
+                {
+                  eventName: 'Daily Standup',
+                  eventTime: getTimeHHMM(new Date()),
+                },
+                {
+                  eventName: 'Daily Standup',
+                  eventTime: getTimeHHMM(new Date()),
+                },
+                {
+                  eventName: 'Daily Standup',
+                  eventTime: getTimeHHMM(new Date()),
+                },
+                {
+                  eventName: 'Daily Standup',
+                  eventTime: getTimeHHMM(new Date()),
+                },
+              ],
+            },
+          ]}
+        />
+        <div className={stl.main} style={{ width: '100%' }}>
+          <Toolbar logout={signOut} handleType={typeHandler} width="100%" />
+          {label}
+          <div className={stl.container} style={{ width: '100%' }}>
+            <LabelLeft id="labelLeft" />
+            <div className={stl.structureGrid}>
+              <StructureGrid
+                id="structure"
+                width="100%"
+                type={data.type}
+                variant={data.variant}
+                day={data.day}
+                days={data.days}
+                month={data.month}
+                months={data.months}
+                customClass={stl.structureGrid}
+              />
+            </div>
+            {/* for testing purpose */}
+            {/* <button
             onClick={() => {
               logoutHandler(1)
             }}
           >
             Click me!
           </button> */}
+          </div>
         </div>
       </div>
     </div>
