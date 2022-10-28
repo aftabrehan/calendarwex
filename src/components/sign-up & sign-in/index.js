@@ -1,3 +1,6 @@
+import { signOut } from 'firebase/auth'
+import { auth } from '../../../pages/api/firebase-config'
+
 import { useEffect, useState } from 'react'
 
 import SignUp from './signup'
@@ -17,6 +20,13 @@ const Form = () => {
     }
   }, [user])
 
+  const signOutFunction = () => {
+    signOut(auth)
+    alert('User Logged out')
+    window.localStorage.setItem('user', JSON.stringify(null))
+    setFormType(1)
+  }
+
   const getElm = () => {
     switch (formType) {
       case 0:
@@ -26,7 +36,7 @@ const Form = () => {
         return <SignIn onClickHandler={setFormType} />
 
       case 2:
-        return <Layout logoutHandler={setFormType} />
+        return <Layout signOut={signOutFunction} logoutHandler={setFormType} />
     }
   }
 

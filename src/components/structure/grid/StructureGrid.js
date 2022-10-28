@@ -20,10 +20,7 @@ const StructureGrid = ({
     style={{ width, height }}
   >
     {months || month || (
-      <div className={clsx(stl[`${type}`], customClassWeek)}>
-        {hours}
-        {days || day}
-      </div>
+      <div className={clsx(stl[`${type}`], customClassWeek)}>{days || day}</div>
     )}
   </div>
 )

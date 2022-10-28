@@ -84,7 +84,7 @@ const DropDown = ({
             key={index}
             value={index + 1}
             onClick={e => {
-              liOnClick || handleValue(e.target.value)
+              handleValue(e.target.value) || liOnClick
             }}
             onMouseUpCapture={onMouseUpCapture}
           >

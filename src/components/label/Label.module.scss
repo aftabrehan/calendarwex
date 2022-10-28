@@ -4,7 +4,7 @@
 .label {
   box-sizing: border-box;
   @extend .flexRowStart;
-  width: 673px;
+  min-width: 1000px;
   height: 24px;
   border-bottom: 1px solid $stroke;
   border: 1px solid$stroke;
@@ -90,7 +90,7 @@
 
 .labelLeft {
   padding: 0px;
-  width: 54px;
+  min-width: 54px;
   height: 120rem;
   border: 1px solid $stroke;
   user-select: none;

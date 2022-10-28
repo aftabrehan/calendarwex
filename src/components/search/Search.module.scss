@@ -24,24 +24,3 @@
     fill: $primary;
   }
 }
-
-.searchInput {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: $label;
-  font-size: 14px;
-  transition: 0.4s;
-  height: 37px;
-  width: 0px;
-}
-
-.closeIcon {
-  display: none;
-}
-
-.searchInput:focus::placeholder {
-  color: transparent;
-}
