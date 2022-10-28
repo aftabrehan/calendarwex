@@ -84,7 +84,7 @@ const Toolbar = ({
         <input
           id="input"
           className={stl.searchInput}
-          type="text"
+          type="search"
           value={inputValue}
           placeholder="Search"
           onChange={e => setInputValue(e.target.value)}
