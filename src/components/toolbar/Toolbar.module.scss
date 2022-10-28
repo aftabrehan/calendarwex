@@ -43,9 +43,7 @@
     border: none;
     outline: none;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend .flexCenter;
     right: 10px;
     padding: 5px;
     bottom: 17%;
