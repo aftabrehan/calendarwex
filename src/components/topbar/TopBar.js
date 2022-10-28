@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+
 import stl from './TopBar.module.scss'
 
 import SettingsIcon from 'assets/settings.svg'
@@ -8,14 +10,14 @@ import SampleLogo from 'assets/sample-logo.svg'
 import AccMiniMenu from 'components/accMiniMenu'
 import { useState } from 'react'
 
-const TopBar = () => {
+const TopBar = ({ logout, accBtnId, customClassAcc }) => {
   const [value, setValue] = useState(false)
 
-  if (typeof window !== 'undefined') {
-    if (value === true) {
-      document.getElementById('accMenu').style.display = 'flex'
-    } else {
+  if (typeof window !== null) {
+    if (value === false) {
       document.getElementById('accMenu').style.display = 'none'
+    } else {
+      document.getElementById('accMenu').style.display = 'block'
     }
   }
 
@@ -44,7 +46,11 @@ const TopBar = () => {
         >
           <AccountIcon />
         </button>
-        <AccMiniMenu id="accMenu" />
+        <AccMiniMenu
+          logoutHandler={logout}
+          id={accBtnId}
+          customClass={clsx(customClassAcc || stl.menu)}
+        />
       </div>
     </div>
   )

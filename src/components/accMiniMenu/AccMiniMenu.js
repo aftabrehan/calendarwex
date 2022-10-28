@@ -5,9 +5,9 @@ import stl from './AccMiniMenu.module.scss'
 import AccountIcon from 'assets/account-small.svg'
 import LogoutIcon from 'assets/logout-small.svg'
 
-const AccMiniMenu = ({ customClass, id }) => {
+const AccMiniMenu = ({ logoutHandler, customClass, id }) => {
   return (
-    <div id="accMenu" className={clsx(stl.accMiniMenu, customClass)}>
+    <div id={id} className={clsx(stl.accMiniMenu, customClass)}>
       <div className={stl.upperSection}>
         <span>Username</span>
         <span>example@gmail.com</span>
@@ -15,10 +15,14 @@ const AccMiniMenu = ({ customClass, id }) => {
       <hr />
       <div className={stl.lowerSection}>
         <button>
-          <AccountIcon className={stl.accIcon} /> Account
+          <AccountIcon /> Account
         </button>
-        <button>
-          <LogoutIcon /> Log out
+        <button
+          onClick={() => {
+            logoutHandler() || console.log('Button clicked...')
+          }}
+        >
+          <LogoutIcon className={stl.logoutIcon} /> Log out
         </button>
       </div>
     </div>

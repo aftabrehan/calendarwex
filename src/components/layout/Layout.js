@@ -276,7 +276,11 @@ const Layout = ({ logoutHandler, signOut }) => {
 
   return (
     <div className={stl.layoutContainer}>
-      <TopBar />
+      <TopBar
+        logout={signOut}
+        accBtnId="accMenu"
+        customClassAcc={stl.accMenu}
+      />
       <div className={stl.layout}>
         <Sidebar
           customClass={stl.sideBar}
@@ -315,7 +319,7 @@ const Layout = ({ logoutHandler, signOut }) => {
           ]}
         />
         <div className={stl.main} style={{ width: '100%' }}>
-          <Toolbar logout={signOut} handleType={typeHandler} width="100%" />
+          <Toolbar handleType={typeHandler} width="100%" />
           {label}
           <div className={stl.container} style={{ width: '100%' }}>
             <LabelLeft id="labelLeft" />

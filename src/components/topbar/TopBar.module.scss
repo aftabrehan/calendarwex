@@ -47,8 +47,9 @@
 
 .menu {
   position: absolute;
-  top: 70%;
-  right: 60%;
+  top: 51%;
+  right: 1.5%;
   background: $white;
   display: none;
+  z-index: 1000;
 }

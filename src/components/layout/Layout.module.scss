@@ -70,6 +70,14 @@
   align-items: stretch;
 }
 
+.accMenu {
+  position: absolute;
+  right: 1.5%;
+  display: none;
+  top: 3.5%;
+  z-index: 1000;
+}
+
 @media screen and (max-width: 900px) {
   .layout {
     .sideBar {

@@ -42,7 +42,7 @@ Button.defaultProps = {
   variant: 'fill',
   size: 'normal',
   disabled: false,
-  onClick: () => console.log('Button clicked'),
+  // onClick: () => console.log('Button clicked'),
 }
 
 Button.propTypes = {

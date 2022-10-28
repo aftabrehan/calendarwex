@@ -1,4 +1,5 @@
 @import 'styles/colors';
+@import 'styles/common';
 
 .accMiniMenu {
   border: 1px solid $border;
@@ -8,8 +9,7 @@
 
   .upperSection {
     width: 300px;
-    display: flex;
-    flex-direction: column;
+    @extend .flexCol;
 
     span {
       padding: 5px;
@@ -17,16 +17,25 @@
   }
 
   .lowerSection {
-    display: flex;
-    flex-direction: column;
+    @extend .flexCol;
     gap: 10px;
     justify-content: left;
 
     button {
       all: unset;
+      position: relative;
       display: flex;
       align-items: center;
       gap: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .logoutIcon {
+      margin-left: 2px;
     }
   }
 }
