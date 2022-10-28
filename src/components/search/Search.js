@@ -33,4 +33,5 @@ Search.defaultProps = {
   arg: 'Search',
   id: 'srchbox',
   width: '204px',
+  onClick: () => console.log('Button clicked..'),
 }
