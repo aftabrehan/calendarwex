@@ -1,26 +1,31 @@
+import { useState, useRef } from 'react'
 import clsx from 'clsx'
 
-import stl from './TopBar.module.scss'
+import AccMiniMenu from 'components/accMiniMenu'
+import { useOnClickOutside } from 'lib/hooks'
 
 import SettingsIcon from 'assets/settings.svg'
 import NotificationIcon from 'assets/notification.svg'
 import AccountIcon from 'assets/account.svg'
 import SampleLogo from 'assets/sample-logo.svg'
 
-import AccMiniMenu from 'components/accMiniMenu'
-import { useState } from 'react'
+import stl from './TopBar.module.scss'
 
 const TopBar = ({ logout, accBtnId, customClassAcc }) => {
   const [value, setValue] = useState(false)
 
+  const ref = useRef()
+
   const onClickHander = () => {
-    if (!value) {
-      document.getElementById('accMenu').style.visibility = 'visible'
-      document.getElementById('accMenu').style.display = 'block'
-    } else {
-      document.getElementById('accMenu').style.display = 'none'
-    }
+    document.getElementById('accMenu').style.visibility = 'visible'
+    document.getElementById('accMenu').style.display = 'block'
   }
+
+  const hideMiniMenu = () => {
+    document.getElementById('accMenu').style.display = 'none'
+  }
+
+  useOnClickOutside(hideMiniMenu, ref)
   return (
     <div className={stl.topBar}>
       <div className={stl.leftSection}>
@@ -48,6 +53,7 @@ const TopBar = ({ logout, accBtnId, customClassAcc }) => {
           <AccountIcon />
         </button>
         <AccMiniMenu
+          reference={ref}
           onClick={logout}
           id={accBtnId}
           customClass={clsx(customClassAcc || stl.menu)}

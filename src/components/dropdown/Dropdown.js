@@ -1,5 +1,8 @@
+import { useRef } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
+
+import { useOnClickOutside } from 'lib/hooks'
 
 import stl from './Dropdown.module.scss'
 import Button from 'components/button'
@@ -43,6 +46,8 @@ const DropDown = ({
   drplist,
   onMouseUpCapture,
 }) => {
+  const ref = useRef()
+
   const bntOnClickHandler = () => {
     const btn = document.getElementById('drpBtn')
     btn.style.opacity = '0'
@@ -53,6 +58,8 @@ const DropDown = ({
     dropDown.style.opacity = '1'
     dropDown.style.zIndex = '1'
   }
+
+  useOnClickOutside(mouseUpCaptureHandler, ref)
 
   return (
     <div className={stl.drpdncontainer} style={style}>
@@ -66,6 +73,7 @@ const DropDown = ({
         onClick={bntOnClick || bntOnClickHandler}
       />
       <ul
+        ref={ref}
         id="dropMenu"
         className={clsx(stl[`${variant}`], customClass)}
         style={{
@@ -84,9 +92,9 @@ const DropDown = ({
             key={index}
             value={index + 1}
             onClick={e => {
-              handleValue(e.target.value) || liOnClick
+              liOnClick(e.target.value)
             }}
-            onMouseUpCapture={onMouseUpCapture}
+            onMouseUpCapture={mouseUpCaptureHandler}
           >
             {i || children}
           </li>
