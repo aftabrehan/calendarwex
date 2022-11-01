@@ -71,9 +71,9 @@
 }
 
 .accMenu {
+  visibility: hidden;
   position: absolute;
   right: 1.5%;
-  display: none;
   top: 3.5%;
   z-index: 1000;
 }

@@ -132,12 +132,6 @@ const Toolbar = ({
           icon={<AddIcon />}
           label="Add Event"
         />
-        <Button
-          onClick={logout}
-          variant="transparent"
-          icon={<LogoutIcon />}
-          style={{ padding: '5px', zIndex: '1' }}
-        />
       </div>
     </div>
   )

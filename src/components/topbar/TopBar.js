@@ -13,14 +13,14 @@ import { useState } from 'react'
 const TopBar = ({ logout, accBtnId, customClassAcc }) => {
   const [value, setValue] = useState(false)
 
-  if (typeof window !== null) {
-    if (value === false) {
-      document.getElementById('accMenu').style.display = 'none'
-    } else {
+  const onClickHander = () => {
+    if (!value) {
+      document.getElementById('accMenu').style.visibility = 'visible'
       document.getElementById('accMenu').style.display = 'block'
+    } else {
+      document.getElementById('accMenu').style.display = 'none'
     }
   }
-
   return (
     <div className={stl.topBar}>
       <div className={stl.leftSection}>
@@ -37,11 +37,12 @@ const TopBar = ({ logout, accBtnId, customClassAcc }) => {
         <button
           className={stl.accountButton}
           onClick={() => {
-            if (value === false) {
+            if (!value) {
               setValue(true)
             } else {
               setValue(false)
             }
+            onClickHander()
           }}
         >
           <AccountIcon />
@@ -49,6 +50,7 @@ const TopBar = ({ logout, accBtnId, customClassAcc }) => {
         <AccMiniMenu
           logoutHandler={logout}
           id={accBtnId}
+          onClick={onClickHander}
           customClass={clsx(customClassAcc || stl.menu)}
         />
       </div>
