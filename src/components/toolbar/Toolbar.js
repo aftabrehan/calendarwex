@@ -13,7 +13,7 @@ import LogoutIcon from 'assets/logout.svg'
 import CloseIcon from 'assets/close.svg'
 
 const Toolbar = ({
-  handleType,
+  dropDownHandler,
   sideBarHandler,
   sidebarBtnId,
   toggleBtnClass,
@@ -48,7 +48,7 @@ const Toolbar = ({
   const [inputValue, setInputValue] = useState('')
 
   const valueHandler = props => {
-    handleType(props)
+    dropDownHandler(props)
 
     if (
       (props === 1 && setTitle('01 January 2022')) ||
@@ -113,7 +113,7 @@ const Toolbar = ({
         <DropDown
           style={{ zIndex: '1' }}
           variant="Dropdown"
-          handleValue={valueHandler}
+          liOnClick={valueHandler}
           drplist={['Day', 'Week', 'Month', 'Year']}
           name={name || drpLabel}
           height="0"
@@ -138,3 +138,7 @@ const Toolbar = ({
 }
 
 export default Toolbar
+
+Toolbar.defaultProps = {
+  dropDownHandler: () => console.log('Dropdown Option Clicked...'),
+}

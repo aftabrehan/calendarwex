@@ -319,7 +319,7 @@ const Layout = ({ logoutHandler, signOut }) => {
           ]}
         />
         <div className={stl.main} style={{ width: '100%' }}>
-          <Toolbar handleType={typeHandler} width="100%" />
+          <Toolbar dropDownHandler={typeHandler} width="100%" />
           {label}
           <div className={stl.container} style={{ width: '100%' }}>
             <LabelLeft id="labelLeft" />
