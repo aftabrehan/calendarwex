@@ -48,9 +48,8 @@ const TopBar = ({ logout, accBtnId, customClassAcc }) => {
           <AccountIcon />
         </button>
         <AccMiniMenu
-          logoutHandler={logout}
+          onClick={logout}
           id={accBtnId}
-          onClick={onClickHander}
           customClass={clsx(customClassAcc || stl.menu)}
         />
       </div>
